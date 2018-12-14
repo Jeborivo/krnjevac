@@ -1,0 +1,46 @@
+.hero {
+   padding-top: 40px;
+
+    &_content {
+        position: relative;
+        height: 650px;
+        overflow: hidden;
+        padding: 125px 30px 200px 30px;
+
+
+        &--bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+          
+
+            .bg-video_content {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+        
+            }
+        }
+
+        &--text {
+            position: relative;
+            z-index: 15;
+            color: $white;
+        }
+
+        &--title {
+            font-weight: bold;
+            width: 450px;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        &--desc {
+            margin-bottom: 50px;
+        }
+    }
+
+}

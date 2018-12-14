@@ -1,0 +1,30 @@
+.wtb {
+
+    @include xy-grid;
+    background-color: #fcfcfc; 
+    padding: 135px 0 0 0; 
+    height: 636px;
+
+    &_links {
+
+    }
+
+    &_text-area {
+
+        h1 {
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.8;
+            margin: 40px 0 60px 0;
+        }
+    }
+
+    &_faq {
+
+    }
+
+}

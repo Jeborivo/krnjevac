@@ -1,0 +1,17 @@
+// small
+
+$h1-small-font-size:map-get(map-get(map-get($header-styles, small), h1), font-size) * 1px;
+$h2-small-font-size:map-get(map-get(map-get($header-styles, small), h2), font-size) * 1px;
+$h3-small-font-size:map-get(map-get(map-get($header-styles, small), h3), font-size) * 1px;
+$h4-small-font-size:map-get(map-get(map-get($header-styles, small), h4), font-size) * 1px;
+$h5-small-font-size:map-get(map-get(map-get($header-styles, small), h5), font-size) * 1px;
+$h6-small-font-size:map-get(map-get(map-get($header-styles, small), h6), font-size) * 1px;
+
+//medium
+
+$h1-medium-font-size:map-get(map-get(map-get($header-styles, medium), h1), font-size) * 1px;
+$h2-medium-font-size:map-get(map-get(map-get($header-styles, medium), h2), font-size) * 1px;
+$h3-medium-font-size:map-get(map-get(map-get($header-styles, medium), h3), font-size) * 1px;
+$h4-medium-font-size:map-get(map-get(map-get($header-styles, medium), h4), font-size) * 1px;
+$h5-medium-font-size:map-get(map-get(map-get($header-styles, medium), h5), font-size) * 1px;
+$h6-medium-font-size:map-get(map-get(map-get($header-styles, medium), h6), font-size) * 1px;
