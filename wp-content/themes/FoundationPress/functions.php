@@ -56,3 +56,29 @@ require_once( 'library/gutenberg.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
+
+// Custom code for functions/.php
+
+// Section post type
+function create_posttype() {
+ 
+    register_post_type( 'front',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Front' ),
+				'singular_name' => __( 'Front' ),
+			),
+			'supports' => array( 'title', 'editor','thumbnail' ),
+            'public' => true,
+            'has_archive' => true,
+			'rewrite' => array('slug' => 'Front sections'),
+			
+			
+		)
+		
+    );
+}
+
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
