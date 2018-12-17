@@ -14,9 +14,8 @@
 get_header(); ?>
 
 <?php get_template_part( 'template-parts/featured-image' ); ?>
-<div class="main-container">
 	<div class="main-grid">
-		<main class="main-content">
+		<main class="main-content-full-width">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 				<?php comments_template(); ?>
@@ -38,16 +37,14 @@ get_header(); ?>
 					setup_postdata( $post );?>
 					<?php $br = $br+1;?>
 					<?php if($br % 2>0):?>
-						<?php $class="odd"; ?>
+						<?php $class="odd main-container section_about"; ?>
 					<?php else:?>
-						<?php $class="even"; ?>
+						<?php $class="even main-container section_about"; ?>
 				<?php endif?>
 					<?php $type = get_field('type'); ?>
 					<?php include 'sections/'.$type.'.php';?>
 			<?php endforeach; ?>
 		</main>
-		<?php get_sidebar(); ?>
 	</div>
-</div>
 <?php
 get_footer();

@@ -1,90 +1,142 @@
-.cards-container {
+.cards {
 
-  @include xy-grid;
- 
-  .card {
-    @include breakpoint(small) {
-      @include xy-cell(12);
+  &-heading {
+    font-weight: bold;
+    color: #808080;
+    text-align: center;
+    margin: 75px 0px 100px;
+  }
+  
+  &-info {
+    display: flex;
+    padding: 0px 200px;
+    justify-content: space-between;
 
-
-      .card-content {
-
-        position: relative;
-        
-        &_description {
-          padding: 3px 20px 20px 20px;
-
-          &--title {
-            font-weight: bold;
-            color: $color-grey-dark-2;
-          }
-
-          &--weight {
-            color: $color-grey-light-2;  
-          }
-
-          &--price {
-            color: $color-grey-dark-2;
-          }
-
-        }
-        
-        .add-to-cart {
-
-          padding: 20px;
-          position: absolute;
-          height: 50px;
-          width: 50px;
-          top: 20px;
-          right: 20px;
-
-          h3 {
-
-            @include breakpoint(small) {
-              font-size: $h3-medium-font-size;
-            }
-
-            position: absolute;
-            top: 7%;
-            left: 35%;
-          }
-        }
-
-        &_image {
-
-        }
-
+    &_text {
+      
+      h6 {
+        color: $color-grey-dark-2;
       }
-
     }
 
+    .icon-check-circle {
+      color: #FF8300;
+    }
+
+    .go-to-shop {
+      margin-bottom: 0;
+      height: 60px;
+      align-self: center;
+
+      h5 {
+        font-weight: bold;
+        margin-bottom: 0;
+
+        .icon-cart {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+
+  .cards-container {
+    margin-bottom: 90px;
+
+    @include xy-grid;
+   
+    .card {
+      @include breakpoint(small) {
+        @include xy-cell(12);
+  
+  
+        .card-content {
+  
+          position: relative;
+          
+          &_description {
+            padding: 3px 20px 20px 20px;
+  
+            &--title {
+              font-weight: bold;
+              color: $color-grey-dark-2;
+            }
+  
+            &--weight {
+              color: $color-grey-light-2;  
+            }
+  
+            &--price {
+              color: $color-grey-dark-2;
+            }
+  
+          }
+  
+  
+          .add_to_cart_button {
+  
+            padding: 20px;
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            top: 20px;
+            right: 20px;
+            border-radius: 100%;
+  
+            h3 {
+  
+              @include breakpoint(small) {
+                font-size: $h3-medium-font-size;
+              }
+  
+              position: absolute;
+              top: 7%;
+              left: 35%;
+            }
+          }
+  
+          &_image {
+            display: block;
+            height: 230px;
+            background-size: cover;
+            background-position: center center;
+  
+          }
+  
+        }
+  
+      }
+  
+      @include breakpoint(medium) {
+        @include xy-cell(1 of 2, true, 24px );
+  
+      }
+  
+      @include breakpoint(large) {
+        @include xy-cell(1 of 3, true, 24px );
+  
+      }
+  
+      @include breakpoint(xlarge) {
+        @include xy-cell(1 of 4, true, 24px );
+  
+      }
+  
+    }
+  
+  
+    @include breakpoint(small) {
+      padding: 0 20px;
+    }
+  
     @include breakpoint(medium) {
-      @include xy-cell(1 of 2, true, 24px );
-
+      padding: 0 36px;
     }
-
-    @include breakpoint(large) {
-      @include xy-cell(1 of 3, true, 24px );
-
-    }
-
+  
     @include breakpoint(xlarge) {
-      @include xy-cell(1 of 4, true, 24px );
-
+      padding: 0 88px;
     }
-
   }
+  
 
 
-  @include breakpoint(small) {
-    padding: 0 20px;
-  }
-
-  @include breakpoint(medium) {
-    padding: 0 36px;
-  }
-
-  @include breakpoint(xlarge) {
-    padding: 0 72px;
-  }
 }

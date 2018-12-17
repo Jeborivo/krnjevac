@@ -1,0 +1,53 @@
+.section_about {
+    display: flex;
+    padding: 0 110px 40px 110px;
+
+    &--text {
+        width: 36%;
+        margin-left: 5%;
+
+        .text_title {
+            font-weight: bold;
+            color: $black;
+            line-height: 1;
+            margin-bottom: 50px;
+            padding-top: 150px;
+        }
+
+        .text-content {
+
+            .more-link {
+                color: $black;
+                display: flex;
+                font-weight: bold;
+
+                .icon-arrow-right {
+                    color: $black;
+                    display: block;
+                    padding-top: 3px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    &--img {
+        width: 60%;
+        height: 600px;
+        background-repeat:no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.section_about.odd {
+    flex-direction: row-reverse;
+}
+
+.section_about.even {
+
+    .section_about--text {
+        margin-left: 0;
+        margin-right: 5%;
+    }
+}

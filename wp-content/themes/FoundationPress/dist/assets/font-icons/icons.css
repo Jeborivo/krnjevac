@@ -1,10 +1,10 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?4268a575be81df82ee691c915be1fca8?#iefix") format("embedded-opentype"),
-url("./icons.woff2?4268a575be81df82ee691c915be1fca8") format("woff2"),
-url("./icons.woff?4268a575be81df82ee691c915be1fca8") format("woff"),
-url("./icons.ttf?4268a575be81df82ee691c915be1fca8") format("truetype"),
-url("./icons.svg?4268a575be81df82ee691c915be1fca8#icons") format("svg");
+    src: url("./icons.eot?682c32d82f8d1f64fc7eb9792cff5cce?#iefix") format("embedded-opentype"),
+url("./icons.woff2?682c32d82f8d1f64fc7eb9792cff5cce") format("woff2"),
+url("./icons.woff?682c32d82f8d1f64fc7eb9792cff5cce") format("woff"),
+url("./icons.ttf?682c32d82f8d1f64fc7eb9792cff5cce") format("truetype"),
+url("./icons.svg?682c32d82f8d1f64fc7eb9792cff5cce#icons") format("svg");
 }
 
 i {
@@ -25,37 +25,37 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-arrow-right:before {
     content: "\f101";
 }
-.icon-Group 142:before {
+.icon-cart:before {
     content: "\f102";
 }
-.icon-Group 157:before {
+.icon-check-circle:before {
     content: "\f103";
 }
-.icon-Group 158:before {
+.icon-Group 142:before {
     content: "\f104";
 }
-.icon-Group 166:before {
+.icon-Group 157:before {
     content: "\f105";
 }
-.icon-Group 167:before {
+.icon-Group 158:before {
     content: "\f106";
 }
-.icon-Group 168:before {
+.icon-Group 166:before {
     content: "\f107";
 }
-.icon-Group 169:before {
+.icon-Group 167:before {
     content: "\f108";
 }
-.icon-Group 170:before {
+.icon-Group 168:before {
     content: "\f109";
 }
-.icon-Group 171:before {
+.icon-Group 169:before {
     content: "\f10a";
 }
-.icon-search:before {
+.icon-Group 170:before {
     content: "\f10b";
 }
-.icon-cart:before {
+.icon-Group 171:before {
     content: "\f10c";
 }
 .icon-Group 174:before {
@@ -109,6 +109,9 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-Rectangle 47:before {
     content: "\f11d";
 }
-.icon-Symbol 13 – 147:before {
+.icon-search:before {
     content: "\f11e";
+}
+.icon-Symbol 13 – 147:before {
+    content: "\f11f";
 }

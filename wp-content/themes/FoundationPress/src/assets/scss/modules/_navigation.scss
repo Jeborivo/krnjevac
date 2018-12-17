@@ -240,15 +240,17 @@
     z-index: 0;
     opacity: 0;
     width: 0; 
-   transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
 
     .desktop-menu {
       position: fixed;
       top: 120px;
-      right: 90px;
+      right: 1500%;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      transition: all 1s;
 
       .menu-item {
         
@@ -263,8 +265,9 @@
     .info {
       color: $white;
       position: fixed;
-      left: 90px;
       bottom: 100px;
+      left: -1500%;
+      transition: all 1s;
 
       &_title {
         font-weight: bold;
@@ -277,12 +280,13 @@
 
     .nav_links {
       position: fixed;
-      right: 100px;
       bottom: 100px;
       display: flex;
       width: 30%;
       height: 140px;
       justify-content: space-between;
+      right: 1500%;
+      transition: all 1s;
 
       .faq,
       .about,
@@ -325,6 +329,18 @@
       z-index: 1500;
       opacity: 1;
       width: 100%;
+
+      .info {
+        left: 90px;
+      }
+
+      .nav_links {
+        right: 100px;
+      }
+
+      .desktop-menu {
+        right: 90px;
+      }
   }
 
 
