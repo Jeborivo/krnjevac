@@ -38,7 +38,7 @@
 .title-bar-title {
   a {
     font-size: 1rem;
-    color: #B9B9B9;
+    color: #B9B9B9; 
   }
 }
 
@@ -111,7 +111,8 @@
 
   &-title {
     align-self: center;
-    margin: 0 18.6% 0 0;
+    margin: 0 12.2% 0 0;
+    padding-bottom: 5px;
   }
   
   &-left {
@@ -133,6 +134,14 @@
 
   }
 
+  .shop {
+    .icon-cart {
+      font-size: 21px;
+      color: $white;
+      margin-right: 20px;
+    }
+  }
+
   .wrap-search { 
 
     display: flex;
@@ -146,6 +155,16 @@
     .label-toggle {
       display: block;
       color: $primary-color;
+      position: relative;
+      margin-right: 35px;
+    }
+
+    .icon-search {
+      font-size: 21px;
+      margin-top: 0px;
+      position: absolute;
+      top: -3px;
+      color: $white;
     }
 
     .search-content {
@@ -156,8 +175,9 @@
 
       &-inner {
         background-color: transparent;
-        color: white;
+        color: $white;
         font-size: $h6-medium-font-size;
+        height: 25px;
       }
     }
 
@@ -209,13 +229,6 @@
       z-index: 1000;
       transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
-      // @media screen and (min-width: 1020px) {
-      //     display: none;
-      // }
-
-      // @media screen and (max-width: 600px) {
-      //     right: 3.5rem;
-      // }
 
   }
 
@@ -320,7 +333,7 @@
   &__icon {
 
       position: relative;
-      top: 50%;
+      top: 58%;
       width: 13px;
     
 
@@ -341,13 +354,13 @@
       }
 
       &::before {
-          top: 10px;
+          top: 8px;
           width: 17px;
           left: -4px;
       }
 
       &::after {
-          top: -10px;
+          top: -8px;
           width: 20px;
           left: -7px;
       }

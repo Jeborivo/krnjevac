@@ -15,6 +15,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+		<link rel="stylesheet" href="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/font-icons/icons.css">
 		<script src="wp-content/themes/FoundationPress/js/script.js"></script>
 		<?php wp_head(); ?>
 	</head>
@@ -38,7 +39,7 @@
 		<nav class="site-navigation top-bar" role="navigation">
 			<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png" alt="krnjevac"></a>
 				</div>
 				<?php foundationpress_top_bar_l(); ?>
 			</div>
@@ -50,13 +51,13 @@
 				<?php endif; ?>
 				<div class="wrap-search">
 					<input id="open" class="search-toggle" type="checkbox">
-					<label for="open" class="label-toggle">Search</label>
+					<label for="open" class="label-toggle"><i class="icon-search"></i></label>
 					<div class="search-content">
 						<input class="search-content-inner" type="text">
 					</div>
 				</div>
 
-				<a href="#" class="shop">shop</a>
+				<a href="#" class="shop"><i class="icon-cart"></i></a>
 				<div class="navigation"> 	
             	<input type="checkbox" class="navigation__checkbox" id="navi-toggle">
            		<label for="navi-toggle" class="navigation__button">
@@ -105,15 +106,15 @@
 			<div class="hero_content main-container">
 				<div class="hero_content--bg-video">
 					<video class="bg-video_content" autoplay muted loop>
-						<source src="wp-content/themes/FoundationPress/src/assets/images/Honey.webm" type="video/webm">
-						<source src="wp-content/themes/FoundationPress/src/assets/images/Honey.mp4" type="video/mp4">
+						<source src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/Honey.webm" type="video/webm">
+						<source src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/Honey.mp4" type="video/mp4">
 					</video>
 				</div>
 
 				<div class="hero_content--text">
 					<h1 class="hero_content--title">Ne mešamo se u posao prirode</h1>
 					<h4 class="hero_content--desc">Posebno i pažljivo odabran med bez dodataka.</h4>
-					<button class="button hero_content--button" type="button">Krnjevac med</button>
+					<button class="button hero_content--button" type="button">Krnjevac med <i class="icon-arrow-right"></i></button>
 				</div>
 			</div>
 		</div>

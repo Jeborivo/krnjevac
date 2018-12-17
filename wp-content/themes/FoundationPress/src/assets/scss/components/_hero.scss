@@ -41,6 +41,15 @@
         &--desc {
             margin-bottom: 50px;
         }
+
+        &--button {
+            display: inline-flex;
+
+            .icon-arrow-right {
+                display: block;
+                margin-left: 5px;
+            }
+        }
     }
 
 }
