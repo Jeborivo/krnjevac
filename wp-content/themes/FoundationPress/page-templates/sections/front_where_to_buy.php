@@ -1,1 +1,5 @@
-where to buy
+<div class="front_wtb">
+    <h2> 	<?php the_title(); ?> </h2>
+    <p><?php the_content(); ?></p>
+
+</div>
