@@ -53,7 +53,7 @@
 					<input id="open" class="search-toggle" type="checkbox">
 					<label for="open" class="label-toggle"><i class="icon-search"></i></label>
 					<div class="search-content">
-						<input class="search-content-inner" type="text">
+						<?php get_search_form(); ?>
 					</div>
 				</div>
 
