@@ -59,9 +59,27 @@ require_once( 'library/gutenberg.php' );
 
 // Custom code for functions/.php
 
-// Section post type
+// Section post type 
 function create_posttype() {
- 
+//  About
+    register_post_type( 'about',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'About' ),
+				'singular_name' => __( 'About' ),
+			),
+			'supports' => array( 'title', 'editor','thumbnail' ),
+            'public' => true,
+            'has_archive' => true,
+			'rewrite' => array('slug' => 'About sections'),
+			
+			
+        )
+        
+		
+    );
+    // Front
     register_post_type( 'front',
     // CPT Options
         array(
@@ -75,13 +93,18 @@ function create_posttype() {
 			'rewrite' => array('slug' => 'Front sections'),
 			
 			
-		)
+        )
+        
 		
     );
+   
 }
 
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
 //  theme support for woocommerce
-add_theme_support( 'woocommerce' );
+function mytheme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 

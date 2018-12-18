@@ -20,29 +20,7 @@ get_header(); ?>
 
 </header>
 
-	<?php 
-			// list sections
-				$section = get_posts(array(
-					'posts_per_page'	=> -1,
-					'post_type'			=> 'front',					
-				));
-			?>
-			<?php $br =0;
-			  	 $class='';
-			?>
-			<?php foreach( $section as $post ): 
-					setup_postdata( $post );?>
-					<?php $br = $br+1;?>
-					<?php if($br % 2>0):?>
-						<?php $class="odd"; ?>
-					<?php else:?>
-						<?php $class="even"; ?>
-			       <?php endif?>
-					<?php $type = get_field('type'); ?>
-				
-					<?php include 'sections/'.$type.'.php';?>
-				
-			<?php endforeach; ?>
+
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>

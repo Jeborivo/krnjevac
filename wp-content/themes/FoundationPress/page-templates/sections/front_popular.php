@@ -29,6 +29,7 @@
               <div class="card-content_image" style="background-image: url('<?php the_post_thumbnail_url(  ); ?> ')">
               </div>
               <?php endif; ?>
+              <a href="?add-to-cart=1">+</a>
               <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
             </div>
         </div>
