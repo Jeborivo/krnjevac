@@ -97,6 +97,23 @@ function create_posttype() {
         
 		
     );
+     // Front
+     register_post_type( 'faq',
+     // CPT Options
+         array(
+             'labels' => array(
+                 'name' => __( 'Faq' ),
+                 'singular_name' => __( 'Faq' ),
+             ),
+             'public' => true,
+             'has_archive' => true,
+             'rewrite' => array('slug' => 'Front sections'),
+             
+             
+         )
+         
+         
+     );
    
 }
 

@@ -29,17 +29,31 @@ get_header(); ?>
 				'post_type'         => 'about',                 
 			));
 			?>
-			<?php 
-				$br =0;
-				$class='';
-			?>
-
 			<?php foreach( $section as $post ): 
 					setup_postdata( $post );?>
 					<?php $type = get_field('Type'); ?>
 					<?php include 'sections/'.$type.'.php';?>
 			<?php endforeach; ?>
 			<?php endwhile; ?>
+
+
+            <div class="faq">
+                <?php 
+                    // list sections
+                        $faq = get_posts(array(
+                            'posts_per_page'    => -1,
+                            'post_type'         => 'faq',                 
+                        ));
+                        ?>
+    
+                        <?php foreach( $faq as $post ): ?>
+                            <?php    setup_postdata( $post );?>
+                            <div class="faq_single">
+                                <h3><?php the_title(); ?></h3>
+                                <div class="faq_content"><?php the_content(); ?></div> 
+                            </div>
+                        <?php endforeach; ?>
+            </div>
 		</main>
 		<?php get_sidebar(); ?>
 	</div>
