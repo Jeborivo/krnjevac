@@ -27,6 +27,8 @@
   // Full width template
   .main-content-full-width {
     @include xy-cell(12);
+    margin: 0;
+    width: 100%;
   }
 
   // Default template

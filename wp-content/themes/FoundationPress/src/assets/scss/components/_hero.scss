@@ -1,5 +1,6 @@
 .hero {
    padding-top: 40px;
+   background-color: #000;
 
     &_content {
         position: relative;
@@ -15,6 +16,7 @@
             height: 100%;
             width: 100%;
             z-index: 1;
+            
           
 
             .bg-video_content {

@@ -102,22 +102,7 @@
 			</div>
 		</nav>
 
-		<div class="hero">
-			<div class="hero_content main-container">
-				<div class="hero_content--bg-video">
-					<video class="bg-video_content" autoplay muted loop>
-						<source src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/Honey.webm" type="video/webm">
-						<source src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/Honey.mp4" type="video/mp4">
-					</video>
-				</div>
 
-				<div class="hero_content--text">
-					<h1 class="hero_content--title">Ne mešamo se u posao prirode</h1>
-					<h4 class="hero_content--desc">Posebno i pažljivo odabran med bez dodataka.</h4>
-					<button class="button hero_content--button" type="button">Krnjevac med <i class="icon-arrow-right"></i></button>
-				</div>
-			</div>
-		</div>
 
 
 	</header>

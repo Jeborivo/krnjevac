@@ -1,30 +1,33 @@
-.wtb {
+.front_wtb{
+    height: 640px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 150px;
+    
 
-    @include xy-grid;
-    background-color: #fcfcfc; 
-    padding: 135px 0 0 0; 
-    height: 636px;
+    &--text {
+        width: 40%;
+        margin-left: 355px;
+        margin-right: auto;
+        padding-top: 135px;
 
-    &_links {
-
-    }
-
-    &_text-area {
-
-        h1 {
+        h2 {
             font-weight: bold;
+            margin-bottom: 25px;
         }
 
         h3 {
             font-size: 24px;
             font-weight: bold;
-            line-height: 1.8;
-            margin: 40px 0 60px 0;
+            font-size: 24px;
+            width: 75%;
+            margin-bottom: 35px;
         }
     }
 
-    &_faq {
-
+    &--image {
+        background-size: cover;
+        background-position: center center;
+        width: 25%;
     }
-
 }
