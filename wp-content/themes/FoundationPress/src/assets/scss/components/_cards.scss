@@ -8,11 +8,36 @@
   }
   
   &-info {
+      
+    @include breakpoint(small) {
+      padding: 0 30px;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    @include breakpoint(medium) {
+      padding: 0 100px;
+      text-align: unset;
+      flex-direction: row;
+    }
+  
+    @include breakpoint(xlarge) {
+      padding: 0 200px;
+    }
+
+
     display: flex;
-    padding: 0px 200px;
     justify-content: space-between;
 
     &_text {
+
+      @include breakpoint(small) {
+        margin-bottom: 20px;
+      }
+
+      @include breakpoint(medium) {
+        margin-bottom: 0;
+      }
       
       h6 {
         color: $color-grey-dark-2;

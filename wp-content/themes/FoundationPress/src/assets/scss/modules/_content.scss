@@ -54,11 +54,19 @@
 
   }
 
-  .status-publish {
-    display: none;
-  }
 }
 
 hr {
   display: none;
+}
+
+.page-template-front-krnjevac,
+.page-template-about {
+  .entry-content {
+    display: none;
+  }
+}
+
+.title-bar {
+  display: none!important;
 }

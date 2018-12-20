@@ -1,6 +1,12 @@
-<h3><?php the_title(); ?></h3>
-<div class="about_type_1_body"><?php the_content(); ?></div>
+<div class="section-info">
+    <div class="section-info_title">
+        <h2><?php the_title(); ?></h2>
+        <?php the_field('icon_list'); ?>
+        </ul>
+    </div>
+    <div class="section-info_content"><?php the_content(); ?></div>
 
-   <?php the_field('icon_list'); ?>
-</ul>
-<a href="#">Gde kupiti</a>
+
+</div>
+<!-- <a href="#">Gde kupiti</a> -->
+

@@ -14,7 +14,17 @@
 
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
+		<div class="hero hero_about" style="background-image: url('http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnja-hero.jpg')">
+			<div class="hero_content main-container">
+				<div class="hero_content--text">
+					<h1 class="hero_content--title">Garantovano 100% prirodnimed bez ikakvih dodataka</h1>
+					<h5 class="hero_content--link"><a href="#">Kupi Krnjevac proizvode <i class="icon-arrow-right"></i></a></h5>
+					<h5 class="hero_content--link"><a href="#">Kontrola kvaliteta <i class="icon-arrow-right"></i></a></h5>
+					<div class="hero_content--more-link"><h5>Saznaj više o Krnjevac medu</h5><i class="icon-001-down-arrow"></i></div>
+				</div>
+			</div>
+		</div>
+
 <div class="main-container">
 	<div class="main-grid">
 		<main class="main-content">
@@ -47,15 +57,22 @@ get_header(); ?>
                         ?>
     
                         <?php foreach( $faq as $post ): ?>
-                            <?php    setup_postdata( $post );?>
-                            <div class="faq_single">
-                                <h3><?php the_title(); ?></h3>
-                                <div class="faq_content"><?php the_content(); ?></div> 
-                            </div>
+							<?php    setup_postdata( $post );?>
+							<div class="faq-wrap">
+								<input type="checkbox" id="collapse" class="toggle">
+								<label for="collapse" class="faq-toggle">
+									<h5><?php the_title(); ?></h5>
+									<i class="icon-003-down-arrow-1"></i>
+								</label>
+                            	<div class="faq-wrap_content">
+                                	<div class="faq-wrap_content--inner"><?php the_content(); ?></div> 
+                            	</div>
+							</div>
+						
                         <?php endforeach; ?>
-            </div>
+			</div>
+			
 		</main>
-		<?php get_sidebar(); ?>
 	</div>
 </div>
 <?php

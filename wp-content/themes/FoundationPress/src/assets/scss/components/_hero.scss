@@ -1,12 +1,21 @@
 .hero {
-   padding-top: 40px;
+    @include breakpoint(medium) {
+        padding-top: 100px;
+    }
+
+   padding-top: 70px;
    background-color: #000;
 
     &_content {
+
+        @include breakpoint(medium) {
+            padding: 125px 30px 200px 30px;
+        }
+
         position: relative;
         height: 650px;
         overflow: hidden;
-        padding: 125px 30px 200px 30px;
+        padding: 30px 55px 20px 55px;
 
 
         &--bg-video {
@@ -28,14 +37,24 @@
         }
 
         &--text {
+            @include breakpoint(medium) {
+                text-align: unset;
+            }
+
+            text-align: center;
             position: relative;
             z-index: 15;
             color: $white;
         }
 
         &--title {
+            @include breakpoint(medium) {
+                width: 450px;
+                font-size: 55px;
+            }
+
             font-weight: bold;
-            width: 450px;
+            font-size: 34px;
             line-height: 1;
             margin-bottom: 25px;
         }
@@ -55,4 +74,49 @@
         }
     }
 
+}
+
+// ABOUT PAGE HERO
+
+.hero_about {
+    background-size: cover;
+    background-position: center center;
+
+    .hero_content--title {
+        width: 520px;
+        line-height: 1.5;
+    }
+
+    .hero_content--text {
+        position: static;
+    }
+
+    .hero_content--link {
+        
+        a {
+            color: $white;
+            font-weight: bold;
+            display: flex;
+
+            i {
+                display: block;
+                padding-top: 3px;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .hero_content--more-link {
+        display: flex;
+        align-items: center;
+        width: 300px;
+        position: absolute;
+        right: 0;
+        bottom: 70px;
+
+        i {
+            font-size: 39px;
+            margin-left: 20px;
+        }
+    }
 }

@@ -1,7 +1,12 @@
-<h3><?php the_title(); ?></h3>
-<div class="about_type_1_body"><?php the_content(); ?></div>
+<div class="section-info-img">
+    <div class="section-info-img_content">
+    <h3 class="section-info-img_content--title"><?php the_title(); ?></h3>
+    <div class="section-info-img_content--desc"><?php the_content(); ?></div>
+    <a href="#" class="section-info-img_content--link">Gde kupiti <i class="icon-arrow-right"></i></a>
+    </div>
 
-   <?php the_field('icon_list'); ?>
+   <div class="section-info-img_image" style="background-image: url('<?php the_post_thumbnail_url(  ); ?> ')">  </div>
+  
 
-   <div class="about_about-about_type-2--img" style="background-image: url('<?php the_post_thumbnail_url(  ); ?> ')"> OVDE SAM STAVIO NEKI TEKST SAMO DA BI VIDEO DA POSTOJI </div>
-   <a href="#">Gde kupiti</a>
+</div>
+<?php the_field('icon_list'); ?>

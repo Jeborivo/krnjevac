@@ -1,33 +1,74 @@
 .front_wtb{
-    height: 640px;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 150px;
-    
+    @include breakpoint(small) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 75px;
+    }
+    @include breakpoint(medium) {
+        flex-direction: row;
+        margin-top: 150px;
+    }
 
     &--text {
-        width: 40%;
-        margin-left: 355px;
-        margin-right: auto;
-        padding-top: 135px;
 
-        h2 {
-            font-weight: bold;
-            margin-bottom: 25px;
-        }
 
-        h3 {
-            font-size: 24px;
-            font-weight: bold;
-            font-size: 24px;
-            width: 75%;
-            margin-bottom: 35px;
+        @include breakpoint(small) {
+            width: 100%;
+            text-align: center;
+            padding: 50px;
+
+            h2 {
+                font-weight: bold;
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            h3 {
+                font-size: 15px;
+                font-weight: bold;
+                width: 100%;
+                margin-bottom: 15px;
+            }
         }
+        @include breakpoint(medium) {
+            width: 40%;
+            text-align: unset;
+            margin-left: 180px;
+            margin-right: auto;
+            padding-top: 0;
+
+            h2 {
+                margin-bottom: 25px;
+                font-size: 36px;
+            }
+            h3 {
+                font-size: 18px;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        @include breakpoint(xlarge) {
+            width: 40%;
+            text-align: unset;
+            margin-left: 355px;
+            margin-right: auto;
+            padding-top: 135px;
+
+            h3 {
+                font-size: 24px;
+                width: 75%;
+                margin-bottom: 35px;
+            }
+        }    
     }
 
     &--image {
-        background-size: cover;
-        background-position: center center;
-        width: 25%;
+        @include breakpoint(small) {
+            width: 50%;
+            margin-left: auto;
+        }
+        @include breakpoint(medium) {
+            width: 25%;
+        }
     }
 }
