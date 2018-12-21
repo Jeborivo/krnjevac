@@ -5,7 +5,9 @@
       $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'Popular', 'orderby' => 'rand' );
       $loop = new WP_Query( $args );
       while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+      <?php $productId= $product->get_id();?>
         <div class="card">
+
           <div class="card-content">
               <div class="card-content_description">
                 <h4 class="card-content_description--title"><?php the_title(); ?></h4>
@@ -24,13 +26,13 @@
                 </h3>
               </div>
               <?php if ( has_post_thumbnail( $product->get_id() ) ):?>
-              <?php $attachment_ids[0] = get_post_thumbnail_id( $product->get_id() );?>
+              <?php $attachment_ids[0] = get_post_thumbnail_id( $productId );?>
               <?php $attachment = wp_get_attachment_image_src($attachment_ids[0], 'full' ); ?>
               <div class="card-content_image" style="background-image: url('<?php the_post_thumbnail_url(  ); ?> ')">
               </div>
               <?php endif; ?>
-              <!-- <a href="?add-to-cart=1">+</a> sta je ovo jbga? -->
-              <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
+              <a href="?add-to-cart=<?php echo ($productId); ?>">+</a>
+           
             </div>
         </div>
       <?php endwhile; ?>
