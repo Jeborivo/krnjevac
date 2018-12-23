@@ -1,84 +1,191 @@
 .footer {
 
     &-container {
-        background-color: $white;
-        padding: 90px 115px 50px;
-        position: relative;
-        border: none;
+
+        @include breakpoint (small) {
+            background-color: $white;
+            padding: 30px 30px 20px;
+            position: relative;
+            border: none;
+
+        }
+        @include breakpoint (medium) {
+            padding: 45px 50px 35px;
+        }
+        @include breakpoint (large) {
+            padding: 90px 115px 50px;
+        }
+
         
         .links-logo-wrap {
-            display: flex;
-            margin-bottom: 80px;
+            @include breakpoint (small) {
+                display: flex;
+                margin-bottom: 20px;
+                flex-direction: column;
+            }
+            @include breakpoint (medium) {
+                margin-bottom: 40px;
+
+            }
+            @include breakpoint (large) {
+                margin-bottom: 80px;
+                flex-direction: row;
+            }
         }
 
         .footer-logo {
-            margin-right: 110px;
-
-            &_text {
+            @include breakpoint(small) {
                 width: 110px;
+                margin: auto;
+
+                &_text {
+                    width: 110px;
+                    text-align: center;
+                }
             }
+            @include breakpoint(medium) {
+                
+            }
+            @include breakpoint(large) {
+                margin: 0 110px auto auto;
+            }
+
         }
 
         .footer-links {
-            width: 340px;
-            height: 240px;
-            padding-top: 15px;
+            // display: none;
 
-            .desktop-menu {
-                flex-direction: column;
-                width: 340px;
-                height: 240px;
+            @include breakpoint (small) {
+                margin: auto;
+                width: 100%;
+                padding-top: 15px;
 
-                .menu-item {
-                    width: 200px;
-                }
-                
-                li {
-                    width: 170px;
-                    margin-right: 70px;
-
-                    a {
-                        font-size: $h6-medium-font-size;
-                        color: $black;
-                        padding: 0;
-
-                        &:hover {
-                            color: $primary-color;
+                .desktop-menu {
+                    flex-direction: column;
+                    margin: auto;
+                    text-align: center;
+    
+                    .menu-item {
+                        
+                    }
+                    
+                    li {
+                        // margin-right: 10px;
+    
+                        a {
+                            font-size: $h6-medium-font-size;
+                            color: $black;
+                            padding: 0;
+    
+                            &:hover {
+                                color: $primary-color;
+                            }
                         }
+                    }
+    
+                    li:not(:last-child) {
+                        padding-bottom: 17px;
                     }
                 }
 
-                li:not(:last-child) {
-                    padding-bottom: 17px;
-                }
+
             }
+
+            @include breakpoint (medium) {
+
+                .desktop-menu {
+                    text-align: unset;
+                    width: 340px;
+                    height: 240px;
+                }
+                
+            }
+            @include breakpoint (large) {
+                // margin-right: 110px
+                width: 340px;
+                height: 240px;
+                padding-top: 15px;
+                
+            }
+
+
+
         }
 
         .footer-search {
-            height: 60px;
-            width: 270px;
-            position: absolute;
-            top: 90px;
-            right: 115px;
+            @include breakpoint(small){
+                align-self: center;
+                height: 30px;
+                margin-top: 10px;
+            }
+            @include breakpoint(medium){
+                height: 45px;
+                width: 270px;
+                margin-top: 0;
+               
+            }
+            @include breakpoint(large){
+                align-self: unset;
+                height: 60px;
+                width: 270px;
+                
+            }
+
             
         }
 
-        .footer-addres {
-            color: #9E9E9E;
-            position: absolute;
-            bottom: 50px;
-            right: 115px;
 
-            h4 {
-                font-weight: bold;
-                text-align: right;
+        .footer-address-company-wrap {
+            @include breakpoint (small){
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column-reverse;
+
+
+                .footer-address {
+                    color: #9E9E9E;
+    
+                    h4 {
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+                .footer-company {
+                    margin-top: auto;
+                    text-align: center;
+                }
             }
-        }
+            @include breakpoint (medium){
+                flex-direction: row;
 
-        .footer-company {
-            position: absolute;
-            bottom: 50px;
-            left: 115px;
+
+                .footer-address {
+
+                    h4 {
+                    text-align: right;
+                    }
+                }
+                .footer-company {
+                    text-align: unset;
+                }
+            }
+            @include breakpoint (large){
+                
+            }
+
+
+            // .footer-address {
+            //     color: #9E9E9E;
+    
+            //     h4 {
+            //         font-weight: bold;
+            //         text-align: right;
+            //     }
+            // }
+            
+            // .footer-company {
+            //     margin-top: auto;
+            // }
         }
     }
 }

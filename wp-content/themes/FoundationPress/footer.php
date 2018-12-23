@@ -20,15 +20,17 @@
             <div class="footer-links">
             <?php foundationpress_footer(); ?>
             </div>
+            <div class="footer-search"><?php get_search_form(); ?></div>
         </div>
 
-        <div class="footer-search"><?php get_search_form(); ?></div>
 
-        <div class="footer-addres">
-            <h4 class="footer-addres_phone">+381 26 821 080</h4>
+        <div class="footer-address-company-wrap">
+        <div class="footer-company"><h6>Medino DOO Krnjevo - www.medino.rs</h6></div>
+        <div class="footer-address">
+            <h4 class="footer-address_phone">+381 26 821 080</h4>
             <h4 class="footer-address_mail">office@krnjevac.rs</h4>
         </div>
-        <div class="footer-company"><h6>Medino DOO Krnjevo - www.medino.rs</h6></div>
+        </div>
     </div>
 </footer>
 

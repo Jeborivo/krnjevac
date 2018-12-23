@@ -130,14 +130,14 @@
         }
   
       }
-  
+
       @include breakpoint(medium) {
         @include xy-cell(1 of 2, true, 24px );
   
       }
   
       @include breakpoint(large) {
-        @include xy-cell(1 of 3, true, 24px );
+        @include xy-cell(1 of 2, true, 24px );
   
       }
   

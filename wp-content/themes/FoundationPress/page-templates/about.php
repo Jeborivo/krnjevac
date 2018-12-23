@@ -60,7 +60,7 @@ get_header(); ?>
 							<?php    setup_postdata( $post );?>
 							<div class="faq-wrap">
 								<input type="checkbox" id="collapse" class="toggle">
-								<label for="collapse" class="faq-toggle">
+								<label for="collapse" class="form-toggle">
 									<h5><?php the_title(); ?></h5>
 									<i class="icon-003-down-arrow-1"></i>
 								</label>

@@ -1,164 +1,302 @@
 .page-template-about {
     .main-content {
         width: 100%;
+        margin: 0;
     }
 
     .section-info {
-        display: flex;
-        padding: 100px 215px;
-        justify-content: space-between;
-
-        &_title {
-            width: 41%;
+    
+        @include breakpoint(small) {
             display: flex;
+            padding: 30px 20px;
             flex-direction: column;
 
-            h2 {
-                font-weight: bold;
-                margin-bottom: 140px;
+            &_title {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+    
+                h2 {
+                    font-weight: bold;
+                    margin-bottom: 30px;
+                }
+    
+                .icon-list {
+                    margin-left: 0;
+                    list-style-type: none;
+    
+                    li {
+                        font-size: $h5-medium-font-size;
+                        color: $color-grey-dark-1;
+                        text-align: center;
+                    }
+                }
             }
 
+        
+            &_content {
+                width:100%;
+                text-align: center;
+    
+                p {
+                    line-height: 2.1;
+                    margin-bottom: 0;
+                }
+    
+                p:first-child {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        
+        @include breakpoint(medium) {
+            padding: 50px 20px;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &_title {
+                width: 41%;
+                text-align: unset;
+    
+                h2 {
+                    font-weight: bold;
+                    margin-bottom: 140px;
+                }
+            }
+
+                
             .icon-list {
                 
                 li {
                     font-size: $h5-medium-font-size;
                     color: $color-grey-dark-1;
+                    text-align: unset;
+                }
+            }
+        
+            &_content {
+                width: 48%;
+                text-align: unset;
+    
+                p {
+                    line-height: 2.1;
+                    margin-bottom: 0;
+                }
+    
+                p:first-child {
+                    margin-bottom: 50px;
                 }
             }
         }
-
-        &_content {
-            width: 48%;
-
-            p {
-                line-height: 2.1;
-                margin-bottom: 0;
-            }
-
-            p:first-child {
-                margin-bottom: 50px;
-            }
+        
+        @include breakpoint(large) {
+            padding: 100px 180px;
+            
         }
+
+        @include breakpoint(xlarge) {
+            padding: 100px 215px;
+            
+        }
+
     }
 
     .section-info-img + .section-info {
         
         .section-info_title {
-            flex-direction: column-reverse;
-            width: 45%;
+            @include breakpoint (small) {
+                flex-direction: column-reverse;
+                width: 100%;
+                text-align: center;
+    
+                h2 {
+                    margin-bottom: 0;
+                }
+    
+                .icon-list {
+                    margin-bottom: 30px;
+                }
 
-            h2 {
-                margin-bottom: 0;
+            }
+            @include breakpoint (medium) {
+                width: 45%;
+                text-align: unset;
+
+                .icon-list {
+                    margin-bottom: 80px;
+                }
+
+            }
+            @include breakpoint (large) {
+                
+                .icon-list {
+                    margin-bottom: 130px;
+                }
             }
 
-            .icon-list {
-                margin-bottom: 130px;
-            }
         }
     }
 
     .section-info-img {
-        padding: 100px 115px;
-        display: flex;
-        justify-content: space-between;
 
-        &_content {
-            width: 40%;
-
-            &--title {
-                font-size: 30px;
-                font-weight: bold;
-                margin-bottom: 45px;
-                width: 310px;
-            }
-
-            &--desc {
-                margin-bottom: 15px;
-                
-                p {
-                    line-height: 2.1;
-                }
-            }
-
-            &--link {
-                font-size: $h5-medium-font-size;
-                font-weight: bold;
-                color: $black;
-                display: flex;
-
-                i {
-                    display: block;
-                    padding-top: 3px;
-                    margin-left: 5px;
-                }
-            }
-        }
+        @include breakpoint(small) {
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            
+            &_content {
+                width: 100%;
     
-        &_image {
-            width: 55%;
-            background-size: cover;
-            background-position: center center;
+                &--title {
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+    
+                &--desc {
+                    margin-bottom: 15px;
+                    text-align: center;
+                    
+                    p {
+                        line-height: 2.1;
+                    }
+                }
+    
+                &--link {
+                    font-size: $h5-medium-font-size;
+                    font-weight: bold;
+                    color: $black;
+                    display: flex;
+                    justify-content: center;
+    
+                    i {
+                        display: block;
+                        padding-top: 3px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            &_image {
+                width: 100%;
+                height: 300px;
+                background-size: cover;
+                background-position: center center;
+            }
         }
+        @include breakpoint(medium) {
+            padding: 50px 20px;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &_content {
+                width: 40%;
+    
+                &--title {
+                    font-size: 30px;
+                    text-align: unset;
+                    margin-bottom: 45px;
+                    width: 310px;
+                }
+    
+                &--desc {
+                    text-align: unset;
+                    
+                }
+    
+                &--link {
+                    justify-content: left;
+                }
+            }
+
+            &_image {
+                width: 55%;
+                height: auto;
+            }
+        }
+        @include breakpoint(large) {
+            padding: 100px 115px;
+        }
+ 
     }
 
     .faq {
-        padding: 100px 115px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
 
-        .faq-wrap {
-            padding: 20px;
-            margin-bottom: 35px;
-            border: 1px solid $color-grey-dark-1;
-            width: 31%;
+        @include breakpoint (small) {
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
 
-
-            input[type='checkbox'] {
-                display: none;
-            }
+            .faq-wrap {
+                padding: 20px;
+                margin-bottom: 35px;
+                border: 1px solid $color-grey-dark-1;
+                width: 100%;
     
-            .faq-toggle {
-                display: flex;
-
-
-                h5 {
-                    font-weight: normal;
-                    transition: all .5s;
+    
+                input[type='checkbox'] {
+                    display: none;
+                }
+        
+                .faq-toggle {
+                    display: flex;
+    
+    
+                    h5 {
+                        font-weight: normal;
+                        transition: all .5s;
+                    }
+    
+                    i {
+                        display: block;
+                        color: $black;
+                        width: 20px;
+                        height: 20px;
+    
+                        transition: all .5s;
+                    }
+                }
+    
+                &_content {
+                    max-height: 0px;
+                    overflow: hidden;
+                  
+                    transition: max-height .5s ease-in-out;
+    
+                    p {
+                        padding: 8px;
+                    }
                 }
 
-                i {
-                    display: block;
-                    color: $black;
-                    width: 20px;
-                    height: 20px;
 
-                    transition: all .5s;
+                .toggle:checked + .faq-toggle  i {
+                    transform: rotate(180deg) translateX(3px);
                 }
-            }
-
-            &_content {
-                max-height: 0px;
-                overflow: hidden;
-              
-                transition: max-height .5s ease-in-out;
-
-                p {
-                    padding: 8px;
+    
+                .toggle:checked + .faq-toggle  h5 {
+                    font-weight: bold;
                 }
+    
+                .toggle:checked + .faq-toggle + .faq-wrap_content {
+                    max-height: 350px;
+                }               
+            }
+        }
+        @include breakpoint (medium) {
+            padding: 50px 20px;
+            flex-direction: row;
+
+            .faq-wrap {
+                width: 31%;
             }
 
-            .toggle:checked + .faq-toggle  i {
-                transform: rotate(180deg) translateX(3px);
-            }
-
-            .toggle:checked + .faq-toggle  h5 {
-                font-weight: bold;
-            }
-
-            .toggle:checked + .faq-toggle + .faq-wrap_content {
-                max-height: 350px;
-            }
+        }
+        @include breakpoint (large) {
+            padding: 100px 115px;
         }
     }
 }

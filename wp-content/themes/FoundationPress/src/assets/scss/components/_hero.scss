@@ -83,8 +83,13 @@
     background-position: center center;
 
     .hero_content--title {
-        width: 520px;
-        line-height: 1.5;
+        @include breakpoint(small) {
+            line-height: 1.5;
+        }
+        @include breakpoint(medium) {
+            width: 520px;
+        }
+
     }
 
     .hero_content--text {
@@ -94,9 +99,16 @@
     .hero_content--link {
         
         a {
-            color: $white;
-            font-weight: bold;
-            display: flex;
+            @include breakpoint(small) {
+                color: $white;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+            }
+            @include breakpoint(medium) {
+                justify-content: left;
+            }
+
 
             i {
                 display: block;
@@ -107,16 +119,126 @@
     }
 
     .hero_content--more-link {
-        display: flex;
-        align-items: center;
-        width: 300px;
-        position: absolute;
-        right: 0;
-        bottom: 70px;
+
+        @include breakpoint(small) {
+            display: flex;
+            align-items: center;
+            width: 300px;
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+            bottom: 70px;
+        }
+        @include breakpoint(medium) {
+            display: flex;
+            align-items: center;
+            width: 300px;
+            position: absolute;
+            right: 0;
+            transform: translateX(0);
+            bottom: 70px;
+        }
 
         i {
             font-size: 39px;
             margin-left: 20px;
+        }
+    }
+}
+
+
+// WHERE TO BUY HERO 
+
+.hero_wtb {
+    margin-top: 0!important;
+    @include breakpoint(small) {
+        padding-top: 70px;
+
+        &--text {
+
+            h1 {
+                font-size: 36px;
+                font-weight: bold;
+            }
+    
+            h3 {
+                font-size: 18px;
+                line-height: 2;
+                margin-bottom: 30px;
+            }
+        }
+
+        .hero_wtb--link-wrap {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            align-items: center;
+        }
+
+        a {
+            @include breakpoint(small) {
+                color: $black;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+            }
+            @include breakpoint(medium) {
+                justify-content: left;
+            }
+
+
+            i {
+                display: block;
+                padding-top: 3px;
+                margin-left: 5px;
+            }
+        }
+
+        .go-to-shop {
+            padding: 18px 35px;
+            width: 265px;
+            
+            h5 {
+                font-weight: bold;
+                margin: 0;
+            }
+        }
+
+    }
+    @include breakpoint(medium) {
+        padding-top: 100px;
+        
+        &--text {
+            h1 {
+                font-size: $h2-medium-font-size;
+            }
+    
+            h3 {
+                font-size: $h3-medium-font-size;
+            }
+        }
+
+        .hero_wtb--link-wrap {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0;
+            
+        }
+
+        .go-to-shop {
+            padding: 18px 56px;
+            margin-bottom: 0;
+            margin-right: 60px;
+            width: 300px;
+            
+        }
+    }
+    @include breakpoint(large) {
+        &--text {
+            h1 {
+                font-size: $h1-medium-font-size;
+            }
         }
     }
 }
