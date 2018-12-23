@@ -55,10 +55,11 @@ get_header(); ?>
                             'post_type'         => 'faq',                 
                         ));
                         ?>
-    
+						<?php $br =0;?>
                         <?php foreach( $faq as $post ): ?>
+						<?php $br++;?>
 							<?php    setup_postdata( $post );?>
-							<div class="faq-wrap">
+							<div class="faq-wrap faq_<?php echo $br?>">
 								<input type="checkbox" id="collapse" class="toggle">
 								<label for="collapse" class="form-toggle">
 									<h5><?php the_title(); ?></h5>
