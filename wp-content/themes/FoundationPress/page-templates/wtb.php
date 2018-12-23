@@ -14,16 +14,6 @@
 
 get_header(); ?>
 
-		<!-- <div class="hero hero_about" style="background-image: url('http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnja-hero.jpg')">
-			<div class="hero_content main-container">
-				<div class="hero_content--text">
-					<h1 class="hero_content--title">Garantovano 100% prirodnimed bez ikakvih dodataka</h1>
-					<h5 class="hero_content--link"><a href="#">Kupi Krnjevac proizvode <i class="icon-arrow-right"></i></a></h5>
-					<h5 class="hero_content--link"><a href="#">Kontrola kvaliteta <i class="icon-arrow-right"></i></a></h5>
-					<div class="hero_content--more-link"><h5>Saznaj više o Krnjevac medu</h5><i class="icon-001-down-arrow"></i></div>
-				</div>
-			</div>
-        </div> -->
         
     <div class="front_wtb hero_wtb">
     <div class="front_wtb--text hero_wtb--text">
