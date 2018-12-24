@@ -60,19 +60,33 @@ get_header(); ?>
 						<?php $br++;?>
 							<?php    setup_postdata( $post );?>
 							<div class="faq-wrap faq_<?php echo $br?>">
-								<input type="checkbox" id="collapse" class="toggle">
-								<label for="collapse" class="form-toggle">
-									<h5><?php the_title(); ?></h5>
-									<i class="icon-003-down-arrow-1"></i>
-								</label>
-                            	<div class="faq-wrap_content">
+							<button class="collapsible">
+							<h5><?php the_title(); ?></h5>
+							<i class="icon-003-down-arrow-1"></i>
+							</button>
+                            	<div class="content">
                                 	<div class="faq-wrap_content--inner"><?php the_content(); ?></div> 
                             	</div>
 							</div>
-						
                         <?php endforeach; ?>
 			</div>
 			
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 		</main>
 	</div>
 </div>

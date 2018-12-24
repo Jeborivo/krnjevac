@@ -77,11 +77,11 @@
 					<h5 class="info_adress">Bulevar oslobođenja 29, 11319 Krnjevo, Srbija</h5>
 				</div>
 				<div class="nav_links">
-					<div class="faq">
-						<a href="#" class="faq_link">Kontrola kvaliteta</a>
-						<a href="#" class="faq_link">Gde kupiti</a>
-						<a href="#" class="faq_link">Uslovi korišćenja i prodaje</a>
-						<a href="#" class="faq_link">Kako poručiti proizvod</a>
+					<div class="faq-nav">
+						<a href="#" class="faq-nav_link">Kontrola kvaliteta</a>
+						<a href="#" class="faq-nav_link">Gde kupiti</a>
+						<a href="#" class="faq-nav_link">Uslovi korišćenja i prodaje</a>
+						<a href="#" class="faq-nav_link">Kako poručiti proizvod</a>
 					</div>
 					<div class="about">
 						<a href="#" class=about_link">Blog</a>

@@ -117,6 +117,27 @@
                 align-self: center;
                 height: 30px;
                 margin-top: 10px;
+                margin-bottom: 20px;
+
+                .input-group-field {
+                    background-color: #E9E9E9;
+                    border: none!important;
+                    box-shadow: none!important;
+                    color: $black;
+                }
+
+                .input-group-button {
+                    width: 58px;
+                    background-color: #E9E9E9;
+                }
+                
+                #searchsubmit {
+                    background: url("http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/icons/search.svg") no-repeat;
+                    background-position: center center;
+                    background-size: 17px 17px; 
+                    padding: 20px 28px;
+                    box-shadow: none;
+                }
             }
             @include breakpoint(medium){
                 height: 45px;

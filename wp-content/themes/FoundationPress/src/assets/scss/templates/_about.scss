@@ -232,60 +232,14 @@
             justify-content: space-between;
 
             .faq-wrap {
+                position: relative;
                 padding: 20px;
                 margin-bottom: 35px;
                 border: 1px solid $color-grey-dark-1;
-                width: 100%;
-    
-    
-                input[type='checkbox'] {
-                    display: none;
-                }
-        
-                .faq-toggle {
-                    display: flex;
-    
-    
-                    h5 {
-                        font-weight: normal;
-                        transition: all .5s;
-                    }
-    
-                    i {
-                        display: block;
-                        color: $black;
-                        width: 20px;
-                        height: 20px;
-    
-                        transition: all .5s;
-                    }
-                }
-    
-                &_content {
-                    max-height: 0px;
-                    overflow: hidden;
-                  
-                    transition: max-height .5s ease-in-out;
-    
-                    p {
-                        padding: 8px;
-                    }
-                }
-
-
-                .toggle:checked + .faq-toggle  i {
-                    transform: rotate(180deg) translateX(3px);
-                }
-    
-                .toggle:checked + .faq-toggle  h5 {
-                    font-weight: bold;
-                }
-    
-                .toggle:checked + .faq-toggle + .faq-wrap_content {
-                    max-height: 350px;
-                }               
+                width: 100%; 
             }
         }
+
         @include breakpoint (medium) {
             padding: 50px 20px;
             flex-direction: row;
@@ -299,5 +253,32 @@
             padding: 100px 115px;
         }
     }
+
+    .collapsible {
+        display: flex;
+        align-items: center;
+        color: black;
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 14px;
+      }
+      
+      .content {
+        padding: 20px;
+        margin-top: 20px;
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        border-left: 1px solid $color-grey-dark-1;
+        border-right: 1px solid $color-grey-dark-1;
+        border-bottom: 1px solid $color-grey-dark-1;
+        background: $white;
+        left: -1px;
+        width: calc(100% + 2px);
+        z-index: 15;
+      }
 }
 
