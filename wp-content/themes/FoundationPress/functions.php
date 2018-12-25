@@ -125,3 +125,31 @@ function mytheme_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
+// removing single-product tabs
+/**
+ * Remove product data tabs
+ */
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+
+function woo_remove_product_tabs( $tabs ) {
+
+    unset( $tabs['description'] );      	// Remove the description tab
+    unset( $tabs['reviews'] ); 			// Remove the reviews tab
+    unset( $tabs['additional_information'] );  	// Remove the additional information tab
+
+    return $tabs;
+}
+
+// removes thumbnail from single product
+function remove_gallery_and_product_images() {
+    if ( is_product() ) {
+        remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+        }
+    }
+    add_action('loop_start', 'remove_gallery_and_product_images');
+
+    /**
+ * Remove related products output
+ */
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+

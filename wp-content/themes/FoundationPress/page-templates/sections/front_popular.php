@@ -7,7 +7,6 @@
       while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
       <?php $productId= $product->get_id();?>
         <div class="card">
-
           <div class="card-content">
               <div class="card-content_description">
                 <h4 class="card-content_description--title"><?php the_title(); ?></h4>
@@ -20,7 +19,7 @@
                   <?php 
                   $sale= $product->get_sale_price();
                   if($sale != ''):?>
-                  <?php echo($product->get_sale_price());?>
+                  <?php echo($sale);?>
                   <?php echo(',-');?>
                   <?php endif; ?>
                 </h3>
