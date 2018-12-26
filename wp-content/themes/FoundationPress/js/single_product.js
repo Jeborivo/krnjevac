@@ -1,3 +1,9 @@
+var selectedVariation;
+var attributeValue;
+var productId;
+var addToCartLink;
+var quantity;
+
 $( document ).ready(function() {
     var variation = 1;
     
@@ -6,9 +12,10 @@ $( document ).ready(function() {
     
  });
 function addToCart(){
-   var quantity=1;
-   quantity = $('.quantity').val();
-   console.log(quantity);
+   
+   quantity = document.getElementById("cart_quantity").value;
+   addToCartLink='?add-to-cart='+productId+'&variation_id='+selectedVariation+'&attribute_gramaza='+attributeValue+'&quantity='+quantity;
+   window.location.href = addToCartLink;
     
 }
 
@@ -21,10 +28,10 @@ function attributeSelect(selected){
 
 }
 function variationSetup(variation){
-    var selectedVariation = $('.variation_'+variation).text();
-    var attributeValue = $('#attributeSelectorButton'+variation).val();
-    var productId= $('#product_id').text();
-    var addToCartLink='?add-to-cart='+productId+'&variation_id='+selectedVariation+'&attribute_gramaza='+attributeValue+'&quantity=3';
+    selectedVariation = $('.variation_'+variation).text();
+    attributeValue = $('#attributeSelectorButton'+variation).val();
+    productId= $('#product_id').text();
+   
 
  
     

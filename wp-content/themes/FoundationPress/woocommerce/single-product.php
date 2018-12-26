@@ -19,7 +19,10 @@ get_header(); ?>
 		<script src="wp-content/themes/FoundationPress/js/single_product.js"></script>
 			
 			<?php while ( have_posts() ) : the_post(); ?>
-			<?php wc_get_template_part( 'content', 'single-product' ); ?>
+			<?php if( $product->is_type( 'simple' ) ): ?>
+				case of single product
+			<?php else:?>
+		
 			<?php
 				// loads product variations
                   $product = new WC_Product_Variable($product->get_id());
@@ -78,8 +81,9 @@ get_header(); ?>
 			
 		 
 			</div>
-			
+		<?php endif;?>
 			<?php endwhile; ?>
+		
 		</main>
 	
 	</div>
