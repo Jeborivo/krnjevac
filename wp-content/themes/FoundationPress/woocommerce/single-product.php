@@ -31,12 +31,11 @@ get_header(); ?>
 				  $br1=0;
 				  $br2=0;
 				 ?>
-
-			
 			<h2><?php echo $product->get_name();?></h2>
 			<h3 class="active_attribute"></h3>
 			<div class="variation_select">
 				<div id="product_id"><?php echo ($product->get_id()); ?></div>
+				
 			<?php foreach ( $variations as $variation ) :?>
 	
 			<!-- lists all atrributes -->
@@ -82,6 +81,19 @@ get_header(); ?>
 		 
 			</div>
 		<?php endif;?>
+		<?php $relatedProducts = wc_get_related_products($product->get_id())?>
+		<h2> Related</h2>
+			<?php foreach ($relatedProducts as $related):?>
+			<div class="card">
+        		<div class="card-content">
+					<?php $relatedProduct = wc_get_product( $related );?>
+					<?php echo $relatedProduct->get_title();?>
+					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $related ), 'single-post-thumbnail' );?>
+					<img class="card-content_image" src="<?php  echo $image[0]; ?>" >
+					<a href="<?php echo get_permalink($related); ?>"> Jos</a>
+				</div>
+			</div>
+			<?php endforeach;?>
 			<?php endwhile; ?>
 		
 		</main>

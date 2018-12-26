@@ -39,7 +39,7 @@ get_header( 'shop' ); ?>
 			$variations = $product->get_available_variations();?>
 		 
 			
-			<?php foreach ( $variations as $variation ) :?>
+			<?php foreach ( $variations as $variation ) :?>z
 			<div class="product_image">
 			  <?php  echo "<img src=" . $variation['image']['thumb_src'] .">"; ?>
 			</div>
