@@ -20,6 +20,10 @@ get_header(); ?>
 		<div class="product-container">
 
 			<?php while ( have_posts() ) : the_post(); ?>
+			<?php if( $product->is_type( 'simple' ) ): ?>
+				case of single product
+			<?php else:?>
+		
 			<?php
 				// loads product variations
                   $product = new WC_Product_Variable($product->get_id());
@@ -28,8 +32,25 @@ get_header(); ?>
 				  $br1=0;
 				  $br2=0;
 				 ?>
-
-			<div class="product-var-image product">
+			<h2><?php echo $product->get_name();?></h2>
+			<h3 class="active_attribute"></h3>
+			<div class="variation_select">
+				<div id="product_id"><?php echo ($product->get_id()); ?></div>
+				
+			<?php foreach ( $variations as $variation ) :?>
+	
+			<!-- lists all atrributes -->
+			
+				<?php if (isset($product->get_attributes()['gramaza']['options'][$br1])): ?>
+					  <input id="attributeSelectorButton<?php echo $br1+1;?>"onclick="attributeSelect(this.name)"name="<?php echo $br1+1;?>" class="active button_<?php echo $br1;?> " type="button" value="<?php echo ($product->get_attributes()['gramaza']['options'][$br1]); ?>">
+					  <div class="variationId variation_<?php echo $br1+1;?>"><?php echo $variation['variation_id'];?></div>
+			   <?php endif;?>
+			   <div class="stock stock<?php echo $br1+1;?>"><?php echo $variation['is_in_stock'];?></div>
+			   <?php $br1++; ?>
+			<?php endforeach;?>
+			<div class="stockIcon"></div>
+			</div>
+				
 			<?php foreach ( $variations as $variation ) :?>
 				<?php $br++; ?>
 				<div class="variation_image variation_image_<?php echo $br;?>">
@@ -82,14 +103,27 @@ get_header(); ?>
 						</h3>
 					<?php endforeach;?>
 	
-						<input id='cart_quantity' class="quantity product-info_price-quantity-to-cart-wrap--quantity" value="1" type="number" name="quantity" min="1" max="99">
-						<input type="button" id="variation_add_to_cart" class="button product-info_price-quantity-to-cart-wrap--button" onclick="addToCart()"value="Dodaj u korpu">
-					</div>
-
+			<input id='cart_quantity' class="quantity" value="1" type="number" name="quantity" min="1" max="99">
+			<input type="button" id="variation_add_to_cart" onclick="addToCart()"value="Add to cart">
 			
-			</div><!-- product-info -->
+		 
+			</div>
+		<?php endif;?>
+		<?php $relatedProducts = wc_get_related_products($product->get_id())?>
+		<h2> Related</h2>
+			<?php foreach ($relatedProducts as $related):?>
+			<div class="card">
+        		<div class="card-content">
+					<?php $relatedProduct = wc_get_product( $related );?>
+					<?php echo $relatedProduct->get_title();?>
+					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $related ), 'single-post-thumbnail' );?>
+					<img class="card-content_image" src="<?php  echo $image[0]; ?>" >
+					<a href="<?php echo get_permalink($related); ?>"> Jos</a>
+				</div>
+			</div>
+			<?php endforeach;?>
 			<?php endwhile; ?>
-		</div><!--Product-container -->
+		
 		</main>
 	
 	</div>
