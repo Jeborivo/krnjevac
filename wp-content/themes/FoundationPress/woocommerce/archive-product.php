@@ -12,8 +12,9 @@
  * @since FoundationPress 1.0.0
  */
 get_header(); ?>
-
-<?php get_template_part( 'template-parts/featured-image' ); ?>
+    <script src="wp-content/themes/FoundationPress/js/multirange.js"></script>
+    <script src="wp-content/themes/FoundationPress/js/jquery.js"></script>
+		
 <div class="main-container">
 	<div class="main-grid">
 	<div class="filters">
@@ -40,12 +41,22 @@ get_header(); ?>
 			?>
 
 
-        <div class="filters">
+        <link rel="stylesheet" href="multirange.css">
+        <div class="range">
+        
+        <input id="range_slider" type="range" multiple value="0,100" />
+          <p class="low_value"></p><p class="high_value"></p>
+        </div>
+       
+
+          <div>
+  
+</div>
           <ul class="category_filter">
             <h3>Kategorije</h3>
             <?php foreach ($all_categories as $cat):?>
             <?php if($cat->name != 'Popular'):?>
-              <input type="button" id="<?php echo $cat->name?>" onclick="categoryFilter(this.value)" value="<?php echo $cat->name?>"> <br>
+              <input type="button" id="<?php echo $cat->name?>"class="<?php echo str_replace(' ','_',$cat->name); ?>" onclick="categoryFilter(this.value)" value="<?php echo $cat->name?>"> <br>
             <?php endif;?>
             <?php endforeach; ?>
           </ul>
@@ -57,8 +68,7 @@ get_header(); ?>
             <input type="button" id="lipov_med" onclick="vrsteMedaFilter(this.id)" value="Lipov med"> <br>
             <input type="button" id="cvetni_med" onclick="vrsteMedaFilter(this.id)" value="Cvetni med"> <br>
           </ul>
-  
-        </div>
+
 	</div>
 		<main class="main-content">
                 <ul  id="product_list"class="products">
@@ -88,7 +98,8 @@ get_header(); ?>
                                               <?php foreach ($terms as $term) :?>
                                                    <?php $product_cat_id = $term->term_id;?>
                                                    <?php  if( $term = get_term_by( 'id', $product_cat_id, 'product_cat' ) ):?>
-                                                      <?php array_push($categories,$term->name);?>
+                                                      <?php $catFormatted =str_replace(" ","_", $term->name); ?>
+                                                      <?php array_push($categories,$catFormatted);?>
                                                    <?php endif; ?>
                                  <?php endforeach; ?>
 
@@ -107,10 +118,10 @@ get_header(); ?>
                                   <p><?php echo ($product->get_attributes()['gramaza']['options'][$br]); ?></p>
                                <?php endif;?>
                                <!-- displays price -->
-                               <h3 class="card-content_descriptio--price"> <?php echo $single_variation->get_regular_price(); ?>,- 
+                               <h3 class="card-content_descriptio--price"> <span id="regular_price"><?php echo $single_variation->get_regular_price(); ?></span>,- 
                                 <?php $sale= $single_variation->get_sale_price(); ?>
                                <?php if($sale != ''):?>
-                                        <?php echo($sale);?>
+                               <span id="sale_price"> <?php echo($sale);?></span>
                                         <?php echo(',-');?>
                                 <?php endif; ?>
                                 </h3>
