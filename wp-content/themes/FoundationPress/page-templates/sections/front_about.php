@@ -8,6 +8,6 @@
 			<a href="#" class="more-link">Više o kontroli kvaliteta <i class="icon-arrow-right"></i></a>
 		</div>
 	</div>
-		<div class="section_about--img" style="background-image: url('<?php the_post_thumbnail_url(  ); ?> ')">
+	<div class="section_about--img" style="background-image: url('<?php the_post_thumbnail_url(  ); ?> ')">
 	</div>
 </div>

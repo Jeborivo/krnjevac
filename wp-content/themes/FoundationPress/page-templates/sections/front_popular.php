@@ -15,7 +15,7 @@
                   <?php echo ($product->get_attributes()['gramaza']['options'][0]); ?>
                   <?php endif;?>
                 </h6>
-                <h3 class="card-content_descriptio--price"><?php echo($product->get_regular_price()) ?> ,- 
+                <h3 class="card-content_description--price"><?php echo($product->get_regular_price()) ?> ,- 
                   <?php 
                   $sale= $product->get_sale_price();
                   if($sale != ''):?>
@@ -30,7 +30,7 @@
               <div class="card-content_image" style="background-image: url('<?php the_post_thumbnail_url(  ); ?> ')">
               </div>
               <?php endif; ?>
-              <a href="?add-to-cart=<?php echo ($productId); ?>">+</a>
+              <a href="?add-to-cart=<?php echo ($productId); ?>" class="add_to_cart_button button"><h3>+</h3></a>
            
             </div>
         </div>

@@ -8,8 +8,43 @@
 
     &_content {
 
+        @include breakpoint(small) {
+            &--bg-video {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 50%;
+                width: 100%;
+                z-index: 1;    
+            }
+
+            &--button {
+                display: inline-flex;
+    
+                .icon-arrow-right {
+                    display: block;
+                    margin: auto;
+                }
+            }
+        }
+
         @include breakpoint(medium) {
             padding: 125px 30px 200px 30px;
+
+            &--bg-video {
+                top: 0;
+                height: 100%;
+                width: 60%;
+            }
+
+            &--button {
+                display: inline-flex;
+    
+                .icon-arrow-right {
+                    display: block;
+                    margin: 0 0 0 5px;
+                }
+            }
         }
 
         position: relative;
@@ -19,14 +54,6 @@
 
 
         &--bg-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            z-index: 1;
-            
-          
 
             .bg-video_content {
                 height: 100%;
@@ -64,14 +91,14 @@
             font-weight: bold;
         }
 
-        &--button {
-            display: inline-flex;
+        // &--button {
+        //     display: inline-flex;
 
-            .icon-arrow-right {
-                display: block;
-                margin-left: 5px;
-            }
-        }
+        //     .icon-arrow-right {
+        //         display: block;
+        //         margin-left: 5px;
+        //     }
+        // }
     }
 
 }
