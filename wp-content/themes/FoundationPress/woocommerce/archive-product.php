@@ -69,6 +69,8 @@ get_header(); ?>
             <input type="button" id="cvetni_med" onclick="vrsteMedaFilter(this.id)" value="Cvetni med"> <br>
           </ul>
 
+          <div id="gramaza" class="gramaza"></div>
+
 	</div>
 		<main class="main-content">
                 <ul  id="product_list"class="products">
@@ -104,7 +106,8 @@ get_header(); ?>
                                  <?php endforeach; ?>
 
                               <!-- Product grid classes -->
-                              <div class="product                                
+                              <div class="product         
+                              <?php echo ($product->get_attributes()['gramaza']['options'][$br]); ?>                       
                               <?php the_field('vrste_meda'); ?>
                               <?php foreach($categories as $category):?>
                               <?php echo $category;?>
@@ -115,7 +118,7 @@ get_header(); ?>
                                 </div>
                                 <!-- lists  Gramaza attribute -->
                                <?php if (isset($product->get_attributes()['gramaza']['options'][$br])): ?>
-                                  <p><?php echo ($product->get_attributes()['gramaza']['options'][$br]); ?></p>
+                                  <p class="product_gramaza"> <?php echo ($product->get_attributes()['gramaza']['options'][$br]); ?></p>
                                <?php endif;?>
                                <!-- displays price -->
                                <h3 class="card-content_descriptio--price"> <span id="regular_price"><?php echo $single_variation->get_regular_price(); ?></span>,- 
