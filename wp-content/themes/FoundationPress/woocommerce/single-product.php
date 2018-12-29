@@ -20,10 +20,6 @@ get_header(); ?>
 		<div class="product-container">
 
 			<?php while ( have_posts() ) : the_post(); ?>
-			<?php if( $product->is_type( 'simple' ) ): ?>
-				case of single product
-			<?php else:?>
-		
 			<?php
 				// loads product variations
                   $product = new WC_Product_Variable($product->get_id());
@@ -32,25 +28,8 @@ get_header(); ?>
 				  $br1=0;
 				  $br2=0;
 				 ?>
-			<h2><?php echo $product->get_name();?></h2>
-			<h3 class="active_attribute"></h3>
-			<div class="variation_select">
-				<div id="product_id"><?php echo ($product->get_id()); ?></div>
-				
-			<?php foreach ( $variations as $variation ) :?>
-	
-			<!-- lists all atrributes -->
-			
-				<?php if (isset($product->get_attributes()['gramaza']['options'][$br1])): ?>
-					  <input id="attributeSelectorButton<?php echo $br1+1;?>"onclick="attributeSelect(this.name)"name="<?php echo $br1+1;?>" class="active button_<?php echo $br1;?> " type="button" value="<?php echo ($product->get_attributes()['gramaza']['options'][$br1]); ?>">
-					  <div class="variationId variation_<?php echo $br1+1;?>"><?php echo $variation['variation_id'];?></div>
-			   <?php endif;?>
-			   <div class="stock stock<?php echo $br1+1;?>"><?php echo $variation['is_in_stock'];?></div>
-			   <?php $br1++; ?>
-			<?php endforeach;?>
-			<div class="stockIcon"></div>
-			</div>
-				
+
+			<div class="product-var-image product">
 			<?php foreach ( $variations as $variation ) :?>
 				<?php $br++; ?>
 				<div class="variation_image variation_image_<?php echo $br;?>">
@@ -103,13 +82,16 @@ get_header(); ?>
 						</h3>
 					<?php endforeach;?>
 	
-			<input id='cart_quantity' class="quantity" value="1" type="number" name="quantity" min="1" max="99">
-			<input type="button" id="variation_add_to_cart" onclick="addToCart()"value="Add to cart">
+						<input id='cart_quantity' class="quantity product-info_price-quantity-to-cart-wrap--quantity" value="1" type="number" name="quantity" min="1" max="99">
+						<input type="button" id="variation_add_to_cart" class="button product-info_price-quantity-to-cart-wrap--button" onclick="addToCart()"value="Dodaj u korpu">
+					</div>
+
 			
-		 
-			</div>
-		<?php endif;?>
-		<?php $relatedProducts = wc_get_related_products($product->get_id())?>
+			</div><!-- product-info -->
+			<?php endwhile; ?>
+		</div><!--Product-container -->
+
+				<?php $relatedProducts = wc_get_related_products($product->get_id())?>
 		<h2> Related</h2>
 			<?php foreach ($relatedProducts as $related):?>
 			<div class="card">
@@ -122,8 +104,6 @@ get_header(); ?>
 				</div>
 			</div>
 			<?php endforeach;?>
-			<?php endwhile; ?>
-		
 		</main>
 	
 	</div>
