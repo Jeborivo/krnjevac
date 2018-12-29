@@ -8,7 +8,7 @@ $( document ).ready(function() {
     $('.low_value').text(priceLow+' rsd');
     $('.high_value').text(priceHigh+' rsd');
     $('.product_gramaza').each(function(i,value){
-    var gramazaValue= $(this).text()
+    var gramazaValue= $(this).text();
     gramazaValue=gramazaValue.replace(' ','');
       if ($.inArray($(this).text(), gramaze) == -1){
           gramaze.push($(this).text());
@@ -59,15 +59,16 @@ $( document ).ready(function() {
 var classArray = [];
 function categoryFilter(category){
     var catFormatted = category.replace(' ','_');
+    console.log(catFormatted);
     if(jQuery.inArray(catFormatted,classArray)==-1){
     classArray.push(catFormatted);
-    $('#'+category).css("background-color","yellow");
+    $('#'+catFormatted).css("background-color","yellow");
     }
     else{
         classArray = $.grep(classArray, function(value) {
             return value != catFormatted;
           });
-          $('#'+category).css("background-color","red");
+          $('#'+catFormatted).css("background-color","red");
           
     }
     filtering();

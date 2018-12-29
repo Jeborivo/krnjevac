@@ -56,7 +56,7 @@ get_header(); ?>
             <h3>Kategorije</h3>
             <?php foreach ($all_categories as $cat):?>
             <?php if($cat->name != 'Popular'):?>
-              <input type="button" id="<?php echo $cat->name?>"class="<?php echo str_replace(' ','_',$cat->name); ?>" onclick="categoryFilter(this.value)" value="<?php echo $cat->name?>"> <br>
+              <input type="button" id="<?php echo str_replace(' ','_',$cat->name); ?>"class="<?php echo str_replace(' ','_',$cat->name); ?>" onclick="categoryFilter(this.value)" value="<?php echo $cat->name?>"> <br>
             <?php endif;?>
             <?php endforeach; ?>
           </ul>
