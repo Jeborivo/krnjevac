@@ -2,6 +2,7 @@ var priceLow ;
 var priceHigh;
 
 $( document ).ready(function() {
+    $("#product-sort").val(0);
     priceLow = lowValue *12;
     priceHigh = highValue *12;
     var gramaze= [];
@@ -18,7 +19,25 @@ $( document ).ready(function() {
     });
 
  });
- 
+
+
+ // sorting 
+ function productSort(siteUrl){
+    var value = $('#product-sort').find(":selected").text();
+    var productOrderby;
+    switch(value) {
+        case 'Najprodavanije':
+            productOrderby='menu_order';
+          break;
+        case 'Datum':
+            productOrderby='date';
+          break;
+        case 'Ime':
+            productOrderby='title';
+        break;
+      }
+      window.location.replace(siteUrl+'?post_type=product&productOrderBy='+productOrderby);
+}
 //  range
  $(document).on('input', '#range_slider', function() {
     priceLow = lowValue *12;

@@ -40,18 +40,23 @@ get_header(); ?>
 				$all_categories = get_categories( $args );
 			?>
 
-
+        <!-- Sort -->
+        <div class="cort">
+          <span>SORTIRAJ</span>
+          <?php $site_url =  get_site_url();?>
+        <select id="product-sort" onchange="productSort('<?php echo $site_url; ?>')">
+            <option value="najprodavanije">Najprodavanije</option>
+            <option value="datum">Datum</option>
+            <option value="ime">Ime</option>
+        </select>
+        <span><a id="arrow-asc" href="#">strelica gore</a></span>
+        <span><a id="arrow-desc" href="#">strelica dole</a></span>
+        </div>
         <link rel="stylesheet" href="multirange.css">
         <div class="range">
-        
-        <input id="range_slider" type="range" multiple value="0,100" />
-          <p class="low_value"></p><p class="high_value"></p>
+          <input id="range_slider" type="range" multiple value="0,100" />
+            <p class="low_value"></p><p class="high_value"></p>
         </div>
-       
-
-          <div>
-  
-</div>
           <ul class="category_filter">
             <h3>Kategorije</h3>
             <?php foreach ($all_categories as $cat):?>
@@ -75,6 +80,8 @@ get_header(); ?>
 		<main class="main-content">
                 <ul  id="product_list"class="products">
                 <?php
+                    $productOrderBy;
+                    $productOrder;
                     $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'orderby'=>'title', 'order'=>'desc', 'tax_query' => array( array(
                         'taxonomy' => 'product_cat',
                         'field' => 'id',
