@@ -2,6 +2,18 @@ var priceLow ;
 var priceHigh;
 
 $( document ).ready(function() {
+    var currentUrl = window.location.href ;
+    if (currentUrl.indexOf("productOrderBy") <= 0){
+        window.location.replace(currentUrl+'&productOrderBy=menu_order&itemOrder=ASC');
+        $("#product-sort").val("najprodavanije");
+        var element = document.getElementById("product-sort");
+        var selectedValue = element.options[element.selectedIndex].value;
+        // vidi sa borom kako mu najlakse da se prikazuje vrednost (iz nekog razloga nece u selectu)
+       
+        } 
+  
+    
+
     $("#product-sort").val(0);
     priceLow = lowValue *12;
     priceHigh = highValue *12;
@@ -36,8 +48,32 @@ $( document ).ready(function() {
             productOrderby='title';
         break;
       }
-      window.location.replace(siteUrl+'?post_type=product&productOrderBy='+productOrderby);
+      window.location.replace(siteUrl+'?post_type=product&productOrderBy='+productOrderby+'&itemOrder=ASC');
 }
+ function arrowAsc(){
+    event.preventDefault();
+     var currentUrl = window.location.href ;
+     if (currentUrl.indexOf("itemOrder") >= 0){
+        currentUrl = currentUrl.replace("DESC", "ASC");
+        window.location.replace(currentUrl);
+        } 
+     else {
+         alert('ne moze');
+        }
+    
+
+ }
+ function arrowDesc(){
+    event.preventDefault();
+    var currentUrl = window.location.href ;
+     if (currentUrl.indexOf("itemOrder") >= 0){
+        currentUrl = currentUrl.replace("ASC", "DESC");
+        window.location.replace(currentUrl);
+        } 
+     else {
+         alert('ne moze');
+        }
+ }
 //  range
  $(document).on('input', '#range_slider', function() {
     priceLow = lowValue *12;

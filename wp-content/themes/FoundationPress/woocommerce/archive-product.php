@@ -19,7 +19,7 @@ get_header(); ?>
 	<div class="main-grid">
 	<div class="filters">
 	<!-- shows product categories -->
-			<?php
+      <?php
 				$taxonomy     = 'product_cat';
 				$orderby      = 'name';  
 				$show_count   = 0;      // 1 for yes, 0 for no
@@ -49,8 +49,8 @@ get_header(); ?>
             <option value="datum">Datum</option>
             <option value="ime">Ime</option>
         </select>
-        <span><a id="arrow-asc" href="#">strelica gore</a></span>
-        <span><a id="arrow-desc" href="#">strelica dole</a></span>
+        <span><a id="arrow-asc" onclick="arrowAsc()" href="" >strelica gore</a></span>
+        <span><a id="arrow-desc" onclick="arrowDesc()" href="" >strelica dole</a></span>
         </div>
         <link rel="stylesheet" href="multirange.css">
         <div class="range">
@@ -80,15 +80,27 @@ get_header(); ?>
 		<main class="main-content">
                 <ul  id="product_list"class="products">
                 <?php
-                    $productOrderBy;
-                    $productOrder;
-                    $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'orderby'=>'title', 'order'=>'desc', 'tax_query' => array( array(
+                if (isset($_GET['productOrderBy'])){
+                  $productOrderBy = $_GET['productOrderBy'];
+                }
+                else {
+                  $productOrderBy = 'title';
+                }
+                if (isset($_GET['itemOrder'])){
+                  $productOrder= $_GET['itemOrder'];
+                }
+                else {
+                  $productOrder = 'ASC';
+                }
+               
+                    $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'orderby'=>$productOrderBy, 'order'=> $productOrder, 'tax_query' => array( array(
                         'taxonomy' => 'product_cat',
                         'field' => 'id',
                         'terms' => array( 18 ), // Product category ID to exlude from display(popular cat in this case)
                         'operator' => 'NOT IN',
                     ) ),);
                     $loop = new WP_Query( $args );
+                    // SORTING NE MOZE DIREKTNO IZ  QUERYIJA, MORACU DIREKTNO NIZ DA SORTIRAM, MOZDA CAK I PRAVITI NOV, ZA SAD MOZE DA SE STILIZUJE
                     while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
                          <?php $productId= $product->get_id();?>
                          <?php
