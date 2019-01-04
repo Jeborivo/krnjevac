@@ -97,7 +97,7 @@ function create_posttype() {
         
 		
     );
-     // Front
+     // FAQ
      register_post_type( 'faq',
      // CPT Options
          array(
@@ -107,13 +107,27 @@ function create_posttype() {
              ),
              'public' => true,
              'has_archive' => true,
-             'rewrite' => array('slug' => 'Front sections'),
+             'rewrite' => array('slug' => 'Faq'),
              
              
          )
          
          
      );
+     register_post_type( 'related_product',
+     // CPT Options
+         array(
+             'labels' => array(
+                 'name' => __( 'Related Product' ),
+                 'singular_name' => __( 'Related Product' ),
+             ),
+             'supports' => array( 'title', 'editor','thumbnail' ),
+             'public' => true,
+             'has_archive' => true,
+             'rewrite' => array('slug' => 'Related Product'),
+             
+             
+            ));
    
 }
 

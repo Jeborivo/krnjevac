@@ -90,20 +90,51 @@ get_header(); ?>
 			</div><!-- product-info -->
 			<?php endwhile; ?>
 		</div><!--Product-container -->
+			<!-- custom related  -->
+			<?php 
+			// query
+				$args = array( 'post_type' => 'related_product', 'posts_per_page' => -1,'meta_key'=> 'product_display','meta_value'	=> $product->get_id());
+				$loop = new WP_Query( $args );
+			?>
+			<h2> Related</h2>
+			<?php while ( $loop->have_posts() ) : $loop->the_post();
+			// values
+				$value = get_field( "product_link" );
+				$productRelated = new WC_Product_Variable($value->post_parent );
+				
+				$variable_product = wc_get_product($value->ID);
+			$thumbnail = get_the_post_thumbnail_url($value->ID);
+				
+			?>
+		
 
-				<?php $relatedProducts = wc_get_related_products($product->get_id())?>
-		<h2> Related</h2>
-			<?php foreach ($relatedProducts as $related):?>
+
 			<div class="card">
         		<div class="card-content">
-					<?php $relatedProduct = wc_get_product( $related );?>
-					<?php echo $relatedProduct->get_title();?>
-					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $related ), 'single-post-thumbnail' );?>
-					<img class="card-content_image" src="<?php  echo $image[0]; ?>" >
-					<a href="<?php echo get_permalink($related); ?>"> Jos</a>
+					<h3 class="title"><?php echo get_the_title( $value->post_parent ); ?></h3>
+					<h4 class="gramaza"><?php echo $variable_product->get_attributes()['gramaza']; ?></h4>
+					<div class="cena">	<?php echo $variable_product->get_regular_price(); ?></span>,- 
+                                <?php $sale= $variable_product->get_sale_price(); ?>
+                               <?php if($sale != ''):?>
+                               <span id="sale_price"> <?php echo($sale);?></span>
+                                        <?php echo(',-');?>
+								<?php endif; ?>
+			
+			</div>
+					<img class="card-content_image" src="<?php  echo $thumbnail; ?>" >
+					<a href="?add-to-cart=<?php echo ($value->post_parent ); ?>&variation_id=<?php echo $value->ID?>&attribute_gramaza=<?php echo ( $variable_product->get_attributes()['gramaza']); ?>">+</a>
 				</div>
 			</div>
-			<?php endforeach;?>
+			
+				
+			
+		<?php	endwhile;?>
+			 
+				
+		
+		
+		
+
 		</main>
 	
 	</div>

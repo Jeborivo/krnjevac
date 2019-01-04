@@ -179,6 +179,7 @@ function filtering(){
         }
     });
     if(classArray.length==0){
+        $('.product').removeClass('filter_hidden');
         $('.product').show();
     }
     if($('.product_title:visible').length==0){
