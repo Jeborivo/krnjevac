@@ -17,14 +17,9 @@
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
 		<link rel="stylesheet" href="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/font-icons/icons.css">
 		<script src="wp-content/themes/FoundationPress/js/script.js"></script>
-		
-		
-		
-		
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
 		<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
 	<?php endif; ?>
