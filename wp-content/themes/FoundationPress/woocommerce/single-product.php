@@ -90,22 +90,52 @@ get_header(); ?>
 			</div><!-- product-info -->
 			<?php endwhile; ?>
 		</div><!--Product-container -->
-
-				<?php $relatedProducts = wc_get_related_products($product->get_id())?>
-		<h2> Related</h2>
-			<?php foreach ($relatedProducts as $related):?>
-			<div class="card">
-        		<div class="card-content">
-					<?php $relatedProduct = wc_get_product( $related );?>
-					<?php echo $relatedProduct->get_title();?>
-					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $related ), 'single-post-thumbnail' );?>
-					<img class="card-content_image" src="<?php  echo $image[0]; ?>" >
-					<a href="<?php echo get_permalink($related); ?>"> Jos</a>
+		<div class="related-products cards">
+			<div class="related-filters">
+				<div class="related-filters_buttons">
+					<button type="button" class="button btn-grey related-filters_buttons--last">Poslednje pregledano</button>
+					<button type="button" class="button btn-grey related-filters_buttons--most">Najprodavanije</button>
 				</div>
+				<a href="#" class="related-filters_link">Internet-prodavnica <i class="icon-arrow-right"></i></a>
 			</div>
-			<?php endforeach;?>
+			<div class="cards-container">
+			<?php $relatedProducts = wc_get_related_products($product->get_id())?>
+
+				<?php foreach ($relatedProducts as $related):?>
+				<div class="card">
+        			<div class="card-content">
+						<?php $relatedProduct = wc_get_product( $related );?>
+						<h4 class="card-content_description--title"><?php echo $relatedProduct->get_title();?></h4>
+						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $related ), 'single-post-thumbnail' );?>
+						<div class="card-content_image" style="background-image: url('<?php  echo $image[0]; ?>')"></div>
+						<a href="<?php echo get_permalink($related); ?>"> Jos</a>
+					</div>
+				</div>
+				<?php endforeach;?>
+			</div> 
+		</div> <!--related-product-container -->
+
+		<div class="product-buy-info">
+			<div class="product-buy-info_address info-field">
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/phone.svg" alt="phone">
+				<h5> Korisnička podrška<br>
+				+381 26 821 080</h5>
+			</div>
+			<div class="product-buy-info_delivery info-field"> 
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/delivery.svg" alt="delivery">
+				<h5>Besplatna dostava za <br>
+				porudžbine iznad 1999,-</h5>
+			</div>
+			<div class="product-buy-info_safe info-field">
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/ssl.svg" alt="ssl">
+				<h5>Sigurna kupovina putem<br>
+				sertifikovane prodavnice</h5>
+			</div>
+			<div class="product-buy-info_button info-field">
+				<button class="button btn-grey"><img 			src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
+			</div>
+		</div>
 		</main>
-	
 	</div>
 </div>
 <?php

@@ -72,6 +72,8 @@
     .card {
       @include breakpoint(small) {
         @include xy-cell(12);
+
+        padding-top: 20px;
   
   
         .card-content {
