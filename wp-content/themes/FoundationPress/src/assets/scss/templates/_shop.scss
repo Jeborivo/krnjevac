@@ -1,0 +1,369 @@
+.post-type-archive-product {
+
+    .main-content {
+        width: 100%!important;
+        margin: 0;
+    }
+
+    .top-bar-left {
+        a {
+            color: black;
+        }
+    }
+    
+    .top-bar-right {
+        .icon-search,
+        .icon-cart {
+            color: black;
+        }
+
+        .navigation__icon {
+            background-color: black;
+            &::before,
+            &::after {
+                background-color: black;
+            }
+        }
+    }
+
+    .main-grid {
+        margin-top: 0;
+
+        @include breakpoint (small) {
+            padding-top: 70px;
+        }
+
+        @include breakpoint (medium) {
+            padding-top: 100px;
+        }
+    }
+
+    .shop-container {
+        @include xy-grid;
+
+        @include breakpoint(small) {
+
+            .filters {
+                @include xy-cell(12)
+                
+                padding: 0 40px;
+
+                .filter-collapsible {
+
+                    input[type='checkbox'] {
+                        display: none;
+                        font-size: h5-medium-font-size;
+                    }
+                    
+                    .filter-colapse-content {
+                        max-height: 0px;
+                        overflow: hidden;
+                      
+                        transition: max-height .25s ease-in-out;
+                    }
+
+                    .ft-toggle:checked + .filter-toggle + .filter-colapse-content {
+                        max-height: 500px;
+                    }
+
+                }
+
+                .vrste-collapsible {
+
+                    input[type='checkbox'] {
+                        display: none;
+                        font-size: h5-medium-font-size;
+                    }
+                    
+                    .vrste-colapse-content {
+                        max-height: 0px;
+                        overflow: hidden;
+                      
+                        transition: max-height .25s ease-in-out;
+                    }
+
+                    .vr-toggle:checked + .vrste-toggle + .vrste-colapse-content {
+                        max-height: 500px;
+                    }
+
+                }
+
+                .gramaza-collapsible {
+
+                    input[type='checkbox'] {
+                        display: none;
+                        font-size: h5-medium-font-size;
+                    }
+                    
+                    .gramaza-colapse-content {
+                        max-height: 0px;
+                        overflow: hidden;
+                      
+                        transition: max-height .25s ease-in-out;
+
+                        #range-slider {
+                            display: none!important;
+                        }
+
+                    }
+
+                    .gr-toggle:checked + .gramaza-toggle + .gramaza-colapse-content {
+                        max-height: 500px;
+                    }
+
+
+                }
+
+                .price-collapsible {
+
+                    input[type='checkbox'] {
+                        display: none;
+                        font-size: h5-medium-font-size;
+                    }
+                    
+                    .price-colapse-content {
+                        max-height: 0px;
+                        overflow: hidden;
+                      
+                        transition: max-height .25s ease-in-out;
+
+                        .range {
+                            visibility: hidden;
+                            position: relative;
+                            padding-top: 20px;
+
+                            transition: all .25s ease-in-out;
+
+                            #range_slider {
+                                width: 100%;
+                            }
+
+                            .value-container {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 20px;
+                                
+                                span {
+                                    color: $color-grey-dark-3;
+                                    font-size: $h6-medium-font-size;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+
+                    .pr-toggle:checked + .price-toggle + .price-colapse-content {
+                        max-height: 500px;
+
+                        .range {
+                            visibility: visible;
+                        }
+                    }
+                }
+
+                .button {
+                    background-color: $white;
+                    color: #636363;
+                    width: 100%;
+                    text-align: left;
+                    font-size: $h6-medium-font-size;
+                    font-weight: unset;
+                    border-radius: 0;
+                    margin-bottom: 10px;
+                }
+                
+                label {
+                    color: $color-grey-dark-3;
+                    font-weight: bold;
+                    margin: 0;
+                    width: 100%;
+                }
+            }
+
+            .product-list {
+                @include xy-cell(12)
+                padding: 0 20px;
+
+                .products-container {
+                    @include xy-grid;
+
+                    .card {
+                        @include xy-cell(12);
+                        margin-bottom: 24px;
+                        flex-grow: unset;
+
+                        .card-content {
+  
+                            position: relative;
+                            
+                            &_description {
+                              padding: 3px 20px 20px 20px;
+                    
+                              &--title {
+                                font-weight: bold;
+                                color: $color-grey-dark-2;
+                              }
+                    
+                              &--weight {
+                                color: $color-grey-light-2;  
+                              }
+                    
+                              &--price {
+                                color: $color-grey-dark-2;
+                              }
+                    
+                            }
+                    
+                    
+                            .add_to_cart_button {
+                    
+                              padding: 20px;
+                              position: absolute;
+                              height: 50px;
+                              width: 50px;
+                              top: 20px;
+                              right: 20px;
+                              border-radius: 100%;
+                              background-color: $primary-color;
+                    
+                              h3 {
+                    
+                                @include breakpoint(small) {
+                                  font-size: $h3-medium-font-size;
+                                }
+                                
+                                color: $white;
+                                position: absolute;
+                                top: 7%;
+                                left: 35%;
+                              }
+                            }
+                    
+                            &_image {
+                              display: block;
+                              height: 230px;
+                              background-size: cover;
+                              background-position: center center;
+                    
+                            }
+                    
+                        }
+
+                    }
+                }
+            }
+        }
+
+        @include breakpoint(medium) {
+
+            .filters {
+                @include xy-cell(1 of 4)
+            }
+
+            .product-list {
+                @include xy-cell(3 of 4)
+                padding: 0 50px;
+
+                .products-container {
+
+                    .card {
+                        @include xy-cell(1 of 2, true, 24px);
+
+
+                    }
+                }
+            }
+        }
+
+        @include breakpoint(large) {
+
+            .product-list {
+
+                .products-container {
+
+                    .card {
+                        @include xy-cell(1 of 3, true, 24px);
+
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+@supports (--css: variables) {
+	input[type="range"].multirange {
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	input[type="range"].multirange.original {
+        position: absolute;
+    }
+
+		input[type="range"].multirange.original::-webkit-slider-thumb {
+			position: relative;
+            z-index: 20;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #FFFFFF;
+            box-shadow: 0px 3px 6px rgba(0,0,0, .16);
+            border-radius: 100%;
+            cursor: pointer!important;
+        }
+
+        input[type="range"].multirange.ghost::-webkit-slider-thumb {
+			position: relative;
+            z-index: 15;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #FFFFFF;
+            box-shadow: 0px 3px 6px rgba(0,0,0, .16);
+            border-radius: 100%;
+            cursor: pointer!important;
+        }
+        
+
+
+        input[type="range" i] {
+            -webkit-appearance: none;
+            // width: 25px;
+            // background: #4CAF50;
+            // cursor: pointer;
+		}
+
+
+		input[type="range"].multirange.original::-moz-range-thumb {
+			transform: scale(1); /* FF doesn't apply position it seems */
+			z-index: 1;
+		}
+
+		input[type="range"].multirange::-moz-range-track {
+			border-color: transparent; /* needed to switch FF to "styleable" control */
+		}
+
+	    input[type="range"].multirange.ghost {
+        position: relative;
+		background: var(--track-background);
+		--track-background: linear-gradient(to right,
+				transparent var(--low), var(--range-color) 0,
+				var(--range-color) var(--high), transparent 0
+			) no-repeat 0 45% / 100% 40%;
+        --range-color: #FFBB00;
+	    }
+
+		input[type="range"].multirange.ghost::-webkit-slider-runnable-track {
+            background: var(--track-background);
+		}
+
+		input[type="range"].multirange.ghost::-moz-range-track {
+            background: var(--track-background);
+		}
+
+}

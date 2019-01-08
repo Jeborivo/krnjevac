@@ -117,13 +117,13 @@ function categoryFilter(category){
     console.log(catFormatted);
     if(jQuery.inArray(catFormatted,classArray)==-1){
     classArray.push(catFormatted);
-    $('#'+catFormatted).css("background-color","yellow");
+    $('#'+catFormatted).css({'background-color' : '#FFBB00', 'color' : '#FCFCFC'});
     }
     else{
         classArray = $.grep(classArray, function(value) {
             return value != catFormatted;
           });
-          $('#'+catFormatted).css("background-color","red");
+          $('#'+catFormatted).css({'background-color' : '#FCFCFC', 'color' : '#636363'});
           
     }
     filtering();
@@ -134,13 +134,13 @@ function categoryFilter(category){
 function vrsteMedaFilter(id){
     if(jQuery.inArray(id,classArray)==-1){
         classArray.push(id);
-        $('#'+id).css("background-color","yellow");
+        $('#'+id).css({'background-color' : '#FFBB00', 'color' : '#FCFCFC'});
     }
     else{
         classArray = $.grep(classArray, function(value) {
             return value != id;
           });
-          $('#'+id).css("background-color","red");
+          $('#'+id).css({'background-color' : '#FCFCFC', 'color' : '#636363'});
     }
     filtering();
   
@@ -148,11 +148,11 @@ function vrsteMedaFilter(id){
 function gramazaFilter(gramaza){
         if(jQuery.inArray(gramaza,classArray)==-1){
             classArray.push(gramaza);
-            $('#'+gramaza).css("background-color","yellow");
+            $('#'+gramaza).css({'background-color' : '#FFBB00', 'color' : '#FCFCFC'});
           }
          else{
              classArray = $.grep(classArray, function(value) {
-            $('#'+gramaza).css("background-color","red");
+            $('#'+gramaza).css({'background-color' : '#FCFCFC', 'color' : '#636363'});
             return value != gramaza;
             
           });
@@ -179,6 +179,7 @@ function filtering(){
         }
     });
     if(classArray.length==0){
+        $('.product').removeClass('filter_hidden');
         $('.product').show();
     }
     if($('.product_title:visible').length==0){
