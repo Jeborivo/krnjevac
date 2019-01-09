@@ -18,7 +18,28 @@ get_header(); ?>
 <div class="main-container">
 	<div class="main-grid">
   <main class="main-content">
+
+    <div class="searchsort-container">
+      <!-- Sort -->
+      <div class="sort">
+        <?php $site_url =  get_site_url();?>
+          <select id="product-sort" onchange="productSort('<?php echo $site_url; ?>')">
+            <option value="" disabled selected hidden>Sortiraj</option>
+            <option value="najprodavanije">Najprodavanije</option>
+            <option value="datum">Datum</option>
+            <option value="ime">Ime</option>
+          </select>
+            <!-- <span><a id="arrow-asc" onclick="arrowAsc()" href="" >strelica gore</a></span>
+            <span><a id="arrow-desc" onclick="arrowDesc()" href="" >strelica dole</a></span> -->
+      </div>
+      <div class="search">
+          <?php get_search_form(); ?>
+      </div>
+    </div>
+
   <div class="shop-container">
+
+
 
 	  <div class="filters">
  
@@ -42,22 +63,9 @@ get_header(); ?>
 					'hide_empty'   => $empty
 				);
 				$all_categories = get_categories( $args );
-			?>
-
-        <!-- Sort -->
-          <div class="cort">
-            <span>SORTIRAJ</span>
-            <?php $site_url =  get_site_url();?>
-            <select id="product-sort" onchange="productSort('<?php echo $site_url; ?>')">
-              <option value="najprodavanije">Najprodavanije</option>
-              <option value="datum">Datum</option>
-              <option value="ime">Ime</option>
-            </select>
-            <span><a id="arrow-asc" onclick="arrowAsc()" href="" >strelica gore</a></span>
-            <span><a id="arrow-desc" onclick="arrowDesc()" href="" >strelica dole</a></span>
-          </div>
-
-          <div class="category_filter filter-collapsible">
+      ?>
+      
+          <div class="category_filter filter-collapsible filter-item">
             <input id="filter-colapse" class="ft-toggle" type="checkbox" checked>
             <label for="filter-colapse" class="filter-toggle">Kategorije</label>
               <div class="filter-colapse-content">
@@ -71,7 +79,7 @@ get_header(); ?>
               </div>
           </div>
           
-          <div class="vrste_meda vrste-collapsible">
+          <div class="vrste_meda vrste-collapsible filter-item">
             <input id="vrste-colapse" class="vr-toggle" type="checkbox" checked>
             <label for="vrste-colapse" class="vrste-toggle">Vrste meda</label>
               <div class="vrste-colapse-content">
@@ -84,7 +92,7 @@ get_header(); ?>
               </div>
           </div>
 
-          <div id="gramaza" class="gramaza gramaza-collapsible">
+          <div id="gramaza" class="gramaza gramaza-collapsible filter-item">
             <input id="gramaza-colapse" class="gr-toggle" type="checkbox" checked>
             <label for="gramaza-colapse" class="gramaza-toggle">Gramaza</label>
               <div class="gramaza-colapse-content">
@@ -94,7 +102,7 @@ get_header(); ?>
               </div>
           </div>
 
-          <div class="price price-collapsible">
+          <div class="price price-collapsible filter-item">
             <input id="price-colapse" class="pr-toggle" type="checkbox" checked>
             <label for="price-colapse" class="price-toggle">Cena</label>
               <div class="price-colapse-content">
@@ -202,8 +210,21 @@ get_header(); ?>
                     <?php endwhile ?>
             </div><!--/.products-->
             </div>
-            <div class="empty_results"></div>
+            <!-- <div class="empty_results"></div>  -->
             </div>
+
+          <div class="shop-newsletter">
+            <div class="shop-newsletter_title newsletter-item">
+              <h2 class="ntitle">Pretplati se na newsletter</h2>
+              <p>Vestibulum fringilla felis in finibus elementum. Maecenas venenatis massa a ullamcorper laoreet. Aenean at ex diam.</p>
+            </div>
+            
+              <form action="" class="shop-newsletter_email newsletter-item">
+                <input type="text" class="shop-newsletter_email--text " placeholder="E mail adresa">
+                <input type="submit" value="Pošalji" class="button btn-grey shop-newsletter_email--submit">
+              </form>
+        
+          </div>
 		</main>
 		
 	</div>
