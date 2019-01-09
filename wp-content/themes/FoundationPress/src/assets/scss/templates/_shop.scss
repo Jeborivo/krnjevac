@@ -38,15 +38,74 @@
         }
     }
 
+    .searchsort-container {
+
+        @include breakpoint(small) {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+            padding: 0 40px;
+
+            #product-sort {
+                height: 58px;
+            }
+
+            .input-group-field {
+                background-color: #F2F2F2;
+                border: none !important;
+                box-shadow: none !important;
+                color: #303030;
+            }
+
+            .input-group-button {
+                background-color: #F2F2F2;
+            }
+
+            #searchsubmit {
+                background: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/icons/search.svg) no-repeat;
+                background-position: center center;
+                background-size: 17px 17px;
+                padding: 20px 28px;
+                box-shadow: none;
+            }
+        }
+
+        @include breakpoint(medium) {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 90px;
+            padding: 0 75px 0 55px;
+
+            .sort {
+                width: 282px;                
+            }
+
+
+        }
+
+        @include breakpoint(large) {
+            padding: 0 75px 0 98px;
+        }
+    }
+
     .shop-container {
         @include xy-grid;
 
         @include breakpoint(small) {
 
             .filters {
-                @include xy-cell(12)
+                @include xy-cell(12);
                 
-                padding: 0 40px;
+                
+                padding: 0 30px;
+
+                .filter-item {
+                    
+                    border: 1px solid #DEDEDE;
+                    padding: 20px;
+                    margin-bottom: 12px;
+                }
+
 
                 .filter-collapsible {
 
@@ -258,11 +317,20 @@
 
             .filters {
                 @include xy-cell(1 of 4)
+                padding: 0 0 0 40px;
+
+                .filter-item {
+                    
+                    border: none;
+                    padding: 0;
+                    margin-bottom: 10px;
+                }
+                
             }
 
             .product-list {
                 @include xy-cell(3 of 4)
-                padding: 0 50px;
+                padding: 0 25px;
 
                 .products-container {
 
@@ -277,8 +345,12 @@
 
         @include breakpoint(large) {
 
-            .product-list {
+            .filters{
+                padding: 0 0 0 85px;
+            }
 
+            .product-list {
+                padding: 0 50px;
                 .products-container {
 
                     .card {
@@ -366,4 +438,91 @@
             background: var(--track-background);
 		}
 
+}
+
+.shop-newsletter {
+    @include breakpoint(small) {
+        @include xy-grid
+
+        padding: 30px 20px;
+
+        .newsletter-item {
+            @include xy-cell(12);
+        }
+
+        &_title {
+            text-align: center;
+
+            h2 {
+                color: #544951;
+                font-weight: bold;
+                margin-bottom: 45px;
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 2;
+            }
+        }
+
+        &_email {
+
+            display: flex;
+            height: 78px;
+            margin: auto 0;
+                
+            &--text {
+                margin: 0;
+                height: auto;
+                background-color: #D5D5D5;
+                color: $white;
+                padding-left: 38px;
+
+                &::placeholder {
+                    color: $white;
+                }
+
+                &:focus {
+                    background-color: #D5D5D5;
+                    border: none;
+                }
+            }
+
+            &--submit {
+                border-radius: 0px!important;
+                width: 167px!important;
+                background-color: #636363!important;
+                color: $white!important;
+            }
+        }
+    }
+
+    @include breakpoint(medium) {
+        padding: 80px 36px;
+
+        .newsletter-item {
+            @include xy-cell(12);
+        }
+
+
+    }
+
+    @include breakpoint(large) {
+        
+        .newsletter-item {
+            @include xy-cell(1 of 2, true, 150px);
+        }
+
+        &_title {
+            text-align: unset;
+
+            h2 {
+                font-size: 45px;
+            }
+        }
+
+        padding: 160px 23px;
+
+    }
 }
