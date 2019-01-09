@@ -114,7 +114,6 @@ $( document ).ready(function() {
 var classArray = [];
 function categoryFilter(category){
     var catFormatted = category.replace(' ','_');
-    console.log(catFormatted);
     if(jQuery.inArray(catFormatted,classArray)==-1){
     classArray.push(catFormatted);
     $('#'+catFormatted).css({'background-color' : '#FFBB00', 'color' : '#FCFCFC'});
@@ -164,19 +163,30 @@ function gramazaFilter(gramaza){
 function filtering(){
 
     $('.empty_results').text('');
-    br=0;
     
     var classComp = classArray.toString();
+   
     classComp = classComp.replace(/\,/g, ' ');
     $('.product').hide();
     $('.product').addClass('filter_hidden');
     $('.product').each(function(i,value){
-        if ( $( this ).hasClass( classComp )){
-            br++;
-            $(this).show();
-            $(this).removeClass('filter_hidden');
-            
-        }
+        var self=$(this);
+      var elementClasses = $(this).attr("class").split(' ');
+      var br =0;
+        classArray.forEach(function(item){  
+            if(jQuery.inArray(item, elementClasses) !== -1){
+                br++;
+            }
+            if(br == classArray.length){
+                self.show();
+                self.removeClass('filter_hidden');
+            }
+        });
+       
+        
+      
+     
+      
     });
     if(classArray.length==0){
         $('.product').removeClass('filter_hidden');
