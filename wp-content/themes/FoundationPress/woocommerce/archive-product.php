@@ -264,7 +264,6 @@ get_header(); ?>
                                </div>
                               </div>
                     <?php endforeach; ?>
-                    <!-- <?php  echo '<pre>' , var_dump($products_array), '</pre>';?> -->
             </div><!--/.products-->
             </div>
             <div class="empty_results"></div>
