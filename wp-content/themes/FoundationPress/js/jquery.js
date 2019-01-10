@@ -25,7 +25,7 @@ $( document ).ready(function() {
     gramazaValue=gramazaValue.replace(' ','');
       if ($.inArray($(this).text(), gramaze) == -1){
           gramaze.push($(this).text());
-          $('#gramaza').append(' <input id="'+gramazaValue+'"type="button" onclick="gramazaFilter(this.value)" value="'+gramazaValue+'"> ');
+          $('.gramaza-content-inner').append(' <input class="button" id="'+gramazaValue+'"type="button" onclick="gramazaFilter(this.value)" value="'+gramazaValue+'"> ');
         }
 
     });
@@ -47,6 +47,9 @@ $( document ).ready(function() {
         case 'Ime':
             productOrderby='title';
         break;
+        case 'Cena':
+            productOrderby='cena';
+          break;
       }
       window.location.replace(siteUrl+'?post_type=product&productOrderBy='+productOrderby+'&itemOrder=ASC');
 }
