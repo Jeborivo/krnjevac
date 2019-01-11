@@ -5,7 +5,7 @@
 		</h2>
 		<div class="text-content">
 			<?php the_content(); ?>
-			<a href="#" class="more-link">Više o kontroli kvaliteta <i class="fas fa-arrow-right"></i></a>
+			<a href="?page_id=102" class="more-link">Više o kontroli kvaliteta <i class="fas fa-arrow-right"></i></a>
 		</div>
 	</div>
 	<div class="section_about--img" >

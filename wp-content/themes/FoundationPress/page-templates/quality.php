@@ -21,7 +21,7 @@ get_header(); ?>
 					<h1 class="hero-quality_content--title">Šta je potrebno da med postane Krnjevac?</h1>
 					<h4 class="hero-quality_content--desc">U sedam pažljivo kontrolisanih koraka dolazimo do Krnjevac meda</h4>
 					<div class="hero-quality_content--button-link-wrap">
-						<button class="button hero-quality_content--button" type="button"> <a href=""> Krnjevac med <i class="fas fa-arrow-right"></i></a></button>
+						<button class="button hero-quality_content--button" type="button"> <a href="?page_id=55"> Krnjevac med <i class="fas fa-arrow-right"></i></a></button>
 						<a href="#step1" class="hero-quality_content--more-link"><h5>Kako nastaje Krnjevac</h5><i class="fas fa-angle-down"></i></a>
 					</div>
 				</div>
