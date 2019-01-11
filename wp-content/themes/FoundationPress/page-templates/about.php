@@ -14,12 +14,12 @@
 
 get_header(); ?>
 
-		<div class="hero hero_about" style="background-image: url('http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/aboutbg.png')">
+		<div class="hero hero_about" style="background-image: url('http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/aboutbg.png')">
 			<div class="hero_content main-container">
 				<div class="hero_content--text">
 					<h1 class="hero_content--title">Garantovano 100% prirodnimed bez ikakvih dodataka</h1>
-					<h5 class="hero_content--link"><a href="#">Kupi Krnjevac proizvode <i class="fas fa-arrow-right"></i></a></h5>
-					<h5 class="hero_content--link"><a href="#">Kontrola kvaliteta <i class="fas fa-arrow-right"></i></a></h5>
+					<h5 class="hero_content--link"><a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC">Kupi Krnjevac proizvode <i class="fas fa-arrow-right"></i></a></h5>
+					<h5 class="hero_content--link"><a href="?page_id=102">Kontrola kvaliteta <i class="fas fa-arrow-right"></i></a></h5>
 					<a class="hero_content--more-link" href="#section-info1">
 						<h5>Saznaj više o Krnjevac medu</h5><i class="fas fa-angle-down"></i>
 					</a>
