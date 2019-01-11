@@ -36,7 +36,7 @@ get_header(); ?>
             <div class="supermarkets-container">
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
                     </div>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
@@ -45,7 +45,7 @@ get_header(); ?>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
                     </div>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
@@ -54,7 +54,7 @@ get_header(); ?>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
                     </div>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
@@ -63,7 +63,7 @@ get_header(); ?>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
                     </div>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
@@ -72,7 +72,7 @@ get_header(); ?>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
                     </div>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
@@ -81,7 +81,7 @@ get_header(); ?>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
                     </div>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
@@ -90,7 +90,7 @@ get_header(); ?>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
                     </div>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
@@ -99,7 +99,7 @@ get_header(); ?>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
                     </div>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
