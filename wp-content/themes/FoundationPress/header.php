@@ -15,7 +15,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
-		<link rel="stylesheet" href="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/font-icons/icons.css">
+		<link rel="stylesheet" href="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/font-icons/icons.css">
 		<script src="wp-content/themes/FoundationPress/js/script.js"></script>
 		<?php wp_head(); ?>
 	</head>
@@ -38,7 +38,7 @@
 		<nav class="site-navigation top-bar" role="navigation">
 			<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png" alt="krnjevac"></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png" alt="krnjevac"></a>
 				</div>
 				<?php foundationpress_top_bar_l(); ?>
 			</div>
