@@ -93,11 +93,33 @@ get_header(); ?>
 				<a href="#" class="related-filters_link">Internet-prodavnica <i class="fas fa-arrow-right"></i></a>
 			</div>
 			<div class="cards-container">
-			<?php $relatedProducts = wc_get_related_products($product->get_id())?>
-
-				<?php foreach ($relatedProducts as $related):?>
 			<!-- custom related  -->
-			<?php 
+		<div class="product-buy-info">
+			<div class="product-buy-info_address info-field">
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/phone.svg" alt="phone">
+				<h5> Korisnička podrška<br>
+				+381 26 821 080</h5>
+			</div>
+			<div class="product-buy-info_delivery info-field"> 
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/delivery.svg" alt="delivery">
+				<h5>Besplatna dostava za <br>
+				porudžbine iznad 1999,-</h5>
+			</div>
+			<div class="product-buy-info_safe info-field">
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/ssl.svg" alt="ssl">
+				<h5>Sigurna kupovina putem<br>
+				sertifikovane prodavnice</h5>
+			</div>
+			<div class="product-buy-info_button info-field">
+				<button class="button btn-grey"><img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
+			</div>
+		
+	
+		</main>
+	</div>
+</div>
+</div>	<!-- OVDE JE RELATED -->
+		<?php 
 			// query
 				$args = array( 'post_type' => 'related_product', 'posts_per_page' => -1,'meta_key'=> 'product_display','meta_value'	=> $product->get_id());
 				$loop = new WP_Query( $args );
@@ -141,28 +163,5 @@ get_header(); ?>
 				</div>
 			</div>
 		<?php endwhile;?>
-		<div class="product-buy-info">
-			<div class="product-buy-info_address info-field">
-				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/phone.svg" alt="phone">
-				<h5> Korisnička podrška<br>
-				+381 26 821 080</h5>
-			</div>
-			<div class="product-buy-info_delivery info-field"> 
-				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/delivery.svg" alt="delivery">
-				<h5>Besplatna dostava za <br>
-				porudžbine iznad 1999,-</h5>
-			</div>
-			<div class="product-buy-info_safe info-field">
-				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/ssl.svg" alt="ssl">
-				<h5>Sigurna kupovina putem<br>
-				sertifikovane prodavnice</h5>
-			</div>
-			<div class="product-buy-info_button info-field">
-				<button class="button btn-grey"><img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
-			</div>
-		</div>
-		</main>
-	</div>
-</div>
 <?php
 get_footer();
