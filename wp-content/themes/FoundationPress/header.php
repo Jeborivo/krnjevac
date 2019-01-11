@@ -80,7 +80,7 @@ $(document).ready(function(){
 					</div>
 				</div>
 
-				<a href="#" class="shop"><i class="fas fa-shopping-cart"></i></a>
+				<a href="?page_id=43" class="shop"><i class="fas fa-shopping-cart"></i></a>
 				<div class="navigation"> 	
             	<input type="checkbox" class="navigation__checkbox" id="navi-toggle">
            		<label for="navi-toggle" class="navigation__button">
