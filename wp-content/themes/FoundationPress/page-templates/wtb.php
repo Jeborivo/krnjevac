@@ -25,7 +25,7 @@ get_header(); ?>
         </div>
     </div>
     <div class="front_wtb--image hero_wtb--image">
-        <img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/gde_kupiti.svg" alt="">
+        <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/gde_kupiti.svg" alt="">
     </div>
 </div>
 
