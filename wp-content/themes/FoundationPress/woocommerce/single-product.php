@@ -95,12 +95,25 @@ get_header(); ?>
 			// values
 				$value = get_field( "product_link" );
 				$productRelated = new WC_Product_Variable($value->post_parent );
-				$variable_product = wc_get_product($value->ID);
-			$thumbnail = get_the_post_thumbnail_url($value->ID);
+				$variation_id = $value->ID;
+				$variable_products= $productRelated->get_children();
+				$variable_product = wc_get_product($variation_id);
+				$thumbnail = get_the_post_thumbnail_url($variation_id);
+				$variation_number = 0;
+				$product_url = get_permalink( $value->post_parent) ;
 			?>
+			
+			<?php foreach($variable_products as $key=>$variation): ?>			
+				<?php if ($variation == $variation_id  ) :?>
+					<?php $variation_number = $key +1; ?>
+				<?php endif ?>
+			<?php endforeach; ?>
+			
 				<div class="card">
         		<div class="card-content">
-					<h3 class="title"><?php echo get_the_title( $value->post_parent ); ?></h3>
+					<a href="<?php echo ($product_url ."&variationNumber=".$variation_number);?>">
+						<h3 class="title"><?php echo get_the_title( $value->post_parent ); ?></h3>
+					</a>
 					<h4 class="gramaza"><?php echo $variable_product->get_attributes()['gramaza']; ?></h4>
 					<div class="cena">	<?php echo $variable_product->get_regular_price(); ?></span>,- 
                                 <?php $sale= $variable_product->get_sale_price(); ?>
@@ -109,8 +122,10 @@ get_header(); ?>
                                         <?php echo(',-');?>
 								<?php endif; ?>
 					</div>
-					<img class="card-content_image" src="<?php  echo $thumbnail; ?>" >
-					<a href="?add-to-cart=<?php echo ($value->post_parent ); ?>&variation_id=<?php echo $value->ID?>&attribute_gramaza=<?php echo ( $variable_product->get_attributes()['gramaza']); ?>">+</a>
+					<a href="<?php echo ($product_url ."&variationNumber=".$variation_number);?>">
+						<img class="card-content_image" src="<?php  echo $thumbnail; ?>" >
+					</a>
+					<a href="?add-to-cart=<?php echo ($value->post_parent ); ?>&variation_id=<?php echo $variation_id?>&attribute_gramaza=<?php echo ( $variable_product->get_attributes()['gramaza']); ?>">+</a>
 				</div>
 			</div>
 		<?php endwhile;?>
@@ -131,7 +146,7 @@ get_header(); ?>
 				sertifikovane prodavnice</h5>
 			</div>
 			<div class="product-buy-info_button info-field">
-				<button class="button btn-grey"><img 			src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
+				<button class="button btn-grey"><img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
 			</div>
 		</div>
 		</main>

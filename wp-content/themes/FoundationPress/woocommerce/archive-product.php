@@ -140,7 +140,9 @@ get_header(); ?>
                           
                             $counter=0;
                           ?>
+                          <?php $variation_number = 0;?>
                             <?php  foreach ($variations as $value) : ?>
+                            <?php $variation_number ++;?>
                             <?php  $single_variation=new WC_Product_Variation($value);?>
                             <?php $popular = $single_variation->get_weight(); ?>
                             <?php $title = $single_variation->get_title();?>
@@ -158,17 +160,18 @@ get_header(); ?>
                                                    <?php endif; ?>
                                  <?php endforeach; ?>
                             <?php  $product_array = array(
-                                      "product_id"   => $product->get_id(),
-                                      "variation_id" => $value,
-                                      "name"         => $title,
-                                      "gramaza"      => $product->get_attributes()['gramaza']['options'][$br],
-                                      "price_regular"=> $single_variation->get_regular_price(),
-                                      "price_sale"   => $sale,
-                                      "image"        => $variation_image[0],
-                                      "vrsta_meda"   => $vrstameda,
-                                      "category"     => $categories,
-                                      "date"         => $product_date,
-                                      "popular"      => $popular,
+                                      "product_id"       => $product->get_id(),
+                                      "variation_id"     => $value,
+                                      "variation_number" => $variation_number,
+                                      "name"             => $title,
+                                      "gramaza"          => $product->get_attributes()['gramaza']['options'][$br],
+                                      "price_regular"    => $single_variation->get_regular_price(),
+                                      "price_sale"       => $sale,
+                                      "image"            => $variation_image[0],
+                                      "vrsta_meda"       => $vrstameda,
+                                      "category"         => $categories,
+                                      "date"             => $product_date,
+                                      "popular"          => $popular,
                                     );  ?>
                                <?php    array_push($products_array, $product_array); ?>
                                <?php $br++ ?>
@@ -237,6 +240,8 @@ get_header(); ?>
                       
                     ?>
                     <?php foreach ($products_array as $sortable_product):?>
+                    <?php  $variation_url = get_permalink( $sortable_product["product_id"]) ;?>
+                    </a>
                     <div class="product card
                               <?php echo $sortable_product["gramaza"];?>      
                               <?php echo $sortable_product["vrsta_meda"];?>     
@@ -246,7 +251,9 @@ get_header(); ?>
                              ">
                               <div class="card-content">
                                 <div class="card-content_description">
+                                <a href="<?php echo ($variation_url ."&variationNumber=".$sortable_product["variation_number"]);?>">
                                   <h4 class="card-content_description--title"><?php echo $sortable_product["name"];?></h4>
+                                </a>
                                   <h6 class="product_gramaza card-content_description--weight"> <?php echo $sortable_product["gramaza"];?></h6>
                                   <!-- displays price -->
                                   <h3 class="card-content_description--price"> <span id="regular_price"><?php echo $sortable_product["price_regular"]; ?></span>,- 
@@ -257,8 +264,10 @@ get_header(); ?>
                                   </h3>
                                 </div>
                                 <!-- displays image url for current variation -->
-                                <div class="card-content_image" style="background-image: url('<?php echo $sortable_product["image"]?>')">
+                                <a href="<?php echo ($variation_url ."&variationNumber=".$sortable_product["variation_number"]);?>">
+                                 <div class="card-content_image" style="background-image: url('<?php echo $sortable_product["image"]?>')">
                                 </div>
+                                </a>
                                 <!-- custom add to cart button for current variation -->
                                 <a href="?add-to-cart=<?php echo $sortable_product["product_id"]; ?>&variation_id=<?php echo $sortable_product["variation_id"];?>&attribute_gramaza=<?php echo ($sortable_product["gramaza"]); ?>" class="add_to_cart_button button"><h3>+</h3></a>
                                </div>
