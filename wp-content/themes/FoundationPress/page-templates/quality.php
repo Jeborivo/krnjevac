@@ -21,7 +21,7 @@ get_header(); ?>
 					<h1 class="hero-quality_content--title">Šta je potrebno da med postane Krnjevac?</h1>
 					<h4 class="hero-quality_content--desc">U sedam pažljivo kontrolisanih koraka dolazimo do Krnjevac meda</h4>
 					<div class="hero-quality_content--button-link-wrap">
-						<button class="button hero-quality_content--button" type="button">Krnjevac med <i class="fas fa-arrow-right"></i></button>
+						<button class="button hero-quality_content--button" type="button"> <a href="?page_id=55"> Krnjevac med <i class="fas fa-arrow-right"></i></a></button>
 						<a href="#step1" class="hero-quality_content--more-link"><h5>Kako nastaje Krnjevac</h5><i class="fas fa-angle-down"></i></a>
 					</div>
 				</div>
@@ -77,10 +77,10 @@ get_header(); ?>
 					</div>
 					<div class="quality-steps_step-8 step links">
 						<div class="links_wrap">
-							<a href="#" class="link">Teglirani med <i class="fas fa-shopping-cart"></i> </a>
-							<a href="#" class="link">Pčelinji proizvodi sa medom  <i class="fas fa-shopping-cart"></i> </a>
-							<a href="#" class="link">HoReCa program <i class="fas fa-shopping-cart"></i> </a>
-							<a href="#" class="link">Akcijski proizvodi <i class="fas fa-shopping-cart"></i> </a>
+							<a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC" class="link">Teglirani med <i class="fas fa-shopping-cart"></i> </a>
+							<a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC" class="link">Pčelinji proizvodi sa medom  <i class="fas fa-shopping-cart"></i> </a>
+							<a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC" class="link">HoReCa program <i class="fas fa-shopping-cart"></i> </a>
+							<a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC" class="link">Akcijski proizvodi <i class="fas fa-shopping-cart"></i> </a>
 						</div>
 					</div>
 				</div>

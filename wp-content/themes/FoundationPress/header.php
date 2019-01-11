@@ -15,7 +15,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
-		<link rel="stylesheet" href="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/font-icons/icons.css">
+		<link rel="stylesheet" href="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/font-icons/icons.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 		<script src="wp-content/themes/FoundationPress/js/script.js"></script>
 		<?php wp_head(); ?>
@@ -80,7 +80,7 @@ $(document).ready(function(){
 					</div>
 				</div>
 
-				<a href="#" class="shop"><i class="fas fa-shopping-cart"></i></a>
+				<a href="?page_id=43" class="shop"><i class="fas fa-shopping-cart"></i></a>
 				<div class="navigation"> 	
             	<input type="checkbox" class="navigation__checkbox" id="navi-toggle">
            		<label for="navi-toggle" class="navigation__button">

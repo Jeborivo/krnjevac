@@ -63,7 +63,7 @@ get_header(); ?>
 				<div class="product_description product-info_description"><?php echo $product->get_data()['description'];?></div>
 					<div class="product-info_link-wrap">
 						<a class="product-info_link-wrap--link tabela_nutritivnih_vrednosti" href="#">Tabela nutritivnih vrednosti <i class="fas fa-arrow-right"></i></a>
-						<a class="product-info_link-wrap--link kupi_u_prodavnici" href="#">Kupi u prodavnici <i class="fas fa-arrow-right"></i></a>
+						<a class="product-info_link-wrap--link kupi_u_prodavnici" href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC">Kupi u prodavnici <i class="fas fa-arrow-right"></i></a>
 					</div>
 					<div class="product-info_price-quantity-to-cart-wrap">
 					<?php foreach ( $variations as $variation ) :?>	
@@ -89,7 +89,7 @@ get_header(); ?>
 					<button type="button" class="button btn-grey related-filters_buttons--last">Poslednje pregledano</button>
 					<button type="button" class="button btn-grey related-filters_buttons--most">Najprodavanije</button>
 				</div>
-				<a href="#" class="related-filters_link">Internet-prodavnica <i class="fas fa-arrow-right"></i></a>
+				<a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC" class="related-filters_link">Internet-prodavnica <i class="fas fa-arrow-right"></i></a>
 			</div>
 			<div class="cards-container">
 			<?php 

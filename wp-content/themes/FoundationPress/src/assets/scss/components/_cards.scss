@@ -64,6 +64,10 @@
       height: 60px;
       align-self: center;
 
+      a {
+        color: $white;
+      }
+
       h5 {
         font-weight: bold;
         margin-bottom: 0;
@@ -119,6 +123,7 @@
             top: 20px;
             right: 20px;
             border-radius: 100%;
+
   
             h3 {
   
