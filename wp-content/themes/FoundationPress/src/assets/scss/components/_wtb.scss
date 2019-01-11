@@ -4,6 +4,7 @@
         flex-direction: column;
         justify-content: flex-end;
         margin-top: 75px;
+        position: relative;
     }
     @include breakpoint(medium) {
         flex-direction: row;
@@ -62,9 +63,10 @@
         }
         @include breakpoint(xlarge) {
             text-align: unset;
-            margin-left: 180px;
-            margin-right: auto;
-            padding-top: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-44.6%, -50%);
 
             h3 {
                 font-size: 24px;
@@ -74,9 +76,6 @@
         }
         @include breakpoint(xxlarge) {
             text-align: unset;
-            margin-left: 355px;
-            margin-right: auto;
-            padding-top: 135px;
 
 
             h2 {
@@ -125,6 +124,10 @@
                 background-color: black;
             }
         }
+    }
+
+    .main-container {
+        margin-top: 100px;
     }
 
     .main-content {
@@ -286,8 +289,12 @@
             display: flex;
             
             i {
-                padding-top: 3px;
+                // padding-top: 3px;
                 margin-left: 3px;
+            }
+
+            .fa-angle-down {
+                font-size: 25px;
             }
         }
 
@@ -319,8 +326,28 @@
                 }
             }
 
+            .btn-green {
+
+                &:hover {
+                    background-color: #A3DF50;
+                }
+
+                // &:active {
+                //     border: 3px solid #AEDB71;
+                // }
+            }
+
             .toggle:checked + .form-toggle + .form-wrap_content {
                 max-height: 500px;
+            }
+
+            .form-toggle {
+                border: none;
+                transition: border .2s;
+            }
+
+            .toggle:checked + .form-toggle {
+                border: 3px solid #AEDB71;
             }
 
             .btn-green {

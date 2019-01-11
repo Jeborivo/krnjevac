@@ -1,4 +1,4 @@
-<div class="section-info">
+<div class="section-info" id="section-info1">
     <div class="section-info_title">
         <h2><?php the_title(); ?></h2>
         <?php the_field('icon_list'); ?>
@@ -9,4 +9,5 @@
 
 </div>
 <!-- <a href="#">Gde kupiti</a> -->
+
 

@@ -14,13 +14,15 @@
 
 get_header(); ?>
 
-		<div class="hero hero_about" style="background-image: url('http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnja-hero.jpg')">
+		<div class="hero hero_about" style="background-image: url('http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/aboutbg.png')">
 			<div class="hero_content main-container">
 				<div class="hero_content--text">
 					<h1 class="hero_content--title">Garantovano 100% prirodnimed bez ikakvih dodataka</h1>
-					<h5 class="hero_content--link"><a href="#">Kupi Krnjevac proizvode <i class="icon-arrow-right"></i></a></h5>
-					<h5 class="hero_content--link"><a href="#">Kontrola kvaliteta <i class="icon-arrow-right"></i></a></h5>
-					<div class="hero_content--more-link"><h5>Saznaj više o Krnjevac medu</h5><i class="icon-001-down-arrow"></i></div>
+					<h5 class="hero_content--link"><a href="#">Kupi Krnjevac proizvode <i class="fas fa-arrow-right"></i></a></h5>
+					<h5 class="hero_content--link"><a href="#">Kontrola kvaliteta <i class="fas fa-arrow-right"></i></a></h5>
+					<a class="hero_content--more-link" href="#section-info1">
+						<h5>Saznaj više o Krnjevac medu</h5><i class="fas fa-angle-down"></i>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -62,7 +64,7 @@ get_header(); ?>
 							<div class="faq-wrap faq_<?php echo $br?>">
 							<button class="collapsible">
 							<h5><?php the_title(); ?></h5>
-							<i class="icon-003-down-arrow-1"></i>
+							<i class="fas fa-angle-down"></i>
 							</button>
                             	<div class="content">
                                 	<div class="faq-wrap_content--inner"><?php the_content(); ?></div> 
@@ -70,6 +72,8 @@ get_header(); ?>
 							</div>
                         <?php endforeach; ?>
 			</div>
+
+
 			
 <script>
 var coll = document.getElementsByClassName("collapsible");
@@ -88,6 +92,20 @@ for (i = 0; i < coll.length; i++) {
 }
 </script>
 		</main>
+	</div>
+</div>
+
+<div class="about-newsletter main-container-full-width">
+	<div class="about-newsletter_wrap main-container">
+	<div class="about-newsletter_title newsletter-item">
+    	<h2 class="ntitle">Pretplati se na newsletter</h2>
+      	<p>Vestibulum fringilla felis in finibus elementum. Maecenas venenatis massa a ullamcorper laoreet. Aenean atexdiam.</p>
+   	</div>
+            
+	<form action="" class="about-newsletter_email newsletter-item">
+      	<input type="text" class="about-newsletter_email--text " placeholder="E mail adresa">
+      	<input type="submit" value="Pošalji" class="button btn-grey about-newsletter_email--submit">
+    </form>
 	</div>
 </div>
 <?php

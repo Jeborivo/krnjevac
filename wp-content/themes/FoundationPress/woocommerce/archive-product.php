@@ -66,7 +66,7 @@ get_header(); ?>
       ?>
       
           <div class="category_filter filter-collapsible filter-item">
-            <input id="filter-colapse" class="ft-toggle" type="checkbox" checked>
+            <!-- <input id="filter-colapse" class="ft-toggle" type="checkbox" checked> -->
             <label for="filter-colapse" class="filter-toggle">Kategorije</label>
               <div class="filter-colapse-content">
                 <div class="filter-content-inner">
@@ -80,7 +80,7 @@ get_header(); ?>
           </div>
           
           <div class="vrste_meda vrste-collapsible filter-item">
-            <input id="vrste-colapse" class="vr-toggle" type="checkbox" checked>
+            <!-- <input id="vrste-colapse" class="vr-toggle" type="checkbox" checked> -->
             <label for="vrste-colapse" class="vrste-toggle">Vrste meda</label>
               <div class="vrste-colapse-content">
                 <div class="vrste-content-inner">
@@ -93,7 +93,7 @@ get_header(); ?>
           </div>
 
           <div id="gramaza" class="gramaza gramaza-collapsible filter-item">
-            <input id="gramaza-colapse" class="gr-toggle" type="checkbox" checked>
+            <!-- <input id="gramaza-colapse" class="gr-toggle" type="checkbox" checked> -->
             <label for="gramaza-colapse" class="gramaza-toggle">Gramaza</label>
               <div class="gramaza-colapse-content">
                 <div class="gramaza-content-inner">
@@ -103,7 +103,7 @@ get_header(); ?>
           </div>
 
           <div class="price price-collapsible filter-item">
-            <input id="price-colapse" class="pr-toggle" type="checkbox" checked>
+            <!-- <input id="price-colapse" class="pr-toggle" type="checkbox" checked> -->
             <label for="price-colapse" class="price-toggle">Cena</label>
               <div class="price-colapse-content">
                 <div class="price-content-inner">
@@ -213,21 +213,24 @@ get_header(); ?>
             <!-- <div class="empty_results"></div>  -->
             </div>
 
-          <div class="shop-newsletter">
-            <div class="shop-newsletter_title newsletter-item">
-              <h2 class="ntitle">Pretplati se na newsletter</h2>
-              <p>Vestibulum fringilla felis in finibus elementum. Maecenas venenatis massa a ullamcorper laoreet. Aenean at ex diam.</p>
-            </div>
+
+		</main>
+		
+	</div>
+</div>
+
+          <div class="shop-newsletter main-container-full-width">
+            <div class="shop-newsletter_wrap main-container">
+              <div class="shop-newsletter_title newsletter-item">
+                <h2 class="ntitle">Pretplati se na newsletter</h2>
+                <p>Vestibulum fringilla felis in finibus elementum. Maecenas venenatis massa a ullamcorper laoreet. Aenean at ex diam.</p>
+              </div>
             
               <form action="" class="shop-newsletter_email newsletter-item">
                 <input type="text" class="shop-newsletter_email--text " placeholder="E mail adresa">
                 <input type="submit" value="Pošalji" class="button btn-grey shop-newsletter_email--submit">
               </form>
-        
+            </div>
           </div>
-		</main>
-		
-	</div>
-</div>
 <?php
 get_footer();

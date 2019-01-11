@@ -154,6 +154,12 @@
       color: $white;
       margin-right: 20px;
     }
+
+    .fa-shopping-cart {
+      font-size: 25px;
+      color: white;
+      margin-right: 25px;
+    }
   }
 
   .wrap-search { 
@@ -170,7 +176,12 @@
       display: block;
       color: $primary-color;
       position: relative;
-      margin-right: 35px;
+      // margin-right: 35px;
+    }
+
+    .fa-search {
+      font-size: 25px;
+      color: white;
     }
 
     .icon-search {
@@ -417,6 +428,10 @@
 
   &__checkbox:checked ~ &__background {
     transform: scale(100);
+
+    @media only screen and (min-width : 2500px) {
+      transform: scale(300);
+    }
   }
 
   &__checkbox:checked ~ &__nav {

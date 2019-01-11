@@ -13,3 +13,28 @@
 .top-bar-right {
     padding-top: 0.3%;
 }
+
+.page-template-front-krnjevac,
+.page-template-about {
+    .top-bar-title {
+        a {
+            img {
+                content:url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png);
+            }
+        }
+    }
+}
+
+.post-type-archive-product,
+.page-template-quality,
+.page-template-wtb,
+.single-product {
+    .top-bar-title {
+        a {
+            img {
+                content:url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg);
+                width: 116px;
+            }
+        }
+    }
+}

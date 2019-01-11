@@ -47,7 +47,12 @@
                 
             }
             @include breakpoint(large) {
-                margin: 0 110px auto auto;
+                margin: 0 110px auto 0;
+
+                &_text {
+                    text-align: left;
+                    padding-top: 26px;
+                }
             }
 
         }
@@ -124,6 +129,7 @@
                     border: none!important;
                     box-shadow: none!important;
                     color: $black;
+                    padding-left: 22px;
                 }
 
                 .input-group-button {

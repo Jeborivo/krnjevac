@@ -14,14 +14,15 @@
 
 get_header(); ?>
 
-		<div class="hero hero_about" style="background-image: url('http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnja1.jpg')">
+		<div class="hero hero_about">
+			<img class="hero-quality-img" src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/heroK.png" alt="">
 			<div class="hero-quality_content hero_content main-container ">
 				<div class="hero-quality_content--text">
 					<h1 class="hero-quality_content--title">Šta je potrebno da med postane Krnjevac?</h1>
 					<h4 class="hero-quality_content--desc">U sedam pažljivo kontrolisanih koraka dolazimo do Krnjevac meda</h4>
 					<div class="hero-quality_content--button-link-wrap">
-					<button class="button hero-quality_content--button" type="button">Krnjevac med <i class="icon-arrow-right"></i></button>
-					<div class="hero-quality_content--more-link"><h5>Kako nastaje Krnjevac</h5><i class="icon-001-down-arrow"></i></div>
+						<button class="button hero-quality_content--button" type="button">Krnjevac med <i class="fas fa-arrow-right"></i></button>
+						<a href="#step1" class="hero-quality_content--more-link"><h5>Kako nastaje Krnjevac</h5><i class="icon-001-down-arrow"></i></a>
 					</div>
 				</div>
 			</div>
@@ -32,7 +33,7 @@ get_header(); ?>
 		<main class="main-content">
 			<div class="quality-steps">
 				<div class="quality-steps_container">
-					<div class="quality-steps_step-1 step">
+					<div class="quality-steps_step-1 step" id="step1">
 						<h1 class="step_title">1</h1>
 						<h3 class="step_desc">Vrcanje meda</h3>
 						<div class="step_text">Ut sagittis sagittis augue, eu luctus lorem convallis non. Sed vitae lacus nec ante malesuada faucibus.</div>
@@ -76,10 +77,10 @@ get_header(); ?>
 					</div>
 					<div class="quality-steps_step-8 step links">
 						<div class="links_wrap">
-							<a href="#" class="link">Teglirani med <i class="icon-cart"></i> </a>
-							<a href="#" class="link">Pčelinji proizvodi sa medom  <i class="icon-cart"></i> </a>
-							<a href="#" class="link">HoReCa program <i class="icon-cart"></i> </a>
-							<a href="#" class="link">Akcijski proizvodi <i class="icon-cart"></i> </a>
+							<a href="#" class="link">Teglirani med <i class="fas fa-shopping-cart"></i> </a>
+							<a href="#" class="link">Pčelinji proizvodi sa medom  <i class="fas fa-shopping-cart"></i> </a>
+							<a href="#" class="link">HoReCa program <i class="fas fa-shopping-cart"></i> </a>
+							<a href="#" class="link">Akcijski proizvodi <i class="fas fa-shopping-cart"></i> </a>
 						</div>
 					</div>
 				</div>
@@ -89,7 +90,10 @@ get_header(); ?>
 					<h3 class="quality-post_content--title">Pažljiv rad i dugo iskustvo naših pčelara, za najbolji med</h3>
 					<h5 class="quality-post_content--text">Naši procesi proizvodnje se neprekidno prate kako bi se nivo kvaliteta održao konstantnim. Kako bismo osigurali potpunu ispravnost i očekivani kvalitet, u našoj modernoj laboratoriji vršimo veliki broj analiza. Za potrebe naših partnera, analize radimo i u sertifikovanim nemačkim laboratorijama QSI i Intertek, koje se nalaze u Bremenu.</h5>
 				</div>
-				<div class="quality-post_image" style="background-image: url('http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnja1.jpg')" ></div>
+				<div class="quality-post_image" >
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/kontpostL.png" alt="" class="quality-post_image--img-center">
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/kontpostRTL.png" alt="" class="quality-post_image--img-top-right">
+				</div>
 			</div>
 		</main>
 	</div>

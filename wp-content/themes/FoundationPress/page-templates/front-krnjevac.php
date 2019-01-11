@@ -25,7 +25,7 @@ get_header(); ?>
 				<div class="hero_content--text">
 					<h1 class="hero_content--title">Ne mešamo se u posao prirode</h1>
 					<h4 class="hero_content--desc">Posebno i pažljivo odabran med bez dodataka.</h4>
-					<button class="button hero_content--button" type="button">Krnjevac med <i class="icon-arrow-right"></i></button>
+					<button class="button hero_content--button" type="button">Krnjevac med <i class="fas fa-arrow-right"></i></button>
 				</div>
 			</div>
 		</div>

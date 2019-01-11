@@ -4,12 +4,18 @@
         display: flex;
         flex-direction: column;
         padding: 0 20px 20px 20px;
-      }
-    
-      @include breakpoint(medium) {
+    }
+
+    @media only screen and (min-width : 420px) {
+        /* Styles */
+        margin-top: 18%;
+    }
+
+    @include breakpoint(medium) {
         padding: 0 36px 20px 36px;
         flex-direction: row;
-      }
+        margin-top: 135px;
+    }
     
       @include breakpoint(xlarge) {
         padding: 0 110px 40px 110px;
@@ -26,15 +32,15 @@
           }
         
           @include breakpoint(medium) {
-            width: 36%;
+            width: 38%;
             margin-left: 5%;
             text-align: unset;
+            padding-top: 90px;
           }
 
         .text_title {
 
             @include breakpoint(medium) {
-                padding-top: 150px;
                 margin-bottom: 50px;
             }
 
@@ -42,7 +48,6 @@
             color: $black;
             line-height: 1;
             margin-bottom: 25px;
-            padding-top: 50px;
         }
 
         .text-content {
@@ -53,7 +58,7 @@
                     justify-content: flex-start;
                 }
                 color: $black;
-                display: flex;
+                display: inline-block;
                 font-weight: bold;
                 justify-content: center;
 
@@ -72,17 +77,47 @@
         @include breakpoint(small) {
             width: 100%;
             height: 400px;
+            position: relative;
+
+            .center-img {
+                
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 60%;
+            }
+
+            .top-right-img  {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-25%,-100%);
+                width: 60%;
+            }
+
+
+
         }
         
         @include breakpoint(medium) {
             height: 500px;
-            width: 60%;
-            margin-left: 5%;
+            width: 45%;
+            
+
+            .center-img {
+                width: unset;
+            }
+
+            .top-right-img  {
+                width: unset;
+            }
+
         }
 
         @include breakpoint(large) {
             height: 600px;
-            width: 60%;
+            width: 45%;
         }
 
         background-repeat:no-repeat;
@@ -95,17 +130,113 @@
 
     @include breakpoint(small) {
         flex-direction: column-reverse;
+
       }
     
       @include breakpoint(medium) {
         flex-direction: row-reverse;
+
+        .section_about--img {
+            margin-right: 16%;
+        }
       }
+
+
+        .section_about--img {
+
+            .center-img {
+                content:url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/kontrola.png);
+            }
+        }
 }
 
 .section_about.even {
 
-    .section_about--text {
-        margin-left: 0;
-        margin-right: 5%;
+    @include breakpoint(small) {
+
+        .section_about--text {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 5%;
+        }
     }
+
+    @include breakpoint(medium) {
+
+        .section_about--text {
+            width: 45%;
+            margin-left: 0;
+            margin-right: 5%;
+        }
+    }
+
+
+    .section_about--img {
+        @include breakpoint(small) {
+            margin-top: 0;
+
+            .top-right-img  {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-36%, -89%);
+                width: 60%;
+            }
+
+            .even-center-img-first {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-80%, -90%);
+                width: 60%;
+            }
+
+            .even-center-img-second {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-26%, -33%);
+                width: 60%;
+            }
+        }
+
+        @media only screen and (min-width : 420px) {
+            /* Styles */
+            margin-top: 25%;
+        }
+
+        @include breakpoint(medium) {
+            margin-top: 0;
+            width: 35%;
+
+            .top-right-img {
+                width: unset;
+                transform: translate(-18%, -89%);
+            }
+
+            .even-center-img-first {
+                width: unset;
+                transform: translate(-65% , -90%);
+            }
+
+            .even-center-img-second {
+                width: unset;
+                transform: translate(-7% , -40%);
+            }
+
+        }
+
+        @include breakpoint(large) {
+            width: 40%;
+        }
+
+        .even-center-img-first {
+            content:url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/obrok1.png);
+        }
+
+        .even-center-img-second {
+            content:url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/obrok2.png);
+        }
+    }
+
 }
