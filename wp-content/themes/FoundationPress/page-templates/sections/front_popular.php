@@ -43,6 +43,6 @@
       <h6><i class="far fa-check-circle"></i>Dostava danas za sutra</h6>
       <h6><i class="far fa-check-circle"></i>Slanje paketa sirom Srbije</h6>
     </div>
-    <button class="button go-to-shop" type="button"><h5>Internet prodavnica<i class="fas fa-shopping-cart"></i></h5></button>
+    <button class="button go-to-shop" type="button"> <a href="#"><h5>Internet prodavnica<i class="fas fa-shopping-cart"></i></h5></a></button>
   </div>
 </div>
