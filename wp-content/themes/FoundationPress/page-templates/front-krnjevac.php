@@ -17,7 +17,7 @@ get_header(); ?>
 			<div class="hero_content main-container">
 				<div class="hero_content--bg-video">
 					<video class="bg-video_content" autoplay muted loop>
-						<source src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac.webm" type="video/webm">
+						<source src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac.webm" type="video/webm">
 						<!-- <source src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/Honey.mp4" type="video/mp4"> -->
 					</video>
 				</div>
