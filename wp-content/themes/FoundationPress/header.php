@@ -62,7 +62,6 @@ $(document).ready(function(){
 		<nav class="site-navigation top-bar" role="navigation">
 			<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png" alt="krnjevac"></a>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt="krnjevac"></a>
 				</div>
 				<?php foundationpress_top_bar_l(); ?>
