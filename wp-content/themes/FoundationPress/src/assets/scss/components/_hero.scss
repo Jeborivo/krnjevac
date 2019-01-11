@@ -20,6 +20,10 @@
 
             &--button {
                 display: inline-flex;
+
+                a {
+                    color: $white;
+                }
     
                 .icon-arrow-right {
                     display: block;
@@ -217,29 +221,37 @@
             margin: auto;
             align-items: center;
         }
-
-        a {
-            @include breakpoint(small) {
-                color: $black;
-                font-weight: bold;
-                display: flex;
-                justify-content: center;
-            }
-            @include breakpoint(medium) {
-                justify-content: left;
-            }
-
-
-            i {
-                display: block;
-                padding-top: 3px;
-                margin-left: 5px;
+        
+        h5 {
+            a {
+                @include breakpoint(small) {
+                    color: $black;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                }
+                @include breakpoint(medium) {
+                    justify-content: left;
+                }
+    
+    
+                i {
+                    display: block;
+                    padding-top: 3px;
+                    margin-left: 5px;
+                }
             }
         }
+
+
 
         .go-to-shop {
             padding: 18px 35px;
             width: 265px;
+
+            a {
+                color: $white;
+            }
             
             h5 {
                 font-weight: bold;
