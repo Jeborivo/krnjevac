@@ -1,0 +1,369 @@
+.page-template-quality {
+    .top-bar-left {
+        a {
+            color: black;
+        }
+    }
+    
+    .top-bar-right {
+        .fa-search,
+        .fa-shopping-cart {
+            color: black;
+        }
+
+        .navigation__icon {
+            background-color: black;
+            &::before,
+            &::after {
+                background-color: black;
+            }
+        }
+    }
+
+    .hero {
+        background-color: $white;
+        position: relative;
+        overflow: hidden;
+
+        .hero-quality-img {
+            position: absolute;
+            right: 0%;
+            top: 50%;
+            transform: translate(50% , -55%);
+        }
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .hero-quality {
+        @include breakpoint(small) {
+            &_content {
+
+                &--text {
+                    text-align: center;
+                }
+
+                &--title {
+                    font-weight: bold;
+                    font-size: 30px;
+                    width: 100%;
+                    margin: 0 auto 39px auto;
+                    text-align: center;   
+                }
+
+                &--desc {
+                    font-weight: bold;
+                    margin-bottom: 60px;
+                }
+
+                &--button-link-wrap {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                &--button {
+                    margin-bottom: 30px;
+                    margin-right: 0;
+                    padding: 18px 30px;
+                }
+
+                &--more-link {
+                    display: flex;
+                    color: $black;
+                    
+                    
+                    h5 {
+                        align-self: center;
+                        margin-right: 10px;
+                        margin-bottom: 0px;
+                        
+                    }
+
+                    i {
+                        font-size: 30px;       
+                        align-self: center;
+                    }
+
+                }
+            }
+        }
+        @include breakpoint(medium) {
+
+            &_content {
+
+                &--title {
+                    font-size: 40px;
+                    width: 54%;
+                    text-align: left;
+                }
+
+                &--button-link-wrap {
+                    flex-direction: row;
+                }
+
+                &--button {
+                    margin-bottom: 0;
+                    margin-right: 50px;
+                    padding: 18px 56px;
+                }
+
+                &--more-link {
+                    display: flex;
+                    
+                    h5 {
+                        align-self: center;
+                        margin-right: 30px;
+                        
+                    }
+
+                    i {
+                        font-size: 39px;
+                    }
+                }
+            }
+        }
+        @include breakpoint(large) {
+
+            &_content {
+
+                &--title {
+                    font-size: $h2-medium-font-size;
+                    width: 50%;
+                }
+            }
+            
+        }
+        @include breakpoint(xlarge) {
+            
+            &_content {
+                
+                &--title {
+                    width: 40%;
+                }
+            }
+        }
+        @include breakpoint(xxlarge) {
+            
+            &_content {
+                
+                &--title {
+                    
+                }
+            }
+        }
+    }
+    
+    .quality-steps {
+
+        &_container {
+
+            @include xy-grid;
+
+            .step {
+
+                &:nth-child(7) {
+                    @include breakpoint(xlarge) {
+                        @include xy-cell (2 of 3, true , 70px)
+
+                        .step-7 {
+                            width: 45%;
+                            margin-left: auto;
+                        }
+                    }
+                }
+
+                @include breakpoint(small) {
+                    @include xy-cell(12)
+                    
+                    text-align: center;
+                    margin-bottom: 20px;
+
+                    &_title {
+                        font-size: 77px;
+                        font-weight: bold;
+                        color: $primary-color;
+                    }
+
+                    &_desc {
+                        font-size: $h4-medium-font-size;
+                        color: $black;
+                        font-weight: bold;
+                        margin-bottom: 38px;
+                    }
+
+                    &_text {
+                        font-size: $h5-medium-font-size;
+                        color: $black;
+                        line-height: 2;
+
+                    }
+
+                    .links_wrap {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        justify-content: space-evenly;
+                        padding-top: 60px;
+
+                        .link {
+                            height: 59px;
+                            margin-bottom: 10px;
+                            color: $black;
+                            text-align: left;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0 10px;
+                            font-weight: bold;
+                        
+
+                        }
+                    }
+                }
+
+                @include breakpoint(medium) {
+                    @include xy-cell(1 of 2, true, 24px );
+
+
+                    &_title {
+                        font-size: 99px;
+                    }
+
+                    .link {
+                        padding: 0 45px;
+                    }
+                }
+
+                @include breakpoint(large) {
+                    @include xy-cell(1 of 2, true, 24px );
+                }
+
+                @include breakpoint(xlarge) {
+                    @include xy-cell(1 of 3, true, 70px );
+
+                }
+            }
+        }
+        @include breakpoint(small) {
+            padding: 0 20px;
+        }
+        
+          @include breakpoint(medium) {
+            padding: 0 36px;
+        }
+        
+          @include breakpoint(xlarge) {
+            padding: 0 88px;
+        }
+    }
+
+    .quality-post {
+        @include breakpoint(small) {
+            padding: 0 20px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+
+            &_content{
+                width: 100%;
+                text-align: center;
+
+                &--title {
+                    text-align: center;
+                    font-weight: bold;
+ 
+                    margin-bottom: 25px;
+                }
+
+                &--text {
+                    line-height: 2.2;
+                }
+            }
+
+
+            &_image {
+                width: 100%;
+                height: 300px;
+                background-size: cover;
+                background-position: center center;
+                position: relative;
+                overflow: hidden;
+
+                &--img-center {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    max-width: 100%;
+                    transform: translate(-50%, -50%);
+                    z-index: 5;
+                }
+
+                &--img-top-right {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    max-width: 132%;
+                    transform: translate(-35%, -45%);
+                    z-index: 4;
+                }
+            }
+            
+        }
+
+        @media only screen and (min-width : 512px) {
+            &_image {
+                height: 400px;
+            }
+        }
+
+        @include breakpoint(medium) {
+            padding: 0 36px;
+            margin-top: 100px;
+            flex-direction: row;
+
+            &_content {
+                width: 43%;
+                text-align: unset;
+
+                &--title {
+                    text-align: left;     
+                    margin-bottom: 45px;
+                }
+            }
+
+            &_image {
+                width: 45%;
+                height: 600px;
+                overflow: unset;
+
+                &--img-center {
+                    max-width: 150%;
+                    transform: translate(-60%, -50%);
+                }
+
+                &--img-top-right {
+                    max-width: 250%;
+                    transform: translate(-43%, -50%);
+                }
+            }
+            
+        }
+        @include breakpoint(large) {
+
+            &_content {
+                width: 38%;
+                padding-top: 110px;
+            }
+            
+        }
+        @include breakpoint(xlarge) {
+            padding: 0 88px;
+        }
+    }
+}

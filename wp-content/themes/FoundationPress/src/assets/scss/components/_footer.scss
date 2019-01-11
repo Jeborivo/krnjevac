@@ -1,0 +1,218 @@
+.footer {
+
+    &-container {
+
+        @include breakpoint (small) {
+            background-color: $white;
+            padding: 30px 30px 20px;
+            position: relative;
+            border: none;
+
+        }
+        @include breakpoint (medium) {
+            padding: 45px 50px 35px;
+        }
+        @include breakpoint (large) {
+            padding: 90px 115px 50px;
+        }
+
+        
+        .links-logo-wrap {
+            @include breakpoint (small) {
+                display: flex;
+                margin-bottom: 20px;
+                flex-direction: column;
+            }
+            @include breakpoint (medium) {
+                margin-bottom: 40px;
+
+            }
+            @include breakpoint (large) {
+                margin-bottom: 80px;
+                flex-direction: row;
+            }
+        }
+
+        .footer-logo {
+            @include breakpoint(small) {
+                width: 110px;
+                margin: auto;
+
+                &_text {
+                    width: 110px;
+                    text-align: center;
+                }
+            }
+            @include breakpoint(medium) {
+                
+            }
+            @include breakpoint(large) {
+                margin: 0 110px auto 0;
+
+                &_text {
+                    text-align: left;
+                    padding-top: 26px;
+                }
+            }
+
+        }
+
+        .footer-links {
+            // display: none;
+
+            @include breakpoint (small) {
+                margin: auto;
+                width: 100%;
+                padding-top: 15px;
+
+                .desktop-menu {
+                    flex-direction: column;
+                    margin: auto;
+                    text-align: center;
+    
+                    .menu-item {
+                        
+                    }
+                    
+                    li {
+                        // margin-right: 10px;
+    
+                        a {
+                            font-size: $h6-medium-font-size;
+                            color: $black;
+                            padding: 0;
+    
+                            &:hover {
+                                color: $primary-color;
+                            }
+                        }
+                    }
+    
+                    li:not(:last-child) {
+                        padding-bottom: 17px;
+                    }
+                }
+
+
+            }
+
+            @include breakpoint (medium) {
+
+                .desktop-menu {
+                    text-align: unset;
+                    width: 340px;
+                    height: 240px;
+                }
+                
+            }
+            @include breakpoint (large) {
+                // margin-right: 110px
+                width: 340px;
+                height: 240px;
+                padding-top: 15px;
+                
+            }
+
+
+
+        }
+
+        .footer-search {
+            @include breakpoint(small){
+                align-self: center;
+                height: 30px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+
+                .input-group-field {
+                    background-color: #E9E9E9;
+                    border: none!important;
+                    box-shadow: none!important;
+                    color: $black;
+                    padding-left: 22px;
+                }
+
+                .input-group-button {
+                    width: 58px;
+                    background-color: #E9E9E9;
+                }
+                
+                #searchsubmit {
+                    background: url("http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/icons/search.svg") no-repeat;
+                    background-position: center center;
+                    background-size: 17px 17px; 
+                    padding: 20px 28px;
+                    box-shadow: none;
+                }
+            }
+            @include breakpoint(medium){
+                height: 45px;
+                width: 270px;
+                margin-top: 0;
+               
+            }
+            @include breakpoint(large){
+                align-self: unset;
+                height: 60px;
+                width: 270px;
+                
+            }
+
+            
+        }
+
+
+        .footer-address-company-wrap {
+            @include breakpoint (small){
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column-reverse;
+
+
+                .footer-address {
+                    color: #9E9E9E;
+    
+                    h4 {
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+                .footer-company {
+                    margin-top: auto;
+                    text-align: center;
+                }
+            }
+            @include breakpoint (medium){
+                flex-direction: row;
+
+
+                .footer-address {
+
+                    h4 {
+                    text-align: right;
+                    }
+                }
+                .footer-company {
+                    text-align: unset;
+                }
+            }
+            @include breakpoint (large){
+                
+            }
+
+
+            // .footer-address {
+            //     color: #9E9E9E;
+    
+            //     h4 {
+            //         font-weight: bold;
+            //         text-align: right;
+            //     }
+            // }
+            
+            // .footer-company {
+            //     margin-top: auto;
+            // }
+        }
+    }
+}

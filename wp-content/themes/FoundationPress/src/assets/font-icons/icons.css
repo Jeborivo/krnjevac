@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "icons";
+    src: url("./icons.eot?041e7acaf49947a90c6503399bb4eae2?#iefix") format("embedded-opentype"),
+url("./icons.woff2?041e7acaf49947a90c6503399bb4eae2") format("woff2"),
+url("./icons.woff?041e7acaf49947a90c6503399bb4eae2") format("woff"),
+url("./icons.ttf?041e7acaf49947a90c6503399bb4eae2") format("truetype"),
+url("./icons.svg?041e7acaf49947a90c6503399bb4eae2#icons") format("svg");
+}
+
+i {
+    line-height: 1;
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-001-down-arrow:before {
+    content: "\f101";
+}
+.icon-002-up-arrow:before {
+    content: "\f102";
+}
+.icon-003-down-arrow-1:before {
+    content: "\f103";
+}
+.icon-arrow-right:before {
+    content: "\f104";
+}
+.icon-cart-2:before {
+    content: "\f105";
+}
+.icon-cart:before {
+    content: "\f106";
+}
+.icon-check-circle:before {
+    content: "\f107";
+}
+.icon-close:before {
+    content: "\f108";
+}
+.icon-Group 142:before {
+    content: "\f109";
+}
+.icon-Group 157:before {
+    content: "\f10a";
+}
+.icon-Group 158:before {
+    content: "\f10b";
+}
+.icon-Group 167:before {
+    content: "\f10c";
+}
+.icon-Group 168:before {
+    content: "\f10d";
+}
+.icon-Group 169:before {
+    content: "\f10e";
+}
+.icon-Group 170:before {
+    content: "\f10f";
+}
+.icon-Group 171:before {
+    content: "\f110";
+}
+.icon-Group 174:before {
+    content: "\f111";
+}
+.icon-Group 175:before {
+    content: "\f112";
+}
+.icon-Group 176:before {
+    content: "\f113";
+}
+.icon-Group 8:before {
+    content: "\f114";
+}
+.icon-Line 23:before {
+    content: "\f115";
+}
+.icon-Line 33:before {
+    content: "\f116";
+}
+.icon-Line 34:before {
+    content: "\f117";
+}
+.icon-Line 35:before {
+    content: "\f118";
+}
+.icon-Path 172:before {
+    content: "\f119";
+}
+.icon-Path 173:before {
+    content: "\f11a";
+}
+.icon-Path 18:before {
+    content: "\f11b";
+}
+.icon-Path 20:before {
+    content: "\f11c";
+}
+.icon-Path 86:before {
+    content: "\f11d";
+}
+.icon-Path 91:before {
+    content: "\f11e";
+}
+.icon-Rectangle 119:before {
+    content: "\f11f";
+}
+.icon-Rectangle 174:before {
+    content: "\f120";
+}
+.icon-Rectangle 47:before {
+    content: "\f121";
+}
+.icon-search:before {
+    content: "\f122";
+}
+.icon-Symbol 13 – 147:before {
+    content: "\f123";
+}

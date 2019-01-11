@@ -1,0 +1,26 @@
+.sites-button {
+  background: $primary-color;
+  font-size: 1.25rem;
+  font-weight: bold;
+  box-shadow: 0 -2px 0 rgba(0,0,0,0.2) inset;
+  border-radius: 3px;
+  border: none;
+}
+
+.button {
+  font-size: $h5-medium-font-size;
+  font-weight: bold;
+  padding: 18px 56px;
+  box-shadow: 0 8px 22px rgba(200, 179, 44, 0.32);
+}
+
+.btn-grey {
+  background-color: $color-grey-dark-1;
+  box-shadow: none;
+}
+
+.btn-green {
+  background-color: $success-color;
+  box-shadow: 0 12px 33px rgba(141, 198, 63, 0.57);
+  border: 3px solid #AEDB71;
+}

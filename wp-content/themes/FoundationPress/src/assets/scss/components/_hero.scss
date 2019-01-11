@@ -1,0 +1,288 @@
+.hero {
+    @include breakpoint(medium) {
+        padding-top: 100px;
+    }
+
+   padding-top: 70px;
+   background-color: #000;
+
+    &_content {
+
+        @include breakpoint(small) {
+            &--bg-video {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 50%;
+                width: 100%;
+                z-index: 1;    
+            }
+
+            &--button {
+                display: inline-flex;
+    
+                .icon-arrow-right {
+                    display: block;
+                    margin: auto;
+                }
+
+                .fa-arrow-right {
+                    margin-left: 3px;
+                }
+            }
+        }
+
+        @include breakpoint(medium) {
+            padding: 125px 30px 200px 30px;
+
+            &--bg-video {
+                top: 0;
+                height: 100%;
+                width: 60%;
+            }
+
+            &--button {
+                display: inline-flex;
+    
+                .icon-arrow-right {
+                    display: block;
+                    margin: 0 0 0 5px;
+                }
+            }
+        }
+
+        position: relative;
+        height: 650px;
+        overflow: hidden;
+        padding: 30px 55px 20px 55px;
+
+
+        &--bg-video {
+
+            .bg-video_content {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+        
+            }
+        }
+
+        &--text {
+            @include breakpoint(medium) {
+                text-align: unset;
+            }
+
+            text-align: center;
+            position: relative;
+            z-index: 15;
+            color: $white;
+        }
+
+        &--title {
+            @include breakpoint(medium) {
+                width: 450px;
+                font-size: 55px;
+            }
+
+            font-weight: bold;
+            font-size: 34px;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        &--desc {
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+
+        // &--button {
+        //     display: inline-flex;
+
+        //     .icon-arrow-right {
+        //         display: block;
+        //         margin-left: 5px;
+        //     }
+        // }
+    }
+
+}
+
+// ABOUT PAGE HERO
+
+.hero_about {
+    background-size: cover;
+
+    @include breakpoint(small) {
+        background-position: center center;
+    }
+    
+    @include breakpoint(medium) {
+        background-position: unset;
+    }
+
+    .hero_content--title {
+        @include breakpoint(small) {
+            line-height: 1.5;
+        }
+        @include breakpoint(medium) {
+            width: 520px;
+        }
+
+    }
+
+    .hero_content--text {
+        position: static;
+    }
+
+    .hero_content--link {
+        
+        a {
+            @include breakpoint(small) {
+                color: $white;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+            }
+            @include breakpoint(medium) {
+                justify-content: left;
+            }
+
+
+            i {
+                display: block;
+                padding-top: 3px;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .hero_content--more-link {
+
+        @include breakpoint(small) {
+            display: flex;
+            align-items: center;
+            width: 300px;
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+            bottom: 70px;
+            color: $white;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        @include breakpoint(medium) {
+            display: flex;
+            align-items: center;
+            width: 300px;
+            position: absolute;
+            right: 0;
+            transform: translateX(0);
+            bottom: 70px;
+        }
+
+        i {
+            font-size: 39px;
+            margin-left: 20px;
+        }
+    }
+}
+
+
+// WHERE TO BUY HERO 
+
+.hero_wtb {
+    margin-top: 0!important;
+    @include breakpoint(small) {
+        padding-top: 70px;
+
+        &--text {
+
+            h1 {
+                font-size: 36px;
+                font-weight: bold;
+            }
+    
+            h3 {
+                font-size: 18px;
+                line-height: 2;
+                margin-bottom: 30px;
+            }
+        }
+
+        .hero_wtb--link-wrap {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            align-items: center;
+        }
+
+        a {
+            @include breakpoint(small) {
+                color: $black;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+            }
+            @include breakpoint(medium) {
+                justify-content: left;
+            }
+
+
+            i {
+                display: block;
+                padding-top: 3px;
+                margin-left: 5px;
+            }
+        }
+
+        .go-to-shop {
+            padding: 18px 35px;
+            width: 265px;
+            
+            h5 {
+                font-weight: bold;
+                margin: 0;
+            }
+        }
+
+    }
+    @include breakpoint(medium) {
+        padding-top: 100px;
+        
+        &--text {
+            h1 {
+                font-size: $h2-medium-font-size;
+            }
+    
+            h3 {
+                font-size: $h3-medium-font-size;
+            }
+        }
+
+        .hero_wtb--link-wrap {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0;
+            
+        }
+
+        .go-to-shop {
+            padding: 18px 56px;
+            margin-bottom: 0;
+            margin-right: 60px;
+            width: 300px;
+            
+        }
+    }
+    @include breakpoint(large) {
+        &--text {
+            
+            h1 {
+                font-size: $h1-medium-font-size;
+            }
+        }
+    }
+}
