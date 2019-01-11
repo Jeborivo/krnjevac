@@ -134,7 +134,7 @@ $( document ).ready(function() {
 
 var classArray = [];
 function categoryFilter(category){
-    var catFormatted = category.replace(' ','_');
+    var catFormatted = category.replace(/\ /g, '_');
     if(jQuery.inArray(catFormatted,classArray)==-1){
     classArray.push(catFormatted);
     $('#'+catFormatted).css({'background-color' : '#FFBB00', 'color' : '#FCFCFC'});
