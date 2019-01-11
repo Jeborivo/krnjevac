@@ -48,7 +48,8 @@ get_header(); ?>
           <div class="cort">
             <span>SORTIRAJ</span>
             <?php $site_url =  get_site_url();?>
-            <select id="product-sort" onchange="productSort('<?php echo $site_url; ?>')">
+            <select value="asd" id="product-sort" onchange="productSort('<?php echo $site_url; ?>')">
+              <option value="selected" >Selected</option>
               <option value="najprodavanije">Najprodavanije</option>
               <option value="datum">Datum</option>
               <option value="ime">Ime</option>
@@ -192,8 +193,7 @@ get_header(); ?>
                             });                   
                         break;
                         case ($productOrderBy=="title" && $itemOrder=="DESC") :   
-                             case ($productOrderBy=="title" && $itemOrder=="ASC") :
-                             echo('IME ASC');     
+                             case ($productOrderBy=="title" && $itemOrder=="ASC") :    
                              usort($products_array, function($a, $b) {
                                if($a['name']==$b['name']) return 0;
                                return $a['name'] < $b['name']?1:-1;

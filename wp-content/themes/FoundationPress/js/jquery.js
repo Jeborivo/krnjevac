@@ -5,16 +5,34 @@ $( document ).ready(function() {
     var currentUrl = window.location.href ;
     if (currentUrl.indexOf("productOrderBy") <= 0){
         window.location.replace(currentUrl+'&productOrderBy=menu_order&itemOrder=ASC');
-        $("#product-sort").val("najprodavanije");
-        var element = document.getElementById("product-sort");
-        var selectedValue = element.options[element.selectedIndex].value;
-        // vidi sa borom kako mu najlakse da se prikazuje vrednost (iz nekog razloga nece u selectu)
        
+
         } 
   
+    var formattedUrl = new URL(currentUrl);
+    var optionValue = formattedUrl.searchParams.get("productOrderBy");
+    switch(optionValue) {
+        case 'menu_order':
+            $('#product-sort option:contains("Selected")').text('Najprodavanije');
+            $('#product-sort option[value="najprodavanije"]').hide();
+        break;
+        case 'date':
+            $('#product-sort option:contains("Selected")').text('Datum');
+            $('#product-sort option[value="datum"]').hide();
+        break;
+        case 'title':
+            $('#product-sort option:contains("Selected")').text('Ime proizvoda');
+            $('#product-sort option[value="ime"]').hide();
+        break;
+        case 'cena':
+            $('#product-sort option:contains("Selected")').text('Cena');
+            $('#product-sort option[value="cena"]').hide();
+        break;
+      }
     
 
-    $("#product-sort").val(0);
+    
+    $('#product-sort option[value="selected"]').hide();
     priceLow = lowValue *12;
     priceHigh = highValue *12;
     var gramaze= [];
@@ -177,13 +195,12 @@ function filtering(){
       var elementClasses = $(this).attr("class").split(' ');
       var br =0;
         classArray.forEach(function(item){  
-            if(jQuery.inArray(item, elementClasses) !== -1){
-                br++;
-            }
-            if(br == classArray.length){
+            var arrayContainsClass = (elementClasses.indexOf(item) > -1);
+            if(arrayContainsClass != false){
                 self.show();
                 self.removeClass('filter_hidden');
             }
+            
         });
        
         
