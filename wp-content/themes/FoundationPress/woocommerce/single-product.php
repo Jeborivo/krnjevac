@@ -34,8 +34,7 @@ get_header(); ?>
 				<?php $br++; ?>
 				<div class="variation_image variation_image_<?php echo $br;?>">
 					<!-- prints images for variations -->
-					<div class="product_image">
-			 				 <?php  echo "<img src=" . $variation['image']['thumb_src'] .">"; ?>
+					<div class="product_image" style="background-image: url('<?php echo $variation['image']['url'] ?> ')">
 					</div>
 				</div>
 			<?php endforeach;?>
@@ -93,6 +92,54 @@ get_header(); ?>
 				<a href="#" class="related-filters_link">Internet-prodavnica <i class="fas fa-arrow-right"></i></a>
 			</div>
 			<div class="cards-container">
+			<?php 
+			// query
+				$args = array( 'post_type' => 'related_product', 'posts_per_page' => -1,'meta_key'=> 'product_display','meta_value'	=> $product->get_id());
+				$loop = new WP_Query( $args );
+			?>
+			<?php while ( $loop->have_posts() ) : $loop->the_post();
+			// values
+				$value = get_field( "product_link" );
+				$productRelated = new WC_Product_Variable($value->post_parent );
+				$variation_id = $value->ID;
+				$variable_products= $productRelated->get_children();
+				$variable_product = wc_get_product($variation_id);
+				$thumbnail = get_the_post_thumbnail_url($variation_id);
+				$variation_number = 0;
+				$product_url = get_permalink( $value->post_parent) ;
+			?>
+			
+			<?php foreach($variable_products as $key=>$variation): ?>			
+				<?php if ($variation == $variation_id  ) :?>
+					<?php $variation_number = $key +1; ?>
+				<?php endif ?>
+			<?php endforeach; ?>
+			
+				<div class="card">
+        		<div class="card-content">
+					<div class="card-content_description">
+					<a href="<?php echo ($product_url ."&variationNumber=".$variation_number);?>">
+						<h4 class="card-content_description--title"><?php echo get_the_title( $value->post_parent ); ?></h4>
+					</a>
+					<h6 class="card-content_description--weight"><?php echo $variable_product->get_attributes()['gramaza']; ?></h6>
+					<h3 class="card-content_description--price">	<?php echo $variable_product->get_regular_price(); ?></span>,- 
+                                <?php $sale= $variable_product->get_sale_price(); ?>
+                               <?php if($sale != ''):?>
+                               <span id="sale_price"> <?php echo($sale);?></span>
+                                        <?php echo(',-');?>
+								<?php endif; ?>
+					</h3>
+					</div>
+
+					<a href="<?php echo ($product_url ."&variationNumber=".$variation_number);?>">
+						<img class="card-content_image" src="<?php  echo $thumbnail; ?>" >
+					</a>
+					<a href="?add-to-cart=<?php echo ($value->post_parent ); ?>&variation_id=<?php echo $variation_id?>&attribute_gramaza=<?php echo ( $variable_product->get_attributes()['gramaza']); ?>" class="add_to_cart_button button"><h3>+</h3></a>
+				</div>
+			</div>
+		<?php endwhile;?>
+
+			</div>
 			<!-- custom related  -->
 		<div class="product-buy-info">
 			<div class="product-buy-info_address info-field">

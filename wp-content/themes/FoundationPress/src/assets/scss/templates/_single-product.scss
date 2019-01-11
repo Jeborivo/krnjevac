@@ -188,6 +188,17 @@
                         align-items: unset;
                     }
                 }
+
+                .variation_image {
+                    height: 100%;
+                    
+                    .product_image {
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center center;
+                        height: 100%;
+                    }
+                }
                 
             }
 
@@ -301,6 +312,71 @@
                         margin-left: 5px;
                     }
                 }
+            }
+
+            .card {
+                margin-bottom: 24px;
+                flex-grow: unset;
+                box-shadow: 0px 24px 32px 2px rgba(84,84,84,0.15);
+
+                .card-content {
+
+                    position: relative;
+                    
+                    &_description {
+                      padding: 18px 20px 20px 20px;
+            
+                      &--title {
+                        font-weight: bold;
+                        color: $color-grey-dark-2;
+                        margin: 0;
+                      }
+            
+                      &--weight {
+                        color: $color-grey-light-2;  
+                      }
+            
+                      &--price {
+                        color: $color-grey-dark-2;
+                      }
+            
+                    }
+            
+            
+                    .add_to_cart_button {
+            
+                      padding: 20px;
+                      position: absolute;
+                      height: 50px;
+                      width: 50px;
+                      top: 20px;
+                      right: 20px;
+                      border-radius: 100%;
+                      background-color: $primary-color;
+            
+                      h3 {
+            
+                        @include breakpoint(small) {
+                          font-size: $h3-medium-font-size;
+                        }
+                        
+                        color: $white;
+                        position: absolute;
+                        top: 7%;
+                        left: 35%;
+                      }
+                    }
+            
+                    &_image {
+                      display: block;
+                      height: 230px;
+                      background-size: cover;
+                      background-position: center center;
+            
+                    }
+            
+                }
+
             }
         }
         @include breakpoint(medium){

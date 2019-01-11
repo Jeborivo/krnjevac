@@ -22,7 +22,7 @@ get_header(); ?>
 					<h4 class="hero-quality_content--desc">U sedam pažljivo kontrolisanih koraka dolazimo do Krnjevac meda</h4>
 					<div class="hero-quality_content--button-link-wrap">
 						<button class="button hero-quality_content--button" type="button">Krnjevac med <i class="fas fa-arrow-right"></i></button>
-						<a href="#step1" class="hero-quality_content--more-link"><h5>Kako nastaje Krnjevac</h5><i class="icon-001-down-arrow"></i></a>
+						<a href="#step1" class="hero-quality_content--more-link"><h5>Kako nastaje Krnjevac</h5><i class="fas fa-angle-down"></i></a>
 					</div>
 				</div>
 			</div>
