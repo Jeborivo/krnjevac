@@ -1,28 +1,35 @@
 .cards {
+  background-color: #F3F3F3;
+  padding-bottom: 160px;
+  padding-top: 75px;
 
   &-heading {
     font-weight: bold;
     color: #808080;
     text-align: center;
-    margin: 75px 0px 100px;
+    margin: 0px 0px 75px 0px;
   }
   
   &-info {
       
     @include breakpoint(small) {
-      padding: 0 30px;
+      padding: 0 20px;
       flex-direction: column;
       text-align: center;
     }
   
     @include breakpoint(medium) {
-      padding: 0 100px;
+      padding: 0 36px;
       text-align: unset;
       flex-direction: row;
     }
   
-    @include breakpoint(xlarge) {
-      padding: 0 200px;
+    @include breakpoint(large) {
+      padding: 0 160px;
+    }
+
+    @include breakpoint(xxlarge) {
+      // padding: 0 383px;
     }
 
 
@@ -46,6 +53,10 @@
 
     .icon-check-circle {
       color: #FF8300;
+    }
+    .fa-check-circle {
+      color: #FF8300;
+      margin-right: 3px;
     }
 
     .go-to-shop {
@@ -166,4 +177,21 @@
   
 
 
+}
+
+.page-template-front-krnjevac {
+
+  .cards-container { 
+    @include breakpoint(small) {
+      padding: 0 20px;
+    }
+
+    @include breakpoint(medium) {
+      padding: 0 36px;
+    }
+
+    @include breakpoint(large) {
+      padding: 0 102px;
+    }
+  }
 }

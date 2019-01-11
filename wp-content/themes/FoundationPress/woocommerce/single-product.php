@@ -34,8 +34,7 @@ get_header(); ?>
 				<?php $br++; ?>
 				<div class="variation_image variation_image_<?php echo $br;?>">
 					<!-- prints images for variations -->
-					<div class="product_image">
-			 				 <?php  echo "<img src=" . $variation['image']['thumb_src'] .">"; ?>
+					<div class="product_image" style="background-image: url('<?php echo $variation['image']['url'] ?> ')">
 					</div>
 				</div>
 			<?php endforeach;?>
@@ -63,8 +62,8 @@ get_header(); ?>
 				</div>
 				<div class="product_description product-info_description"><?php echo $product->get_data()['description'];?></div>
 					<div class="product-info_link-wrap">
-						<a class="product-info_link-wrap--link tabela_nutritivnih_vrednosti" href="#">Tabela nutritivnih vrednosti <i class="icon-arrow-right"></i></a>
-						<a class="product-info_link-wrap--link kupi_u_prodavnici" href="#">Kupi u prodavnici <i class="icon-arrow-right"></i></a>
+						<a class="product-info_link-wrap--link tabela_nutritivnih_vrednosti" href="#">Tabela nutritivnih vrednosti <i class="fas fa-arrow-right"></i></a>
+						<a class="product-info_link-wrap--link kupi_u_prodavnici" href="#">Kupi u prodavnici <i class="fas fa-arrow-right"></i></a>
 					</div>
 					<div class="product-info_price-quantity-to-cart-wrap">
 					<?php foreach ( $variations as $variation ) :?>	
@@ -84,13 +83,20 @@ get_header(); ?>
 			</div><!-- product-info -->
 			<?php endwhile; ?>
 		</div><!--Product-container -->
-			<!-- custom related  -->
+		<div class="related-products cards">
+			<div class="related-filters">
+				<div class="related-filters_buttons">
+					<button type="button" class="button btn-grey related-filters_buttons--last">Poslednje pregledano</button>
+					<button type="button" class="button btn-grey related-filters_buttons--most">Najprodavanije</button>
+				</div>
+				<a href="#" class="related-filters_link">Internet-prodavnica <i class="fas fa-arrow-right"></i></a>
+			</div>
+			<div class="cards-container">
 			<?php 
 			// query
 				$args = array( 'post_type' => 'related_product', 'posts_per_page' => -1,'meta_key'=> 'product_display','meta_value'	=> $product->get_id());
 				$loop = new WP_Query( $args );
 			?>
-			<h2> Related</h2>
 			<?php while ( $loop->have_posts() ) : $loop->the_post();
 			// values
 				$value = get_field( "product_link" );
@@ -111,24 +117,30 @@ get_header(); ?>
 			
 				<div class="card">
         		<div class="card-content">
+					<div class="card-content_description">
 					<a href="<?php echo ($product_url ."&variationNumber=".$variation_number);?>">
-						<h3 class="title"><?php echo get_the_title( $value->post_parent ); ?></h3>
+						<h4 class="card-content_description--title"><?php echo get_the_title( $value->post_parent ); ?></h4>
 					</a>
-					<h4 class="gramaza"><?php echo $variable_product->get_attributes()['gramaza']; ?></h4>
-					<div class="cena">	<?php echo $variable_product->get_regular_price(); ?></span>,- 
+					<h6 class="card-content_description--weight"><?php echo $variable_product->get_attributes()['gramaza']; ?></h6>
+					<h3 class="card-content_description--price">	<?php echo $variable_product->get_regular_price(); ?></span>,- 
                                 <?php $sale= $variable_product->get_sale_price(); ?>
                                <?php if($sale != ''):?>
                                <span id="sale_price"> <?php echo($sale);?></span>
                                         <?php echo(',-');?>
 								<?php endif; ?>
+					</h3>
 					</div>
+
 					<a href="<?php echo ($product_url ."&variationNumber=".$variation_number);?>">
-						<img class="card-content_image" src="<?php  echo $thumbnail; ?>" >
+						<div class="card-content_image" style="background-image: url('<?php  echo $thumbnail; ?>')" ></div>
 					</a>
-					<a href="?add-to-cart=<?php echo ($value->post_parent ); ?>&variation_id=<?php echo $variation_id?>&attribute_gramaza=<?php echo ( $variable_product->get_attributes()['gramaza']); ?>">+</a>
+					<a href="?add-to-cart=<?php echo ($value->post_parent ); ?>&variation_id=<?php echo $variation_id?>&attribute_gramaza=<?php echo ( $variable_product->get_attributes()['gramaza']); ?>" class="add_to_cart_button button"><h3>+</h3></a>
 				</div>
 			</div>
 		<?php endwhile;?>
+
+			</div>
+			<!-- custom related  -->
 		<div class="product-buy-info">
 			<div class="product-buy-info_address info-field">
 				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/phone.svg" alt="phone">
@@ -148,9 +160,11 @@ get_header(); ?>
 			<div class="product-buy-info_button info-field">
 				<button class="button btn-grey"><img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
 			</div>
-		</div>
+		
+	
 		</main>
 	</div>
+</div>
 </div>
 <?php
 get_footer();

@@ -2,6 +2,10 @@
     .main-content {
         width: 100%;
         margin: 0;
+
+        .entry-title {
+            display: none;
+        }
     }
 
     .section-info {
@@ -61,7 +65,7 @@
     
                 h2 {
                     font-weight: bold;
-                    margin-bottom: 140px;
+                    margin-bottom: 120px;
                 }
             }
 
@@ -78,6 +82,7 @@
             &_content {
                 width: 48%;
                 text-align: unset;
+                padding-top: 10px;
     
                 p {
                     line-height: 2.1;
@@ -131,7 +136,7 @@
             @include breakpoint (large) {
                 
                 .icon-list {
-                    margin-bottom: 130px;
+                    margin-bottom: 110px;
                 }
             }
 
@@ -264,9 +269,13 @@
         text-align: left;
         outline: none;
         font-size: 14px;
-      }
+
+        .fa-angle-down {
+            font-size: 25px;
+        }
+    }
       
-      .content {
+    .content {
         padding: 20px;
         margin-top: 20px;
         display: none;
@@ -279,6 +288,104 @@
         left: -1px;
         width: calc(100% + 2px);
         z-index: 15;
-      }
+    }
+
+    .about-newsletter {
+        @include breakpoint(small) {
+   
+
+            background-color: #F3F3F3;
+            
+
+            &_wrap {
+                @include xy-grid
+            }
+    
+            .newsletter-item {
+                @include xy-cell(12);
+            }
+    
+            &_title {
+                text-align: center;
+    
+                h2 {
+                    color: #544951;
+                    font-weight: bold;
+                    margin-bottom: 45px;
+                    font-size: 35px;
+                }
+    
+                p {
+                    font-size: 16px;
+                    line-height: 2;
+                }
+            }
+    
+            &_email {
+    
+                display: flex;
+                height: 78px;
+                margin: auto 0;
+                    
+                &--text {
+                    margin: 0;
+                    height: auto;
+                    background-color: #D5D5D5;
+                    color: $white;
+                    padding-left: 38px;
+    
+                    &::placeholder {
+                        color: $white;
+                    }
+    
+                    &:focus {
+                        background-color: #D5D5D5;
+                        border: none;
+                    }
+                }
+    
+                &--submit {
+                    border-radius: 0px!important;
+                    width: 167px!important;
+                    background-color: #636363!important;
+                    color: $white!important;
+                    margin: 0!important;
+                }
+            }
+        }
+
+        @include breakpoint(medium) {
+
+
+            &_wrap {
+                padding: 80px 36px;
+            }
+
+            .newsletter-item {
+                @include xy-cell(12);
+            }
+    
+        }
+
+        @include breakpoint(large) {
+
+
+            &_wrap {
+                padding: 160px 56px;
+            }
+
+            .newsletter-item {
+                @include xy-cell(1 of 2, true, 150px);
+            }
+    
+            &_title {
+                text-align: unset;
+    
+                h2 {
+                    font-size: 45px; 
+                }
+            }
+        }
+    }
 }
 

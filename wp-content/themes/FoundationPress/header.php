@@ -16,8 +16,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
 		<link rel="stylesheet" href="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/font-icons/icons.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 		<script src="wp-content/themes/FoundationPress/js/script.js"></script>
 		<?php wp_head(); ?>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $("a").on('click', function(event) {
+
+
+    if (this.hash !== "") {
+
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
 	</head>
 	<body <?php body_class(); ?>>
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
@@ -39,6 +63,7 @@
 			<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png" alt="krnjevac"></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt="krnjevac"></a>
 				</div>
 				<?php foundationpress_top_bar_l(); ?>
 			</div>
@@ -50,13 +75,13 @@
 				<?php endif; ?>
 				<div class="wrap-search">
 					<input id="open" class="search-toggle" type="checkbox">
-					<label for="open" class="label-toggle"><i class="icon-search"></i></label>
+					<label for="open" class="label-toggle"><i class="fas fa-search"></i></label>
 					<div class="search-content">
 						<?php get_search_form(); ?>
 					</div>
 				</div>
 
-				<a href="#" class="shop"><i class="icon-cart"></i></a>
+				<a href="#" class="shop"><i class="fas fa-shopping-cart"></i></a>
 				<div class="navigation"> 	
             	<input type="checkbox" class="navigation__checkbox" id="navi-toggle">
            		<label for="navi-toggle" class="navigation__button">

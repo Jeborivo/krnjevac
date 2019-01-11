@@ -20,8 +20,8 @@ get_header(); ?>
         <h1>Gde kupiti?</h1>
         <h3>Pored naše internet prodavnice, dostupni smo i u svim većim lancima supermarketa</h3>
         <div class="hero_wtb--link-wrap">
-            <button class="button go-to-shop" type="button"><h5>Internet prodavnica<i class="icon-cart"></i></h5></button>
-            <h5 class="hero_wtb--link"><a href="#">supermarketi<i class="icon-arrow-right"></i></a></h5>
+            <button class="button go-to-shop" type="button"><h5>Internet prodavnica<i class="fas fa-shopping-cart"></i></h5></button>
+            <h5 class="hero_wtb--link"><a href="#">supermarketi<i class="fas fa-arrow-right"></i></a></h5>
         </div>
     </div>
     <div class="front_wtb--image hero_wtb--image">
@@ -41,7 +41,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
                     <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="icon-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -50,7 +50,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
                     <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="icon-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -59,7 +59,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
                     <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="icon-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -68,7 +68,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
                     <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="icon-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -77,7 +77,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
                     <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="icon-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -86,7 +86,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
                     <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="icon-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -95,7 +95,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
                     <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="icon-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -104,7 +104,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Dis marketi</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
                     <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="icon-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
             </div>
 
@@ -116,7 +116,7 @@ get_header(); ?>
                 <div class="form-wrap">
                     <input type="checkbox" id="collapse" class="toggle">
                     <label for="collapse" class="form-toggle button btn-green">
-                    <h5>Postani partner<i class="icon-003-down-arrow-1"></i></h5>
+                    <h5>Postani partner<i class="fas fa-angle-down"></i></h5>
 					</label>
                     <div class="form-wrap_content">
                         <div class="form-wrap_content--inner">

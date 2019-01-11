@@ -1,6 +1,6 @@
-<div class="cards main-container">
+<div class="cards main-container-full-width">
   <h3 class="cards-heading">Najpopularniji Krnjevac proizvodi</h3>
-  <div class="cards-container ">
+  <div class="cards-container main-container">
     <?php
       $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'Popular', 'orderby' => 'rand' );
       $loop = new WP_Query( $args );
@@ -37,12 +37,12 @@
       <?php endwhile; ?>
     <?php wp_reset_query(); ?>
   </div>
-  <div class="cards-info">
+  <div class="cards-info main-container">
     <div class="cards-info_text">
-      <h6><i class="icon-check-circle"></i>Besplatna dostava preko 2000,-</h6>
-      <h6><i class="icon-check-circle"></i>Dostava danas za sutra</h6>
-      <h6><i class="icon-check-circle"></i>Slanje paketa sirom Srbije</h6>
+      <h6><i class="far fa-check-circle"></i>Besplatna dostava preko 2000,-</h6>
+      <h6><i class="far fa-check-circle"></i>Dostava danas za sutra</h6>
+      <h6><i class="far fa-check-circle"></i>Slanje paketa sirom Srbije</h6>
     </div>
-    <button class="button go-to-shop" type="button"><h5>Internet prodavnica<i class="icon-cart"></i></h5></button>
+    <button class="button go-to-shop" type="button"><h5>Internet prodavnica<i class="fas fa-shopping-cart"></i></h5></button>
   </div>
 </div>

@@ -25,6 +25,10 @@
                     display: block;
                     margin: auto;
                 }
+
+                .fa-arrow-right {
+                    margin-left: 3px;
+                }
             }
         }
 
@@ -107,7 +111,14 @@
 
 .hero_about {
     background-size: cover;
-    background-position: center center;
+
+    @include breakpoint(small) {
+        background-position: center center;
+    }
+    
+    @include breakpoint(medium) {
+        background-position: unset;
+    }
 
     .hero_content--title {
         @include breakpoint(small) {
@@ -155,6 +166,11 @@
             right: 50%;
             transform: translateX(50%);
             bottom: 70px;
+            color: $white;
+
+            &:hover {
+                color: $primary-color;
+            }
         }
         @include breakpoint(medium) {
             display: flex;
@@ -263,6 +279,7 @@
     }
     @include breakpoint(large) {
         &--text {
+            
             h1 {
                 font-size: $h1-medium-font-size;
             }
