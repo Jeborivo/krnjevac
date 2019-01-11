@@ -5,7 +5,14 @@ var addToCartLink;
 var quantity;
 
 $( document ).ready(function() {
+    var currentUrl = window.location.href;
     var variation = 1;
+    var urlConverted = new URL(currentUrl);
+    var variationNumber = urlConverted.searchParams.get("variationNumber");
+    if (variationNumber !=undefined){
+        variation= variationNumber;
+    }
+
     
     variationSetup(variation);
 

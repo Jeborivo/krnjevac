@@ -129,6 +129,26 @@ get_header(); ?>
 				
 			
 		<?php	endwhile;?>
+		<div class="product-buy-info">
+			<div class="product-buy-info_address info-field">
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/phone.svg" alt="phone">
+				<h5> Korisnička podrška<br>
+				+381 26 821 080</h5>
+			</div>
+			<div class="product-buy-info_delivery info-field"> 
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/delivery.svg" alt="delivery">
+				<h5>Besplatna dostava za <br>
+				porudžbine iznad 1999,-</h5>
+			</div>
+			<div class="product-buy-info_safe info-field">
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/ssl.svg" alt="ssl">
+				<h5>Sigurna kupovina putem<br>
+				sertifikovane prodavnice</h5>
+			</div>
+			<div class="product-buy-info_button info-field">
+				<button class="button btn-grey"><img 			src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
+			</div>
+		</div>
 			 
 				
 		
