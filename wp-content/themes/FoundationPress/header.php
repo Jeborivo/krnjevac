@@ -62,7 +62,7 @@ $(document).ready(function(){
 		<nav class="site-navigation top-bar" role="navigation">
 			<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt="krnjevac"></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><i class="logo-krnjevacmed" alt=""></i></a>
 				</div>
 				<?php foundationpress_top_bar_l(); ?>
 			</div>

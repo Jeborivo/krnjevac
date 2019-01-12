@@ -10,7 +10,7 @@
 	</div>
 	<div class="section_about--img" >
 		<img class="top-right-img" src="<?php the_post_thumbnail_url(  ); ?>" alt="kontrola kvaliteta">
-		<img class="center-img"></img>
+		<i class="center-img"></i>
 		<img class="even-center-img-first"></img>
 		<img class="even-center-img-second"></img>
 	</div>
