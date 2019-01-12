@@ -25,7 +25,6 @@ get_header(); ?>
         <select value="asd" id="product-sort" onchange="productSort('<?php echo $site_url; ?>')">
           <option value="selected" >Selected</option>
           <option value="najprodavanije">Najprodavanije</option>
-          <option value="datum">Datum</option>
           <option value="ime">Ime</option>
           <option value="cena">Cena</option>
         </select>
@@ -67,7 +66,8 @@ get_header(); ?>
             <!-- <input id="filter-colapse" class="ft-toggle" type="checkbox" checked> -->
             <label for="filter-colapse" class="filter-toggle">Kategorije</label>
               <div class="filter-colapse-content">
-                <div class="filter-content-inner">
+                <div class="filter-content-inner"> 
+                  <a id="category-close" onclick="categoryClose()" href="#">x</a>
                   <?php foreach ($all_categories as $cat):?>
                     <?php if($cat->name != 'Popular'):?>
                       <input class="button" type="button" id="<?php echo str_replace(' ','_',$cat->name); ?>"class="<?php echo str_replace(' ','_',$cat->name); ?>" onclick="categoryFilter(this.value)" value="<?php echo $cat->name?>"> <br>
@@ -78,6 +78,7 @@ get_header(); ?>
           </div>
           
           <div class="vrste_meda vrste-collapsible filter-item">
+          <a id="vrste-meda-close" onclick="vrsteMedaClose()" href="#">x</a>
             <!-- <input id="vrste-colapse" class="vr-toggle" type="checkbox" checked> -->
             <label for="vrste-colapse" class="vrste-toggle">Vrste meda</label>
               <div class="vrste-colapse-content">
@@ -91,6 +92,7 @@ get_header(); ?>
           </div>
 
           <div id="gramaza" class="gramaza gramaza-collapsible filter-item">
+          <a id="gramaza-close" onclick="gramazaClose()" href="#">x</a>
             <!-- <input id="gramaza-colapse" class="gr-toggle" type="checkbox" checked> -->
             <label for="gramaza-colapse" class="gramaza-toggle">Gramaza</label>
               <div class="gramaza-colapse-content">
@@ -101,6 +103,7 @@ get_header(); ?>
           </div>
 
           <div class="price price-collapsible filter-item">
+          <a id="range-close" onclick="rangeClose()"href="#">x</a>
             <!-- <input id="price-colapse" class="pr-toggle" type="checkbox" checked> -->
             <label for="price-colapse" class="price-toggle">Cena</label>
               <div class="price-colapse-content">
