@@ -176,6 +176,17 @@
                 //         max-height: 500px;
                 //     }
 
+                .gramaza-collapsible {
+                    .gramaza-content-inner {
+                        @include xy-grid;
+                        
+                        .button {
+                            @include xy-cell(1 of 2 , true, 10px);
+                            text-align: center;
+                        }
+                    }
+                }
+
 
                 // }
 
@@ -201,6 +212,7 @@
 
                             #range_slider {
                                 width: 100%;
+                                border-right: 1px solid #cacaca;
                             }
 
                             .value-container {
@@ -262,9 +274,10 @@
 
                     .card {
                         @include xy-cell(12);
-                        margin-bottom: 24px;
+                        margin-bottom: 30px;
                         flex-grow: unset;
-                        box-shadow: 0px 24px 32px 2px rgba(84,84,84,0.15);
+                        box-shadow: 0px 12px 42px 4px rgba(84, 84, 84, 0.09);
+                        
 
                         .card-content {
   
