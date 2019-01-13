@@ -221,14 +221,14 @@ function filtering(){
 }
 // Close
 function categoryClose(){
-    alert('kurac');
+    alert('test');
 }
 function vrsteMedaClose(){
-    alert('kurac');
+    alert('test');
 }
 function gramazaClose(){
-    alert('kurac');
+    alert('test');
 }
 function rangeClose(){
-    alert('kurac');
+    alert('test');
 }
