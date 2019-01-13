@@ -219,4 +219,16 @@ function filtering(){
         
     
 }
-
+// Close
+function categoryClose(){
+    alert('test');
+}
+function vrsteMedaClose(){
+    alert('test');
+}
+function gramazaClose(){
+    alert('test');
+}
+function rangeClose(){
+    alert('test');
+}
