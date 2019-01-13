@@ -11,7 +11,7 @@
 	<div class="section_about--img" >
 		<img class="top-right-img" src="<?php the_post_thumbnail_url(  ); ?>" alt="kontrola kvaliteta">
 		<i class="center-img"></i>
-		<img class="even-center-img-first"></img>
-		<img class="even-center-img-second"></img>
+		<i class="even-center-img-first"></i>
+		<i class="even-center-img-second"></i>
 	</div>
 </div>
