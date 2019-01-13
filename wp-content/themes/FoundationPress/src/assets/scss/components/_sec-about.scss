@@ -106,7 +106,7 @@
             
 
             .center-img {
-                width: unset;
+                width: 100%;
             }
 
             .top-right-img  {
@@ -131,23 +131,46 @@
     @include breakpoint(small) {
         flex-direction: column-reverse;
 
-      }
+    }
     
-      @include breakpoint(medium) {
+    @include breakpoint(medium) {
         flex-direction: row-reverse;
 
         .section_about--img {
             margin-right: 16%;
         }
-      }
+    }
 
 
-        .section_about--img {
+    .section_about--img {
 
-            .center-img {
-                content:url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/kontrola.png);
+        .center-img {
+            content:url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/kontrola.png);
+        }
+
+        .center-img::before {
+            content:"";
+            background-image: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/kontrola.png);
+            width: 100%;
+
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            @include breakpoint(small) {
+                height: 200px;
+            }
+
+            @media only screen and (min-width : 420px) {
+                height: 400px;
+            }
+
+            @include breakpoint(medium) {
+                height: 430px;
             }
         }
+    }
 }
 
 .section_about.even {
@@ -202,7 +225,7 @@
 
         @media only screen and (min-width : 420px) {
             /* Styles */
-            margin-top: 25%;
+            margin-top: 170px;
         }
 
         @include breakpoint(medium) {
@@ -215,12 +238,12 @@
             }
 
             .even-center-img-first {
-                width: unset;
+                width: 93%;
                 transform: translate(-65% , -90%);
             }
 
             .even-center-img-second {
-                width: unset;
+                width: 78%;
                 transform: translate(-7% , -40%);
             }
 
@@ -234,8 +257,76 @@
             content:url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/obrok1.png);
         }
 
+        .even-center-img-first:before {
+            content:"";
+            background-image: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/obrok1.png);
+            width: 100%;
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            
+            @include breakpoint(small) {
+                height: 200px;
+            }
+
+            @media only screen and (min-width : 420px) {
+                height: 240px;
+            }
+
+            @media only screen and (min-width : 550px) {
+                height: 285px;
+            }
+
+            @include breakpoint(medium) {
+                height: 220px;
+            }
+
+            @include breakpoint(large) {
+                height: 330px;
+            }
+
+            @include breakpoint(xlarge) {
+                height: 400px;
+            }
+        }
+
         .even-center-img-second {
             content:url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/obrok2.png);
+        }
+
+        .even-center-img-second:before {
+            content:"";
+            background-image: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/obrok2.png);
+            width: 100%;
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            
+            @include breakpoint(small) {
+                height: 200px;
+            }
+
+            @media only screen and (min-width : 420px) {
+                height: 240px;
+            }
+
+            @media only screen and (min-width : 550px) {
+                height: 285px;
+            }
+
+            @include breakpoint(medium) {
+                height: 220px;
+            }
+
+            @include breakpoint(large) {
+                height: 375px;
+            }
+
+            @include breakpoint(xlarge) {
+                height: 400px;
+            }
         }
     }
 

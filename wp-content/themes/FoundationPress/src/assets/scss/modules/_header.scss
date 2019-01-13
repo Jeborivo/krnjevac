@@ -18,8 +18,21 @@
 .page-template-about {
     .top-bar-title {
         a {
-            img {
+            padding-left: 0;
+
+            .logo-krnjevacmed {
                 content:url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png);
+                width: 116px;
+                height: 35px;
+            }
+
+            .logo-krnjevacmed::before {
+                content: "";
+                display: block;
+                background-image: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png);
+                background-size: cover;
+                width: 116px;
+                height:35px;
             }
         }
     }
@@ -31,9 +44,21 @@
 .single-product {
     .top-bar-title {
         a {
-            img {
+            padding-left: 0;
+            
+            .logo-krnjevacmed {
                 content:url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg);
                 width: 116px;
+                height: 35px;
+            }
+
+            .logo-krnjevacmed::before {
+                content: ""; 
+                display: block;
+                background-image: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg);
+                background-size: cover;
+                width: 116px;
+                height: 35px;
             }
         }
     }

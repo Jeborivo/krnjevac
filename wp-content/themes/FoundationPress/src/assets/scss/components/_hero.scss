@@ -42,7 +42,7 @@
             &--bg-video {
                 top: 0;
                 height: 100%;
-                width: 60%;
+                width: 63%;
             }
 
             &--button {
@@ -223,6 +223,8 @@
         }
         
         h5 {
+            margin: 0;
+            
             a {
                 @include breakpoint(small) {
                     color: $black;
