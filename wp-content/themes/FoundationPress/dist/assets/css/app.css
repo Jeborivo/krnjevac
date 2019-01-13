@@ -8518,14 +8518,14 @@ body#tinymce {
   padding-left: 0; }
   .page-template-front-krnjevac .top-bar-title a .logo-krnjevacmed,
   .page-template-about .top-bar-title a .logo-krnjevacmed {
-    content: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png);
+    content: url(http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png);
     width: 116px;
     height: 35px; }
   .page-template-front-krnjevac .top-bar-title a .logo-krnjevacmed::before,
   .page-template-about .top-bar-title a .logo-krnjevacmed::before {
     content: "";
     display: block;
-    background-image: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png);
+    background-image: url(http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png);
     background-size: cover;
     width: 116px;
     height: 35px; }
@@ -8539,7 +8539,7 @@ body#tinymce {
   .page-template-quality .top-bar-title a .logo-krnjevacmed,
   .page-template-wtb .top-bar-title a .logo-krnjevacmed,
   .single-product .top-bar-title a .logo-krnjevacmed {
-    content: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg);
+    content: url(http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg);
     width: 116px;
     height: 35px; }
   .post-type-archive-product .top-bar-title a .logo-krnjevacmed::before,
@@ -8548,7 +8548,7 @@ body#tinymce {
   .single-product .top-bar-title a .logo-krnjevacmed::before {
     content: "";
     display: block;
-    background-image: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg);
+    background-image: url(http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg);
     background-size: cover;
     width: 116px;
     height: 35px; }
@@ -9041,10 +9041,10 @@ body#tinymce {
       .section_about.odd .section_about--img {
         margin-right: 16%; } }
   .section_about.odd .section_about--img .center-img {
-    content: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/kontrola.png); }
+    content: url(http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/kontrola.png); }
   .section_about.odd .section_about--img .center-img::before {
     content: "";
-    background-image: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/kontrola.png);
+    background-image: url(http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/kontrola.png);
     width: 100%;
     display: block;
     background-size: contain;
@@ -9122,10 +9122,10 @@ body#tinymce {
     .section_about.even .section_about--img {
       width: 40%; } }
   .section_about.even .section_about--img .even-center-img-first {
-    content: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/obrok1.png); }
+    content: url(http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/obrok1.png); }
   .section_about.even .section_about--img .even-center-img-first:before {
     content: "";
-    background-image: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/obrok1.png);
+    background-image: url(http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/obrok1.png);
     width: 100%;
     display: block;
     background-size: contain;
@@ -9148,10 +9148,10 @@ body#tinymce {
       .section_about.even .section_about--img .even-center-img-first:before {
         height: 400px; } }
   .section_about.even .section_about--img .even-center-img-second {
-    content: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/obrok2.png); }
+    content: url(http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/obrok2.png); }
   .section_about.even .section_about--img .even-center-img-second:before {
     content: "";
-    background-image: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/obrok2.png);
+    background-image: url(http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/obrok2.png);
     width: 100%;
     display: block;
     background-size: contain;
@@ -9604,7 +9604,7 @@ body#tinymce {
         width: 58px;
         background-color: #E9E9E9; }
       .footer-container .footer-search #searchsubmit {
-        background: url("http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/icons/search.svg") no-repeat;
+        background: url("http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/icons/search.svg") no-repeat;
         background-position: center center;
         background-size: 17px 17px;
         padding: 20px 28px;
@@ -10948,7 +10948,7 @@ body#tinymce {
   .post-type-archive-product .searchsort-container .input-group-button {
     background-color: #E9E9E9; }
   .post-type-archive-product .searchsort-container #searchsubmit {
-    background: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/icons/search.svg) no-repeat;
+    background: url(http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/icons/search.svg) no-repeat;
     background-position: center center;
     background-size: 17px 17px;
     padding: 20px 28px;
