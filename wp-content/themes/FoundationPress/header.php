@@ -101,8 +101,8 @@ $(document).ready(function(){
 				</div>
 				<div class="nav_links">
 					<div class="faq-nav">
-						<a href="#" class="faq-nav_link">Kontrola kvaliteta</a>
-						<a href="#" class="faq-nav_link">Gde kupiti</a>
+						<a href="?page_id=102" class="faq-nav_link">Kontrola kvaliteta</a>
+						<a href="?page_id=104" class="faq-nav_link">Gde kupiti</a>
 						<a href="#" class="faq-nav_link">Uslovi korišćenja i prodaje</a>
 						<a href="#" class="faq-nav_link">Kako poručiti proizvod</a>
 					</div>
