@@ -15,7 +15,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
-		<link rel="stylesheet" href="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/font-icons/icons.css">
+		<link rel="stylesheet" href="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/font-icons/icons.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 		<script src="wp-content/themes/FoundationPress/js/script.js"></script>
 		<?php wp_head(); ?>
@@ -101,8 +101,8 @@ $(document).ready(function(){
 				</div>
 				<div class="nav_links">
 					<div class="faq-nav">
-						<a href="#" class="faq-nav_link">Kontrola kvaliteta</a>
-						<a href="#" class="faq-nav_link">Gde kupiti</a>
+						<a href="?page_id=102" class="faq-nav_link">Kontrola kvaliteta</a>
+						<a href="?page_id=104" class="faq-nav_link">Gde kupiti</a>
 						<a href="#" class="faq-nav_link">Uslovi korišćenja i prodaje</a>
 						<a href="#" class="faq-nav_link">Kako poručiti proizvod</a>
 					</div>
