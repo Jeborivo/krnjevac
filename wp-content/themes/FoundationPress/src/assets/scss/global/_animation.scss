@@ -1,0 +1,11 @@
+// fadein nav-menu-items
+
+@keyframes fadein {
+    from { opacity: 0;}
+    to   { opacity: 2;}
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

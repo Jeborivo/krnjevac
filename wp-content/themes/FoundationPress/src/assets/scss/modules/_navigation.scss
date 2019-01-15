@@ -279,11 +279,15 @@
       @include breakpoint(small) {
         position: fixed;
         top: 50px;
-        right: 1500%;
+        // right: 1500%;
+        right: 50%;
+        transform: translate(50%);
+        visibility: hidden;
+        opacity: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        transition: all 1s;
+        transition: all 2s;
   
   
         .menu-item {
@@ -299,6 +303,8 @@
       @include breakpoint(medium) {
         top: 120px;
         align-items: flex-end;
+        right: 90px;
+        transform: translate(0);
 
         .menu-item {
           text-align: unset;
@@ -317,9 +323,13 @@
         color: $white;
         position: fixed;
         bottom: 0;
-        left: -1500%;
-        transition: all 1s;
+        // left: -1500%;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 2s;
         text-align: center;
+        left: 50%;
+        transform: translate(-50%);
   
         &_title {
           font-weight: bold;
@@ -339,6 +349,9 @@
       @include breakpoint(medium) {
         bottom: 100px;
         text-align: unset; 
+        left: 90px;
+        transform: translate(0);
+
 
         &_title {
           font-weight: bold;
@@ -365,8 +378,11 @@
         flex-wrap: wrap;
         align-items: flex-end;
         height: 140px;
-        right: 1500%;
-        transition: all 1s;
+        visibility: hidden;
+        opacity: 0;
+        right: 50%;
+        transform: translate(50%);
+        transition: all 2s;
   
         .faq-nav,
         .about,
@@ -395,6 +411,8 @@
         justify-content: space-between;
         flex-wrap: unset;
         align-items: baseline;
+        right: 100px;
+        transform: translate(0);
 
         .faq-nav,
         .about,
@@ -442,18 +460,20 @@
     @include breakpoint(small) {
 
       .info {
-        left: 50%;
-        transform: translate(-50%);
+        visibility: visible;
+        opacity: 1;
       }
   
       .nav_links {
-        right: 50%;
-        transform: translate(50%);
+        visibility: visible;
+        opacity: 1;
       }
   
       .desktop-menu {
-        right: 50%;
-        transform: translate(50%);
+        // right: 50%;
+        // transform: translate(50%);
+        opacity: 1;
+        visibility: visible;
       }
     }
     @include breakpoint(medium) {
@@ -469,14 +489,14 @@
       }
   
       .desktop-menu {
-        right: 90px;
-        transform: translate(0);
+        // right: 90px;
+        // transform: translate(0);
       }
     }
     @include breakpoint(large) {
 
       .info {
-        left: 90px;
+        // left: 90px;
       }
   
       .nav_links {
@@ -484,7 +504,7 @@
       }
   
       .desktop-menu {
-        right: 90px;
+        // right: 90px;
       }
 
     }
