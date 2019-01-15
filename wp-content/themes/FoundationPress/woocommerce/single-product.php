@@ -83,7 +83,14 @@ get_header(); ?>
 			</div><!-- product-info -->
 			<?php endwhile; ?>
 		</div><!--Product-container -->
-		<div class="related-products cards">
+		</main>
+		
+	</div>
+</div>
+</div>
+
+		<div class="related-products cards main-container-full-width">
+			<div class="related_wrap-mc main-container">
 			<div class="related-filters">
 				<div class="related-filters_buttons">
 					<button type="button" class="button btn-grey related-filters_buttons--last">Poslednje pregledano</button>
@@ -92,6 +99,7 @@ get_header(); ?>
 				<a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC" class="related-filters_link">Internet-prodavnica <i class="fas fa-arrow-right"></i></a>
 			</div>
 			<div class="cards-container">
+
 			<?php 
 			// query
 				$args = array( 'post_type' => 'related_product', 'posts_per_page' => -1,'meta_key'=> 'product_display','meta_value'	=> $product->get_id());
@@ -141,7 +149,10 @@ get_header(); ?>
 
 			</div>
 			<!-- custom related  -->
-		<div class="product-buy-info">
+		</div>
+	</div>
+	<div class="product-buy-info-wrap">
+		<div class="product-buy-info main-container">
 			<div class="product-buy-info_address info-field">
 				<img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/phone.svg" alt="phone">
 				<h5> Korisnička podrška<br>
@@ -160,11 +171,7 @@ get_header(); ?>
 			<div class="product-buy-info_button info-field">
 				<button class="button btn-grey"><img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
 			</div>
-		
-	
-		</main>
+		</div>
 	</div>
-</div>
-</div>
 <?php
 get_footer();
