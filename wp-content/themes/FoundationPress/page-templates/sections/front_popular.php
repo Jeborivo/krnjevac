@@ -19,8 +19,10 @@
                   <?php 
                   $sale= $product->get_sale_price();
                   if($sale != ''):?>
-                    <span id="regular_price"><?php echo($product->get_regular_price()) ?> ,- </span>
-                    <span id="sale_price"><?php echo($sale);?></span>
+                    <span class="regular_price">
+                      <span class="line"></span>
+                      <?php echo($product->get_regular_price()) ?>,- </span>
+                    <span class="sale_price"><?php echo($sale);?></span>
                     <?php echo(',-');?>
                   <?php else: ?>
                     <span id="regular_price"><?php echo($product->get_regular_price()) ?> ,- </span>

@@ -54,10 +54,9 @@ function variationSetup(variation){
     $('#variation_add_to_cart').attr('href',addToCartLink);
   
     if($('.stock'+variation+':contains("1")').length > 0){   
-        $('.stockIcon').text('Na stanju!');      
+        $('.stockIcon').html('<i class="far fa-check-circle"></i><p class="available">Na stanju!</p>');      
     }
     else{
-        $('.stockIcon').text('Nije na stanju!');
-        
+        $('.stockIcon').html('<i class="far fa-times-circle"></i><p class="available">Nije na stanju!</p>');
     }
 }

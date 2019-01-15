@@ -71,8 +71,10 @@ get_header(); ?>
 						<!-- display prices -->			
 						<h3 class="card-content_descriptio--price variation_price variation_price<?php echo $br2?>"> 
 						<?php if( $variation['display_price'] !=  $variation['display_regular_price']):?>
-						<span id="regular_price"><?php echo $variation['display_regular_price'];?>,- </span>
-						<span id="sale_price"><?php echo $variation['display_price'];?>,-</span>
+						<span class="regular_price">
+						<span class="line"></span>	
+						<?php echo $variation['display_regular_price'];?>,- </span>
+						<span class="sale_price"><?php echo $variation['display_price'];?>,-</span>
 						<?php else: ?>
 						<span id="regular_price"> <?php echo $variation['display_price'];?>,-</span>
 						<?php endif?>
@@ -132,12 +134,15 @@ get_header(); ?>
 						<h4 class="card-content_description--title"><?php echo get_the_title( $value->post_parent ); ?></h4>
 					</a>
 					<h6 class="card-content_description--weight"><?php echo $variable_product->get_attributes()['gramaza']; ?></h6>
-					<h3 class="card-content_description--price">	<?php echo $variable_product->get_regular_price(); ?></span>,- 
-                                <?php $sale= $variable_product->get_sale_price(); ?>
-                               <?php if($sale != ''):?>
-                               <span id="sale_price"> <?php echo($sale);?></span>
-                                        <?php echo(',-');?>
-								<?php endif; ?>
+					<h3 class="card-content_description--price">
+						<span class="regular_price">
+						<span class="line"></span>
+						<?php echo $variable_product->get_regular_price(); ?>,-
+						</span>
+                        <?php $sale= $variable_product->get_sale_price(); ?>
+                        <?php if($sale != ''):?>
+                        <span class="sale_price"> <?php echo($sale);?><?php echo(',-');?></span>   
+						<?php endif; ?>
 					</h3>
 					</div>
 
