@@ -269,26 +269,53 @@
         text-align: left;
         outline: none;
         font-size: 14px;
+        
+        h5 {
+            padding-right: 20px;
+        }
+        
 
         .fa-angle-down {
             font-size: 25px;
         }
     }
+
+    .active {
+
+        h5{
+            font-weight: bold;
+        }
+    }
       
     .content {
-        padding: 20px;
-        margin-top: 20px;
-        display: none;
+        // padding: 20px;
+        // margin-top: 20px;
+        // display: none;
+        max-height: 0px;
         overflow: hidden;
         position: absolute;
         border-left: 1px solid $color-grey-dark-1;
         border-right: 1px solid $color-grey-dark-1;
-        border-bottom: 1px solid $color-grey-dark-1;
         background: $white;
         left: -1px;
         width: calc(100% + 2px);
         z-index: 15;
+        transition: all .5s ease-in-out;
+
+        .faq-wrap_content--inner {
+            padding: 20px;
+            border-bottom: 1px solid $color-grey-dark-1;
+        }
     }
+
+    .faq_1,
+    .faq_2,
+    .faq_3 {
+        .content {
+            z-index: 20;
+        }
+    }
+
 
     .about-newsletter {
         @include breakpoint(small) {
