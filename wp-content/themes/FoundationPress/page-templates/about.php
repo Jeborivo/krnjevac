@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-		<div class="hero hero_about" style="background-image: url('http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/aboutbg.png')">
+		<div class="hero hero_about" style="background-image: url('http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/aboutbg.png')">
 			<div class="hero_content main-container">
 				<div class="hero_content--text">
 					<h1 class="hero_content--title">Garantovano 100% prirodnimed bez ikakvih dodataka</h1>

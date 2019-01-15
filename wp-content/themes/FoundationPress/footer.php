@@ -13,7 +13,7 @@
     <div class="footer-container">
         <div class="links-logo-wrap">
             <div class="footer-logo">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg" alt="krnjevac"></a>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg" alt="krnjevac"></a>
                 <h6 class="footer-logo_text">Ne mešamo se u posao prirode.</h6>
             </div>
 
