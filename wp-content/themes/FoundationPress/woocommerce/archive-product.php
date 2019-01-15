@@ -263,11 +263,14 @@ get_header(); ?>
                                 </a>
                                   <h6 class="product_gramaza card-content_description--weight"> <?php echo $sortable_product["gramaza"];?></h6>
                                   <!-- displays price -->
-                                  <h3 class="card-content_description--price"> <span id="regular_price"><?php echo $sortable_product["price_regular"]; ?></span>,- 
+                                  <h3 class="card-content_description--price"> 
                                   <?php if($sortable_product["price_sale"] != ''):?>
+                                  <span id="regular_price"> <?php echo($sortable_product["price_regular"]);?></span>,-
                                   <span id="sale_price"> <?php echo($sortable_product["price_sale"]);?></span>
                                         <?php echo(',-');?>
-                                  <?php endif; ?>
+                                 <?php else: ?>
+                                 <span id="regular_price"> <?php echo($sortable_product["price_regular"]);?></span>,-
+                                <?php endif ?>
                                   </h3>
                                 </div>
                                 <!-- displays image url for current variation -->
@@ -282,10 +285,6 @@ get_header(); ?>
                     <?php endforeach; ?>
             </div><!--/.products-->
             </div>
-            <div class="empty_results"></div>
-            </div>
-
-
 		</main>
 		
 	</div>

@@ -69,11 +69,13 @@ get_header(); ?>
 					<?php foreach ( $variations as $variation ) :?>	
 					<?php $br2++;?>
 						<!-- display prices -->			
-						<h3 class="card-content_descriptio--price variation_price variation_price<?php echo $br2?>"> <?php echo $variation['display_regular_price'];?>,- 
-                            <?php if( $variation['display_price']!= ''):?>
-							<?php echo $variation['display_price'];?>
-                                    <?php echo(',-');?>
-                        	<?php endif; ?>
+						<h3 class="card-content_descriptio--price variation_price variation_price<?php echo $br2?>"> 
+						<?php if( $variation['display_price'] !=  $variation['display_regular_price']):?>
+						<span id="regular_price"><?php echo $variation['display_regular_price'];?>,- </span>
+						<span id="sale_price"><?php echo $variation['display_price'];?>,-</span>
+						<?php else: ?>
+						<span id="regular_price"> <?php echo $variation['display_price'];?>,-</span>
+						<?php endif?>
 						</h3>
 					<?php endforeach;?>
 	
