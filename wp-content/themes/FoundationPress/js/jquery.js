@@ -43,7 +43,7 @@ $( document ).ready(function() {
     gramazaValue=gramazaValue.replace(' ','');
       if ($.inArray($(this).text(), gramaze) == -1){
           gramaze.push($(this).text());
-          $('.gramaza-content-inner').append(' <input class="button" id="'+gramazaValue+'"type="button" onclick="gramazaFilter(this.value)" value="'+gramazaValue+'"> ');
+          $('.gramaza-content-inner').append(' <input class="button filter-neutral" id="'+gramazaValue+'"type="button" onclick="gramazaFilter(this.value)" value="'+gramazaValue+'"> ');
         }
 
     });
@@ -137,13 +137,13 @@ function categoryFilter(category){
     var catFormatted = category.replace(/\ /g, '_');
     if(jQuery.inArray(catFormatted,classArray)==-1){
     classArray.push(catFormatted);
-    $('#'+catFormatted).css({'background-color' : '#FFBB00', 'color' : '#FCFCFC'});
+    $('#'+catFormatted).removeClass("filter-off filter-neutral").addClass("filter-on");
     }
     else{
         classArray = $.grep(classArray, function(value) {
             return value != catFormatted;
           });
-          $('#'+catFormatted).css({'background-color' : '#FCFCFC', 'color' : '#636363'});
+          $('#'+catFormatted).removeClass("filter-on filter-neutral").addClass("filter-off");
           
     }
     filtering();
@@ -154,13 +154,13 @@ function categoryFilter(category){
 function vrsteMedaFilter(id){
     if(jQuery.inArray(id,classArray)==-1){
         classArray.push(id);
-        $('#'+id).css({'background-color' : '#FFBB00', 'color' : '#FCFCFC'});
+        $('#'+id).removeClass("filter-off filter-neutral").addClass("filter-on");
     }
     else{
         classArray = $.grep(classArray, function(value) {
             return value != id;
           });
-          $('#'+id).css({'background-color' : '#FCFCFC', 'color' : '#636363'});
+          $('#'+id).removeClass("filter-on").addClass("filter-off");
     }
     filtering();
   
@@ -168,11 +168,11 @@ function vrsteMedaFilter(id){
 function gramazaFilter(gramaza){
         if(jQuery.inArray(gramaza,classArray)==-1){
             classArray.push(gramaza);
-            $('#'+gramaza).css({'background-color' : '#FFBB00', 'color' : '#FCFCFC'});
+            $('#'+gramaza).removeClass("filter-off filter-neutral").addClass("filter-on");
           }
          else{
              classArray = $.grep(classArray, function(value) {
-            $('#'+gramaza).css({'background-color' : '#FCFCFC', 'color' : '#636363'});
+            $('#'+gramaza).removeClass("filter-on").addClass("filter-off");
             return value != gramaza;
             
           });

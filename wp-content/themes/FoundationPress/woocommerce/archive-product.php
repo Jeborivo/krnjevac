@@ -70,7 +70,7 @@ get_header(); ?>
                   <a id="category-close" onclick="categoryClose()" href="#">x</a>
                   <?php foreach ($all_categories as $cat):?>
                     <?php if($cat->name != 'Popular'):?>
-                      <input class="button" type="button" id="<?php echo str_replace(' ','_',$cat->name); ?>"class="<?php echo str_replace(' ','_',$cat->name); ?>" onclick="categoryFilter(this.value)" value="<?php echo $cat->name?>"> <br>
+                      <input class="button filter-neutral" type="button" id="<?php echo str_replace(' ','_',$cat->name); ?>"class=" <?php echo str_replace(' ','_',$cat->name); ?>" onclick="categoryFilter(this.value)" value="<?php echo $cat->name?>"> <br>
                     <?php endif;?>
                   <?php endforeach; ?>
                 </div>
@@ -83,10 +83,10 @@ get_header(); ?>
             <label for="vrste-colapse" class="vrste-toggle">Vrste meda</label>
               <div class="vrste-colapse-content">
                 <div class="vrste-content-inner">
-                  <input class="button" type="button" id="bagremov_med" onclick="vrsteMedaFilter(this.id)" value="Bagremov med"> <br>
-                  <input class="button" type="button" id="livadski_med" onclick="vrsteMedaFilter(this.id)" value="Livadski med"> <br>
-                  <input class="button" type="button" id="lipov_med" onclick="vrsteMedaFilter(this.id)" value="Lipov med"> <br>
-                  <input class="button" type="button" id="cvetni_med" onclick="vrsteMedaFilter(this.id)" value="Cvetni med"> <br>
+                  <input class="button filter-neutral" type="button" id="bagremov_med" onclick="vrsteMedaFilter(this.id)" value="Bagremov med"> <br>
+                  <input class="button filter-neutral" type="button" id="livadski_med" onclick="vrsteMedaFilter(this.id)" value="Livadski med"> <br>
+                  <input class="button filter-neutral" type="button" id="lipov_med" onclick="vrsteMedaFilter(this.id)" value="Lipov med"> <br>
+                  <input class="button filter-neutral" type="button" id="cvetni_med" onclick="vrsteMedaFilter(this.id)" value="Cvetni med"> <br>
                 </div>
               </div>
           </div>
