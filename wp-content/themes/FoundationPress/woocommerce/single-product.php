@@ -69,11 +69,13 @@ get_header(); ?>
 					<?php foreach ( $variations as $variation ) :?>	
 					<?php $br2++;?>
 						<!-- display prices -->			
-						<h3 class="card-content_descriptio--price variation_price variation_price<?php echo $br2?>"> <?php echo $variation['display_regular_price'];?>,- 
-                            <?php if( $variation['display_price']!= ''):?>
-							<?php echo $variation['display_price'];?>
-                                    <?php echo(',-');?>
-                        	<?php endif; ?>
+						<h3 class="card-content_descriptio--price variation_price variation_price<?php echo $br2?>"> 
+						<?php if( $variation['display_price'] !=  $variation['display_regular_price']):?>
+						<span id="regular_price"><?php echo $variation['display_regular_price'];?>,- </span>
+						<span id="sale_price"><?php echo $variation['display_price'];?>,-</span>
+						<?php else: ?>
+						<span id="regular_price"> <?php echo $variation['display_price'];?>,-</span>
+						<?php endif?>
 						</h3>
 					<?php endforeach;?>
 	
@@ -83,7 +85,14 @@ get_header(); ?>
 			</div><!-- product-info -->
 			<?php endwhile; ?>
 		</div><!--Product-container -->
-		<div class="related-products cards">
+		</main>
+		
+	</div>
+</div>
+</div>
+
+		<div class="related-products cards main-container-full-width">
+			<div class="related_wrap-mc main-container">
 			<div class="related-filters">
 				<div class="related-filters_buttons">
 					<button type="button" class="button btn-grey related-filters_buttons--last">Poslednje pregledano</button>
@@ -92,6 +101,7 @@ get_header(); ?>
 				<a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC" class="related-filters_link">Internet-prodavnica <i class="fas fa-arrow-right"></i></a>
 			</div>
 			<div class="cards-container">
+
 			<?php 
 			// query
 				$args = array( 'post_type' => 'related_product', 'posts_per_page' => -1,'meta_key'=> 'product_display','meta_value'	=> $product->get_id());
@@ -141,30 +151,29 @@ get_header(); ?>
 
 			</div>
 			<!-- custom related  -->
-		<div class="product-buy-info">
+		</div>
+	</div>
+	<div class="product-buy-info-wrap">
+		<div class="product-buy-info main-container">
 			<div class="product-buy-info_address info-field">
-				<img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/phone.svg" alt="phone">
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/phone.svg" alt="phone">
 				<h5> Korisnička podrška<br>
 				+381 26 821 080</h5>
 			</div>
 			<div class="product-buy-info_delivery info-field"> 
-				<img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/delivery.svg" alt="delivery">
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/delivery.svg" alt="delivery">
 				<h5>Besplatna dostava za <br>
 				porudžbine iznad 1999,-</h5>
 			</div>
 			<div class="product-buy-info_safe info-field">
-				<img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/ssl.svg" alt="ssl">
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/ssl.svg" alt="ssl">
 				<h5>Sigurna kupovina putem<br>
 				sertifikovane prodavnice</h5>
 			</div>
 			<div class="product-buy-info_button info-field">
-				<button class="button btn-grey"><img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
+				<button class="button btn-grey"><img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
 			</div>
-		
-	
-		</main>
+		</div>
 	</div>
-</div>
-</div>
 <?php
 get_footer();

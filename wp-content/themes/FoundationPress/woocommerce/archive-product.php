@@ -70,7 +70,7 @@ get_header(); ?>
                   <a id="category-close" onclick="categoryClose()" href="#">x</a>
                   <?php foreach ($all_categories as $cat):?>
                     <?php if($cat->name != 'Popular'):?>
-                      <input class="button" type="button" id="<?php echo str_replace(' ','_',$cat->name); ?>"class="<?php echo str_replace(' ','_',$cat->name); ?>" onclick="categoryFilter(this.value)" value="<?php echo $cat->name?>"> <br>
+                      <input class="button filter-neutral" type="button" id="<?php echo str_replace(' ','_',$cat->name); ?>"class=" <?php echo str_replace(' ','_',$cat->name); ?>" onclick="categoryFilter(this.value)" value="<?php echo $cat->name?>"> <br>
                     <?php endif;?>
                   <?php endforeach; ?>
                 </div>
@@ -83,10 +83,10 @@ get_header(); ?>
             <label for="vrste-colapse" class="vrste-toggle">Vrste meda</label>
               <div class="vrste-colapse-content">
                 <div class="vrste-content-inner">
-                  <input class="button" type="button" id="bagremov_med" onclick="vrsteMedaFilter(this.id)" value="Bagremov med"> <br>
-                  <input class="button" type="button" id="livadski_med" onclick="vrsteMedaFilter(this.id)" value="Livadski med"> <br>
-                  <input class="button" type="button" id="lipov_med" onclick="vrsteMedaFilter(this.id)" value="Lipov med"> <br>
-                  <input class="button" type="button" id="cvetni_med" onclick="vrsteMedaFilter(this.id)" value="Cvetni med"> <br>
+                  <input class="button filter-neutral" type="button" id="bagremov_med" onclick="vrsteMedaFilter(this.id)" value="Bagremov med"> <br>
+                  <input class="button filter-neutral" type="button" id="livadski_med" onclick="vrsteMedaFilter(this.id)" value="Livadski med"> <br>
+                  <input class="button filter-neutral" type="button" id="lipov_med" onclick="vrsteMedaFilter(this.id)" value="Lipov med"> <br>
+                  <input class="button filter-neutral" type="button" id="cvetni_med" onclick="vrsteMedaFilter(this.id)" value="Cvetni med"> <br>
                 </div>
               </div>
           </div>
@@ -263,11 +263,14 @@ get_header(); ?>
                                 </a>
                                   <h6 class="product_gramaza card-content_description--weight"> <?php echo $sortable_product["gramaza"];?></h6>
                                   <!-- displays price -->
-                                  <h3 class="card-content_description--price"> <span id="regular_price"><?php echo $sortable_product["price_regular"]; ?></span>,- 
+                                  <h3 class="card-content_description--price"> 
                                   <?php if($sortable_product["price_sale"] != ''):?>
+                                  <span id="regular_price"> <?php echo($sortable_product["price_regular"]);?></span>,-
                                   <span id="sale_price"> <?php echo($sortable_product["price_sale"]);?></span>
                                         <?php echo(',-');?>
-                                  <?php endif; ?>
+                                 <?php else: ?>
+                                 <span id="regular_price"> <?php echo($sortable_product["price_regular"]);?></span>,-
+                                <?php endif ?>
                                   </h3>
                                 </div>
                                 <!-- displays image url for current variation -->
@@ -282,10 +285,6 @@ get_header(); ?>
                     <?php endforeach; ?>
             </div><!--/.products-->
             </div>
-            <div class="empty_results"></div>
-            </div>
-
-
 		</main>
 		
 	</div>

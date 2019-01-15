@@ -268,8 +268,12 @@
 
     .related-products {
         @include breakpoint(small){
+            
+            padding-bottom: 30px;
             margin-top: 50px;
             padding-top: 25px;
+            background-color: #F8F8F8;
+            padding-bottom: 0;
 
             .related-filters {
                 margin-bottom: 25px;
@@ -293,7 +297,7 @@
                         margin-bottom: 20px;
 
                         &:active {
-                            background-color: #dedede;
+                            background-color: #DEDEDE;
                         }
                     }
 
@@ -316,6 +320,10 @@
                         margin-left: 5px;
                     }
                 }
+            }
+
+            .cards-container {
+                margin-bottom: 0;
             }
 
             .card {
@@ -386,6 +394,7 @@
         @include breakpoint(medium){
             margin-top: 150px;
             padding-top: 85px;
+            padding-bottom: 50px;
 
             .related-filters {
                 flex-direction: row;
@@ -413,6 +422,10 @@
                 padding: 0 98px;
             }
         }
+    }
+    .product-buy-info-wrap {
+        padding: 75px 0px 53px 0px;
+        background-color: #F5F5F5;
     }
 
     .product-buy-info {
@@ -490,7 +503,7 @@
             }
         }
         @include breakpoint(large){
-            padding: 0 88px;
+            padding: 0 102px;
             .info-field {
                 @include xy-cell(1 of 4, true , 24px);
 

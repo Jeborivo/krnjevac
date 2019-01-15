@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-		<div class="hero hero_about" style="background-image: url('http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/aboutbg.png')">
+		<div class="hero hero_about" style="background-image: url('http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/aboutbg.png')">
 			<div class="hero_content main-container">
 				<div class="hero_content--text">
 					<h1 class="hero_content--title">Garantovano 100% prirodnimed bez ikakvih dodataka</h1>
@@ -83,10 +83,10 @@ for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
+    if (content.style.maxHeight === "700px") {
+      content.style.maxHeight = "0px";
     } else {
-      content.style.display = "block";
+      content.style.maxHeight = "700px";
     }
   });
 }

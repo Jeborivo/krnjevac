@@ -239,7 +239,7 @@
                 }
 
                 .button {
-                    background-color: #f2f2f2;
+                    background-color: #ebe9eb;
                     color: #636363;
                     width: 100%;
                     text-align: left;
@@ -248,12 +248,31 @@
                     border-radius: 3px;
                     margin-bottom: 10px;
 
+
+
+                    &:active {
+                        background-color: #FFBB00;
+                    }
+                }
+
+                .filter-neutral {
+                    
                     &:hover {
                         background-color: rgba(#FFBB00, .3);
                     }
+                }
 
-                    &:active {
-                        background-color: #FFBB00
+                .filter-on {
+                    background-color: #FFBB00;
+                    color: $white;
+                }
+
+                .filter-off {
+                    background-color: #ebe9eb;
+                    color: #636363;
+
+                    &:hover {
+                        background-color: rgba(#FFBB00, .3);
                     }
                 }
                 
@@ -274,9 +293,16 @@
 
                     .card {
                         @include xy-cell(12);
-                        margin-bottom: 30px;
+                        margin-bottom: 50px;
                         flex-grow: unset;
                         box-shadow: 0px 12px 42px 4px rgba(84, 84, 84, 0.09);
+                        transform: scale(1);
+                        transition: .2s all ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                            box-shadow: 0px 12px 42px 4px rgba(84, 84, 84, 0.29);
+                        }
                         
 
                         .card-content {
