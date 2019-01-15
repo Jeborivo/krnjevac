@@ -15,13 +15,16 @@
                   <?php echo ($product->get_attributes()['gramaza']['options'][0]); ?>
                   <?php endif;?>
                 </h6>
-                <h3 class="card-content_description--price"><?php echo($product->get_regular_price()) ?> ,- 
+                <h3 class="card-content_description--price">
                   <?php 
                   $sale= $product->get_sale_price();
                   if($sale != ''):?>
-                  <?php echo($sale);?>
-                  <?php echo(',-');?>
-                  <?php endif; ?>
+                    <span id="regular_price"><?php echo($product->get_regular_price()) ?> ,- </span>
+                    <span id="sale_price"><?php echo($sale);?></span>
+                    <?php echo(',-');?>
+                  <?php else: ?>
+                    <span id="regular_price"><?php echo($product->get_regular_price()) ?> ,- </span>
+                  <?php endif;?>
                 </h3>
               </div>
               <?php if ( has_post_thumbnail( $product->get_id() ) ):?>
