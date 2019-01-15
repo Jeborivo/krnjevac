@@ -265,11 +265,13 @@ get_header(); ?>
                                   <!-- displays price -->
                                   <h3 class="card-content_description--price"> 
                                   <?php if($sortable_product["price_sale"] != ''):?>
-                                  <span id="regular_price"> <?php echo($sortable_product["price_regular"]);?></span>,-
-                                  <span id="sale_price"> <?php echo($sortable_product["price_sale"]);?></span>
+                                  <span class="regular_price">
+                                  <span class="line"></span>  
+                                  <?php echo($sortable_product["price_regular"]);?>,-</span>
+                                  <span class="sale_price"> <?php echo($sortable_product["price_sale"]);?></span>
                                         <?php echo(',-');?>
                                  <?php else: ?>
-                                 <span id="regular_price"> <?php echo($sortable_product["price_regular"]);?></span>,-
+                                 <span class="regular_price"> <?php echo($sortable_product["price_regular"]);?>,-</span>
                                 <?php endif ?>
                                   </h3>
                                 </div>

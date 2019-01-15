@@ -77,9 +77,29 @@
                         }
 
                         .stockIcon {
+                            display: flex;
                             color: $success-color;
                             align-self: center;
                             font-size: 12px;
+
+                            .fa-check-circle {
+                                font-size: 22px;
+                                margin-right: 7px;
+                            }
+
+                            .fa-times-circle {
+                                font-size: 22px;
+                                margin-right: 7px;
+                                color: red;
+                            }
+
+                            .not-available {
+                                color: red;
+                            }
+
+                            .available {
+                                margin: 0;
+                            }
                         }
 
                         .button-var {

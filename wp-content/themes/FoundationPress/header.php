@@ -38,8 +38,10 @@ $(document).ready(function(){
    
         window.location.hash = hash;
       });
-    } 
+	} 
   });
+
+  $('.sale_price').prev('span').addClass('slashed');
 });
 </script>
 	</head>
