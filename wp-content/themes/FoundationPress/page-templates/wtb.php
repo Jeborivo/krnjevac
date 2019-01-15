@@ -21,7 +21,7 @@ get_header(); ?>
         <h3>Pored naše internet prodavnice, dostupni smo i u svim većim lancima supermarketa</h3>
         <div class="hero_wtb--link-wrap">
             <button class="button go-to-shop" type="button"> <a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC?post_type=product&productOrderBy=menu_order&itemOrder=ASCpost_type=product&productOrderBy=menu_order&itemOrder=ASC"><h5>Internet prodavnica<i class="fas fa-shopping-cart"></i></h5></a></button>
-            <h5 class="hero_wtb--link"><a href="#">Supermarketi<i class="fas fa-arrow-right"></i></a></h5>
+            <h5 class="hero_wtb--link"><a href="#supermarketi">Supermarketi<i class="fas fa-arrow-right"></i></a></h5>
         </div>
     </div>
     <div class="front_wtb--image hero_wtb--image">
@@ -31,8 +31,8 @@ get_header(); ?>
 
 <div class="main-container">
 	<div class="main-grid">
-		<main class="main-content">
-            <h3 class= "supermarket-title">Lanci maloprodajnih objekata</h3>
+		<main class="main-content" id="supermarketi">
+            <h3  class= "supermarket-title">Lanci maloprodajnih objekata</h3>
             <div class="supermarkets-container">
                 <div class="supermarket">
                     <div class="supermarket_logo">
