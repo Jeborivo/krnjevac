@@ -182,7 +182,7 @@
 
                 @include breakpoint(small) {
                     @include xy-cell(12)
-                    
+                    position: relative;
                     text-align: center;
                     margin-bottom: 20px;
 
@@ -204,6 +204,10 @@
                         color: $black;
                         line-height: 2;
 
+                    }
+
+                    &_line {
+                        visibility: hidden;
                     }
 
                     .links_wrap {
@@ -244,10 +248,25 @@
 
                 @include breakpoint(large) {
                     @include xy-cell(1 of 2, true, 24px );
+
+
                 }
 
                 @include breakpoint(xlarge) {
                     @include xy-cell(1 of 3, true, 70px );
+
+                    &_line {
+                        visibility: visible;
+                        width: 80%;
+                        height: 4px;
+                        background-image: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/steplines.png);
+                        background-repeat: repeat-x;
+                        background-size: 40px 10px;
+                        position: absolute;
+                        top: 25%;
+                        right: 0%;
+                        transform: translate(60%, 25%);
+                    }
 
                 }
             }
