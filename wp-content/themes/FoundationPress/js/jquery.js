@@ -5,8 +5,6 @@ $( document ).ready(function() {
     var currentUrl = window.location.href ;
     if (currentUrl.indexOf("productOrderBy") <= 0){
         window.location.replace(currentUrl+'&productOrderBy=menu_order&itemOrder=ASC');
-       
-
         } 
   
     var formattedUrl = new URL(currentUrl);
@@ -31,7 +29,6 @@ $( document ).ready(function() {
       }
     
 
-    
     $('#product-sort option[value="selected"]').hide();
     priceLow = lowValue *12;
     priceHigh = highValue *12;
@@ -133,10 +130,15 @@ $( document ).ready(function() {
 
 
 var classArray = [];
+var categoryCloseArray = [];
+var vrsteMedaFilterCloseArray = [];
+var gramazaFilterCloseArray = [];
+
 function categoryFilter(category){
     var catFormatted = category.replace(/\ /g, '_');
     if(jQuery.inArray(catFormatted,classArray)==-1){
     classArray.push(catFormatted);
+    categoryCloseArray.push(catFormatted);
     $('#'+catFormatted).removeClass("filter-off filter-neutral").addClass("filter-on");
     }
     else{
@@ -144,6 +146,11 @@ function categoryFilter(category){
             return value != catFormatted;
           });
           $('#'+catFormatted).removeClass("filter-on filter-neutral").addClass("filter-off");
+
+          categoryCloseArray = $.grep(categoryCloseArray, function(value) {
+            return value != catFormatted;
+          });
+         
           
     }
     filtering();
@@ -154,6 +161,7 @@ function categoryFilter(category){
 function vrsteMedaFilter(id){
     if(jQuery.inArray(id,classArray)==-1){
         classArray.push(id);
+        vrsteMedaFilterCloseArray.push(id);
         $('#'+id).removeClass("filter-off filter-neutral").addClass("filter-on");
     }
     else{
@@ -161,6 +169,9 @@ function vrsteMedaFilter(id){
             return value != id;
           });
           $('#'+id).removeClass("filter-on").addClass("filter-off");
+          vrsteMedaFilterCloseArray = $.grep(vrsteMedaFilterCloseArray, function(value) {
+            return value != id;
+          });
     }
     filtering();
   
@@ -168,13 +179,16 @@ function vrsteMedaFilter(id){
 function gramazaFilter(gramaza){
         if(jQuery.inArray(gramaza,classArray)==-1){
             classArray.push(gramaza);
+            gramazaFilterCloseArray.push(gramaza)
             $('#'+gramaza).removeClass("filter-off filter-neutral").addClass("filter-on");
           }
          else{
              classArray = $.grep(classArray, function(value) {
             $('#'+gramaza).removeClass("filter-on").addClass("filter-off");
             return value != gramaza;
-            
+          });
+          gramazaFilterCloseArray = $.grep(gramazaFilterCloseArray, function(value) {
+            return value != gramaza;
           });
          
     }
@@ -216,19 +230,38 @@ function filtering(){
         $('.empty_results').text('Nema rezultata');
     }
     
-        
     
 }
 // Close
 function categoryClose(){
-    alert('test');
+    classArray = classArray.filter(function(x) { 
+        return categoryCloseArray.indexOf(x) < 0;
+      });
+    
+          filtering();
+
+    
 }
 function vrsteMedaClose(){
-    alert('test');
+    classArray = classArray.filter(function(x) { 
+        return vrsteMedaFilterCloseArray.indexOf(x) < 0;
+      });
+    
+          filtering();
 }
 function gramazaClose(){
-    alert('test');
+    
+    classArray = classArray.filter(function(x) { 
+        return gramazaFilterCloseArray.indexOf(x) < 0;
+      });
+    
+          filtering();
 }
 function rangeClose(){
-    alert('test');
-}
+    $("input.original").val(0)
+    $("input.ghost").val(100)
+    priceHigh=1200;
+    priceLow=0;
+    filtering();
+
+ }
