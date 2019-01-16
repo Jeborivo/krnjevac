@@ -99,8 +99,8 @@ $( document ).ready(function() {
     $('.low_value').text(priceLow+' rsd');
     $('.high_value').text(priceHigh+' rsd');
     $('.product').each(function(i,value){
-    var regularPrice= $('#regular_price',this).text();
-    var salePrice= $('#sale_price',this).text();
+    var regularPrice= $('.regular_price',this).text();
+    var salePrice= $('.sale_price',this).text();
     if ( $( this ).hasClass( 'filter_hidden' )){
         return true;
 

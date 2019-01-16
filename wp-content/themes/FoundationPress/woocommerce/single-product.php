@@ -80,7 +80,6 @@ get_header(); ?>
 						<?php endif?>
 						</h3>
 					<?php endforeach;?>
-	
 						<input id='cart_quantity' class="quantity product-info_price-quantity-to-cart-wrap--quantity" value="1" type="number" name="quantity" min="1" max="99">
 						<input type="button" id="variation_add_to_cart" class="button product-info_price-quantity-to-cart-wrap--button" onclick="addToCart()"value="Dodaj u korpu">
 					</div>			
