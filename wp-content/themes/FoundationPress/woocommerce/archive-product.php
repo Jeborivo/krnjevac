@@ -12,8 +12,8 @@
  * @since FoundationPress 1.0.0
  */
 get_header(); ?>
-    <script src="wp-content/themes/FoundationPress/js/multirange.js"></script>
-    <script src="wp-content/themes/FoundationPress/js/jquery.js"></script>
+    <script src="../wp-content/themes/FoundationPress/js/multirange.js"></script>
+    <script src="../wp-content/themes/FoundationPress/js/jquery.js"></script>
 		
 <div class="main-container">
 	<div class="main-grid">
@@ -258,7 +258,7 @@ get_header(); ?>
                              ">
                               <div class="card-content">
                                 <div class="card-content_description">
-                                <a href="<?php echo ($variation_url ."&variationNumber=".$sortable_product["variation_number"]);?>">
+                                <a href="<?php echo ($variation_url ."?variationNumber=".$sortable_product["variation_number"]);?>">
                                   <h4 class="card-content_description--title"><?php echo $sortable_product["name"];?></h4>
                                 </a>
                                   <h6 class="product_gramaza card-content_description--weight"> <?php echo $sortable_product["gramaza"];?></h6>
@@ -276,7 +276,7 @@ get_header(); ?>
                                   </h3>
                                 </div>
                                 <!-- displays image url for current variation -->
-                                <a href="<?php echo ($variation_url ."&variationNumber=".$sortable_product["variation_number"]);?>">
+                                <a href="<?php echo ($variation_url ."?variationNumber=".$sortable_product["variation_number"]);?>">
                                  <div class="card-content_image" style="background-image: url('<?php echo $sortable_product["image"]?>')">
                                 </div>
                                 </a>

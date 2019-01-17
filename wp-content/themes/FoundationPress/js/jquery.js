@@ -4,7 +4,7 @@ var priceHigh;
 $( document ).ready(function() {
     var currentUrl = window.location.href ;
     if (currentUrl.indexOf("productOrderBy") <= 0){
-        window.location.replace(currentUrl+'&productOrderBy=menu_order&itemOrder=ASC');
+        window.location.replace(currentUrl+'?productOrderBy=menu_order&itemOrder=ASC');
         } 
   
     var formattedUrl = new URL(currentUrl);
