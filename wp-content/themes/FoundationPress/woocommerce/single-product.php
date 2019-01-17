@@ -16,7 +16,7 @@ get_header(); ?>
 <div class="main-container">
 	<div class="main-grid">
 		<main class="main-content">
-		<script src="wp-content/themes/FoundationPress/js/single_product.js"></script>
+		<script src="../../wp-content/themes/FoundationPress/js/single_product.js"></script>
 		<div class="product-container">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -80,7 +80,6 @@ get_header(); ?>
 						<?php endif?>
 						</h3>
 					<?php endforeach;?>
-	
 						<input id='cart_quantity' class="quantity product-info_price-quantity-to-cart-wrap--quantity" value="1" type="number" name="quantity" min="1" max="99">
 						<input type="button" id="variation_add_to_cart" class="button product-info_price-quantity-to-cart-wrap--button" onclick="addToCart()"value="Dodaj u korpu">
 					</div>			
@@ -130,7 +129,7 @@ get_header(); ?>
 				<div class="card">
         		<div class="card-content">
 					<div class="card-content_description">
-					<a href="<?php echo ($product_url ."&variationNumber=".$variation_number);?>">
+					<a href="<?php echo ($product_url ."?variationNumber=".$variation_number);?>">
 						<h4 class="card-content_description--title"><?php echo get_the_title( $value->post_parent ); ?></h4>
 					</a>
 					<h6 class="card-content_description--weight"><?php echo $variable_product->get_attributes()['gramaza']; ?></h6>
@@ -146,7 +145,7 @@ get_header(); ?>
 					</h3>
 					</div>
 
-					<a href="<?php echo ($product_url ."&variationNumber=".$variation_number);?>">
+					<a href="<?php echo ($product_url ."?variationNumber=".$variation_number);?>">
 						<div class="card-content_image" style="background-image: url('<?php  echo $thumbnail; ?>')" ></div>
 					</a>
 					<a href="?add-to-cart=<?php echo ($value->post_parent ); ?>&variation_id=<?php echo $variation_id?>&attribute_gramaza=<?php echo ( $variable_product->get_attributes()['gramaza']); ?>" class="add_to_cart_button button"><h3>+</h3></a>

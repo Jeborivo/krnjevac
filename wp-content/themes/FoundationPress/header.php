@@ -17,7 +17,6 @@
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
 		<link rel="stylesheet" href="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/font-icons/icons.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-		<script src="wp-content/themes/FoundationPress/js/script.js"></script>
 		<?php wp_head(); ?>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
