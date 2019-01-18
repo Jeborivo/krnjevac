@@ -6,6 +6,6 @@
         <button class="button btn-grey" type="button">Pretrazi lokacije <i class="fas fa-map-marker-alt"></i></button>
     </div>
     <div class="front_wtb--image">
-        <img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/gde_kupiti.svg" alt="">
+        <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/gde_kupiti.svg" alt="">
     </div>
 </div>

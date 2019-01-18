@@ -15,7 +15,7 @@
 get_header(); ?>
 
 		<div class="hero hero_about">
-			<img class="hero-quality-img" src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/heroK.png" alt="">
+			<img class="hero-quality-img" src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/heroK.png" alt="">
 			<div class="hero-quality_content hero_content main-container ">
 				<div class="hero-quality_content--text">
 					<h1 class="hero-quality_content--title">Šta je potrebno da med postane Krnjevac?</h1>
@@ -91,8 +91,8 @@ get_header(); ?>
 					<h5 class="quality-post_content--text">Naši procesi proizvodnje se neprekidno prate kako bi se nivo kvaliteta održao konstantnim. Kako bismo osigurali potpunu ispravnost i očekivani kvalitet, u našoj modernoj laboratoriji vršimo veliki broj analiza. Za potrebe naših partnera, analize radimo i u sertifikovanim nemačkim laboratorijama QSI i Intertek, koje se nalaze u Bremenu.</h5>
 				</div>
 				<div class="quality-post_image" >
-				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/kontpostL.png" alt="" class="quality-post_image--img-center">
-				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/kontpostRTL.png" alt="" class="quality-post_image--img-top-right">
+				<img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/kontpostL.png" alt="" class="quality-post_image--img-center">
+				<img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/kontpostRTL.png" alt="" class="quality-post_image--img-top-right">
 				</div>
 			</div>
 		</main>
