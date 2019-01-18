@@ -77,10 +77,10 @@ get_header(); ?>
 					</div>
 					<div class="quality-steps_step-8 step links">
 						<div class="links_wrap">
-							<a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC" class="link">Teglirani med <i class="fas fa-shopping-cart"></i> </a>
-							<a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC" class="link">Pčelinji proizvodi sa medom  <i class="fas fa-shopping-cart"></i> </a>
-							<a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC" class="link">HoReCa program <i class="fas fa-shopping-cart"></i> </a>
-							<a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC" class="link">Akcijski proizvodi <i class="fas fa-shopping-cart"></i> </a>
+							<a href="shop" class="link">Teglirani med <i class="fas fa-shopping-cart"></i> </a>
+							<a href="shop" class="link">Pčelinji proizvodi sa medom  <i class="fas fa-shopping-cart"></i> </a>
+							<a href="shop" class="link">HoReCa program <i class="fas fa-shopping-cart"></i> </a>
+							<a href="shop" class="link">Akcijski proizvodi <i class="fas fa-shopping-cart"></i> </a>
 						</div>
 					</div>
 				</div>
