@@ -64,3 +64,31 @@
         }
     }
 }
+
+.navigation__nav {
+    .desktop-menu-mobile {
+        a {
+            color: $white!important;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+
+    .logo-krnjevacmed {
+        content:url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png)!important;
+        width: 116px;
+        height: 35px;
+    }
+
+    .logo-krnjevacmed::before {
+        content: "";
+        display: block;
+        background-image: url(http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/krnjevac-logo.png)!important;
+        background-size: cover;
+        width: 116px;
+        height:35px;
+    }
+}

@@ -16,7 +16,7 @@ get_header(); ?>
 <div class="main-container">
 	<div class="main-grid">
 		<main class="main-content">
-		<script src="../../wp-content/themes/FoundationPress/js/single_product.js"></script>
+		<script src="../krnjevac/wp-content/themes/FoundationPress/js/single_product.js"></script>
 		<div class="product-container">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -71,9 +71,11 @@ get_header(); ?>
 						<!-- display prices -->			
 						<h3 class="card-content_descriptio--price variation_price variation_price<?php echo $br2?>"> 
 						<?php if( $variation['display_price'] !=  $variation['display_regular_price']):?>
+						<span class="price-reg">
 						<span class="regular_price">
 						<span class="line"></span>	
 						<?php echo $variation['display_regular_price'];?>,- </span>
+						</span>
 						<span class="sale_price"><?php echo $variation['display_price'];?>,-</span>
 						<?php else: ?>
 						<span id="regular_price"> <?php echo $variation['display_price'];?>,-</span>
@@ -134,9 +136,11 @@ get_header(); ?>
 					</a>
 					<h6 class="card-content_description--weight"><?php echo $variable_product->get_attributes()['gramaza']; ?></h6>
 					<h3 class="card-content_description--price">
+						<span class="price-reg">
 						<span class="regular_price">
 						<span class="line"></span>
 						<?php echo $variable_product->get_regular_price(); ?>,-
+						</span>
 						</span>
                         <?php $sale= $variable_product->get_sale_price(); ?>
                         <?php if($sale != ''):?>

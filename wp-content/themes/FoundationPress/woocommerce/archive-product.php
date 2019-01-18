@@ -12,8 +12,8 @@
  * @since FoundationPress 1.0.0
  */
 get_header(); ?>
-    <script src="../wp-content/themes/FoundationPress/js/multirange.js"></script>
-    <script src="../wp-content/themes/FoundationPress/js/jquery.js"></script>
+    <script src="../krnjevac/wp-content/themes/FoundationPress/js/multirange.js"></script>
+    <script src="../krnjevac/wp-content/themes/FoundationPress/js/jquery.js"></script>
 		
 <div class="main-container">
 	<div class="main-grid">
@@ -64,13 +64,12 @@ get_header(); ?>
 
           <div class="category_filter filter-collapsible">
             <!-- <input id="filter-colapse" class="ft-toggle" type="checkbox" checked> -->
-            <label for="filter-colapse" class="filter-toggle">Kategorije</label>
+            <label for="filter-colapse" class="filter-toggle">Kategorije <span id="category-close" onclick="categoryClose()">x</span> </label>
               <div class="filter-colapse-content">
                 <div class="filter-content-inner"> 
-                  <a id="category-close" onclick="categoryClose()" href="#">x</a>
                   <?php foreach ($all_categories as $cat):?>
                     <?php if($cat->name != 'Popular'):?>
-                      <input class="button filter-neutral" type="button" id="<?php echo str_replace(' ','_',$cat->name); ?>"class=" <?php echo str_replace(' ','_',$cat->name); ?>" onclick="categoryFilter(this.value)" value="<?php echo $cat->name?>"> <br>
+                      <input class="button filter-neutral filter-categories" type="button" id="<?php echo str_replace(' ','_',$cat->name); ?>"class=" <?php echo str_replace(' ','_',$cat->name); ?>" onclick="categoryFilter(this.value)" value="<?php echo $cat->name?>"> <br>
                     <?php endif;?>
                   <?php endforeach; ?>
                 </div>
@@ -78,23 +77,23 @@ get_header(); ?>
           </div>
           
           <div class="vrste_meda vrste-collapsible filter-item">
-          <a id="vrste-meda-close" onclick="vrsteMedaClose()" href="#">x</a>
+          
             <!-- <input id="vrste-colapse" class="vr-toggle" type="checkbox" checked> -->
-            <label for="vrste-colapse" class="vrste-toggle">Vrste meda</label>
+            <label for="vrste-colapse" class="vrste-toggle">Vrste meda <span id="vrste-meda-close" onclick="vrsteMedaClose()" href="">x</span></label>
               <div class="vrste-colapse-content">
                 <div class="vrste-content-inner">
-                  <input class="button filter-neutral" type="button" id="bagremov_med" onclick="vrsteMedaFilter(this.id)" value="Bagremov med"> <br>
-                  <input class="button filter-neutral" type="button" id="livadski_med" onclick="vrsteMedaFilter(this.id)" value="Livadski med"> <br>
-                  <input class="button filter-neutral" type="button" id="lipov_med" onclick="vrsteMedaFilter(this.id)" value="Lipov med"> <br>
-                  <input class="button filter-neutral" type="button" id="cvetni_med" onclick="vrsteMedaFilter(this.id)" value="Cvetni med"> <br>
+                  <input class="button filter-neutral filter-type" type="button" id="bagremov_med" onclick="vrsteMedaFilter(this.id)" value="Bagremov med"> <br>
+                  <input class="button filter-neutral filter-type" type="button" id="livadski_med" onclick="vrsteMedaFilter(this.id)" value="Livadski med"> <br>
+                  <input class="button filter-neutral filter-type" type="button" id="lipov_med" onclick="vrsteMedaFilter(this.id)" value="Lipov med"> <br>
+                  <input class="button filter-neutral filter-type" type="button" id="cvetni_med" onclick="vrsteMedaFilter(this.id)" value="Cvetni med"> <br>
                 </div>
               </div>
           </div>
 
-          <div id="gramaza" class="gramaza gramaza-collapsible filter-item">
-          <a id="gramaza-close" onclick="gramazaClose()" href="#">x</a>
+          <div id="gramaza" class="gramaza gramaza-collapsible filter-item" >
+          
             <!-- <input id="gramaza-colapse" class="gr-toggle" type="checkbox" checked> -->
-            <label for="gramaza-colapse" class="gramaza-toggle">Gramaza</label>
+            <label for="gramaza-colapse" class="gramaza-toggle">Gramaza <span id="gramaza-close" onclick="gramazaClose()" href="">x</span> </label>
               <div class="gramaza-colapse-content">
                 <div class="gramaza-content-inner">
 
@@ -103,9 +102,9 @@ get_header(); ?>
           </div>
 
           <div class="price price-collapsible filter-item">
-          <a id="range-close" onclick="rangeClose()"href="#">x</a>
+          
             <!-- <input id="price-colapse" class="pr-toggle" type="checkbox" checked> -->
-            <label for="price-colapse" class="price-toggle">Cena</label>
+            <label for="price-colapse" class="price-toggle">Cena <span id="range-close" onclick="rangeClose()">x</span> </label>
               <div class="price-colapse-content">
                 <div class="price-content-inner">
                   <div class="range">
@@ -265,9 +264,11 @@ get_header(); ?>
                                   <!-- displays price -->
                                   <h3 class="card-content_description--price"> 
                                   <?php if($sortable_product["price_sale"] != ''):?>
-                                  <span class="regular_price">
+                                  <span class="price-reg">
                                   <span class="line"></span>  
-                                  <?php echo($sortable_product["price_regular"]);?></span>,-
+                                  <span class="regular_price">
+                                  <?php echo($sortable_product["price_regular"]);?></span><span>,-</span>
+                                  </span>
                                   <span class="sale_price"><?php echo($sortable_product["price_sale"]);?></span>
                                         <?php echo(',-');?>
                                  <?php else: ?>

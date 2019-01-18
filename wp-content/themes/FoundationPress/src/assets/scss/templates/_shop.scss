@@ -281,6 +281,15 @@
                     font-weight: bold;
                     margin: 0;
                     width: 100%;
+
+                    span {
+                        float: right;
+                        
+                        &:hover {
+                            cursor: pointer;
+                            
+                        }
+                    }
                 }
             }
 
