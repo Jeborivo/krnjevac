@@ -12,8 +12,8 @@
  * @since FoundationPress 1.0.0
  */
 get_header(); ?>
-    <script src="../krnjevac/wp-content/themes/FoundationPress/js/multirange.js"></script>
-    <script src="../krnjevac/wp-content/themes/FoundationPress/js/jquery.js"></script>
+    <script src="../wp-content/themes/FoundationPress/js/multirange.js"></script>
+    <script src="../wp-content/themes/FoundationPress/js/jquery.js"></script>
 		
 <div class="main-container">
 	<div class="main-grid">
@@ -156,7 +156,7 @@ get_header(); ?>
                             <?php $sale= $single_variation->get_sale_price(); ?>
                             <?php $product_date = $single_variation->get_date_created();?>
                             <?php $vrstameda = get_field( "vrste_meda" ); ?>
-                            <?php $variation_image = wp_get_attachment_image_src( get_post_thumbnail_id( $value ) );?> <!-- list categories for current product -->
+                            <?php $variation_image = wp_get_attachment_image_src( get_post_thumbnail_id( $value ),'full' );?> <!-- list categories for current product -->
                              <?php $categories=[]; ?>
                              <?php $terms = get_the_terms( $post->ID, 'product_cat' );?>
                                               <?php foreach ($terms as $term) :?>
