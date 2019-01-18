@@ -265,6 +265,11 @@ function rangeClose(){
     $("input.ghost").val(100)
     priceHigh=1200;
     priceLow=0;
+    $(".multirange").attr('style','--low:1%; --high:99%;');
+    $('.low_value').text(priceLow+' rsd');
+    $('.high_value').text(priceHigh+' rsd');
+
+
     filtering();
 
  }
