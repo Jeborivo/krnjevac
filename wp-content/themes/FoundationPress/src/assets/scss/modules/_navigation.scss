@@ -54,6 +54,7 @@
 
 .top-bar {
 
+
   .top-bar-title a {
     font-size: 1rem;
     color: #B9B9B9;
@@ -110,6 +111,7 @@
   justify-content: space-between;
 
   &-title {
+    height: 36px;
     align-self: center;
     margin: 0 10% 0 0;
     padding-bottom: 5px;
@@ -274,6 +276,11 @@
     width: 0; 
     transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
+    .header-menu-moblie  {
+      position: absolute;
+      top: 36px;
+      left: 90px;
+    }
 
     .desktop-menu {
       @include breakpoint(small) {

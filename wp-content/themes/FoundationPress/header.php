@@ -93,34 +93,45 @@ $(document).ready(function(){
 				</div>
 		
             	<nav class="navigation__nav">
-				<?php foundationpress_top_bar_l(); ?>
-				<div class="info">
-					<h3 class="info_title">Medino DOO Krnjevo</h3>
-					<h5 class="info_phone">+381 26 821 080</h5>
-					<h5 class="info_mail">office@krnjevac.rs</h5>
-					<h5 class="info_adress">Bulevar oslobođenja 29, 11319 Krnjevo, Srbija</h5>
-				</div>
-				<div class="nav_links">
-					<div class="faq-nav">
-						<a href="?page_id=102" class="faq-nav_link">Kontrola kvaliteta</a>
-						<a href="?page_id=104" class="faq-nav_link">Gde kupiti</a>
-						<a href="#" class="faq-nav_link">Uslovi korišćenja i prodaje</a>
-						<a href="#" class="faq-nav_link">Kako poručiti proizvod</a>
+
+					<div class="header-menu-moblie top-bar-left">
+						<div class="top-bar-left">
+							<div class="site-desktop-title top-bar-title">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><i class="logo-krnjevacmed" alt=""></i></a>
+							</div>
+							<?php foundationpress_top_bar_l_m(); ?>
+						</div>
 					</div>
-					<div class="about">
-						<a href="#" class=about_link">Blog</a>
-						<a href="#" class=about_link">Naši pčelari</a>
-						<a href="#" class=about_link">Projekti</a>
-						<a href="#" class=about_link">Recepti</a>
+					
+				
+					<?php foundationpress_top_bar_l(); ?>
+					<div class="info">
+						<h3 class="info_title">Medino DOO Krnjevo</h3>
+						<h5 class="info_phone">+381 26 821 080</h5>
+						<h5 class="info_mail">office@krnjevac.rs</h5>
+						<h5 class="info_adress">Bulevar oslobođenja 29, 11319 Krnjevo, Srbija</h5>
 					</div>
-					<div class="social">
-						<a href="#" class=social_link">Facebook</a>		
-						<a href="#" class=social_link">Instagram</a>	
-						<a href="#" class=social_link">Youtube</a>	
+					<div class="nav_links">
+						<div class="faq-nav">
+							<a href="?page_id=102" class="faq-nav_link">Kontrola kvaliteta</a>
+							<a href="?page_id=104" class="faq-nav_link">Gde kupiti</a>
+							<a href="#" class="faq-nav_link">Uslovi korišćenja i prodaje</a>
+							<a href="#" class="faq-nav_link">Kako poručiti proizvod</a>
+						</div>
+						<div class="about">
+							<a href="#" class=about_link">Blog</a>
+							<a href="#" class=about_link">Naši pčelari</a>
+							<a href="#" class=about_link">Projekti</a>
+							<a href="#" class=about_link">Recepti</a>
+						</div>
+						<div class="social">
+							<a href="#" class=social_link">Facebook</a>		
+							<a href="#" class=social_link">Instagram</a>	
+							<a href="#" class=social_link">Youtube</a>	
+						</div>
 					</div>
-				</div>
             	</nav>
-        	</div>
+        	
 
 
 			</div>
