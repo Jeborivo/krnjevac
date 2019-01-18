@@ -12,8 +12,8 @@
  * @since FoundationPress 1.0.0
  */
 get_header(); ?>
-    <script src="../wp-content/themes/FoundationPress/js/multirange.js"></script>
-    <script src="../wp-content/themes/FoundationPress/js/jquery.js"></script>
+    <script src="../krnjevac/wp-content/themes/FoundationPress/js/multirange.js"></script>
+    <script src="../krnjevac/wp-content/themes/FoundationPress/js/jquery.js"></script>
 		
 <div class="main-container">
 	<div class="main-grid">
