@@ -15,7 +15,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
-		<link rel="stylesheet" href="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/font-icons/icons.css">
+		<link rel="stylesheet" href="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/font-icons/icons.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 		<?php wp_head(); ?>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -93,39 +93,51 @@ $(document).ready(function(){
 				</div>
 		
             	<nav class="navigation__nav">
-				<?php foundationpress_top_bar_l(); ?>
-				<div class="info">
-					<h3 class="info_title">Medino DOO Krnjevo</h3>
-					<h5 class="info_phone">+381 26 821 080</h5>
-					<h5 class="info_mail">office@krnjevac.rs</h5>
-					<h5 class="info_adress">Bulevar oslobođenja 29, 11319 Krnjevo, Srbija</h5>
-				</div>
-				<div class="nav_links">
-					<div class="faq-nav">
-						<a href="?page_id=102" class="faq-nav_link">Kontrola kvaliteta</a>
-						<a href="?page_id=104" class="faq-nav_link">Gde kupiti</a>
-						<a href="#" class="faq-nav_link">Uslovi korišćenja i prodaje</a>
-						<a href="#" class="faq-nav_link">Kako poručiti proizvod</a>
+
+					<div class="header-menu-moblie top-bar-left">
+						<div class="top-bar-left">
+							<div class="site-desktop-title top-bar-title">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><i class="logo-krnjevacmed" alt=""></i></a>
+							</div>
+							<?php foundationpress_top_bar_l_m(); ?>
+						</div>
 					</div>
-					<div class="about">
-						<a href="#" class=about_link">Blog</a>
-						<a href="#" class=about_link">Naši pčelari</a>
-						<a href="#" class=about_link">Projekti</a>
-						<a href="#" class=about_link">Recepti</a>
+					
+				
+					<?php foundationpress_top_bar_l(); ?>
+					<div class="info">
+						<h3 class="info_title">Medino DOO Krnjevo</h3>
+						<h5 class="info_phone">+381 26 821 080</h5>
+						<h5 class="info_mail">office@krnjevac.rs</h5>
+						<h5 class="info_adress">Bulevar oslobođenja 29, 11319 Krnjevo, Srbija</h5>
 					</div>
-					<div class="social">
-						<a href="#" class=social_link">Facebook</a>		
-						<a href="#" class=social_link">Instagram</a>	
-						<a href="#" class=social_link">Youtube</a>	
+					<div class="nav_links">
+						<div class="faq-nav">
+							<a href="?page_id=102" class="faq-nav_link">Kontrola kvaliteta</a>
+							<a href="?page_id=104" class="faq-nav_link">Gde kupiti</a>
+							<a href="#" class="faq-nav_link">Uslovi korišćenja i prodaje</a>
+							<a href="#" class="faq-nav_link">Kako poručiti proizvod</a>
+						</div>
+						<div class="about">
+							<a href="#" class=about_link">Blog</a>
+							<a href="#" class=about_link">Naši pčelari</a>
+							<a href="#" class=about_link">Projekti</a>
+							<a href="#" class=about_link">Recepti</a>
+						</div>
+						<div class="social">
+							<a href="#" class=social_link">Facebook</a>		
+							<a href="#" class=social_link">Instagram</a>	
+							<a href="#" class=social_link">Youtube</a>	
+						</div>
 					</div>
-				</div>
             	</nav>
-        	</div>
+        	
 
 
 			</div>
 		</nav>
 
+		
 
 
 

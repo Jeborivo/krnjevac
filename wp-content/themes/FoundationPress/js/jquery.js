@@ -40,7 +40,7 @@ $( document ).ready(function() {
     gramazaValue=gramazaValue.replace(' ','');
       if ($.inArray($(this).text(), gramaze) == -1){
           gramaze.push($(this).text());
-          $('.gramaza-content-inner').append(' <input class="button filter-neutral" id="'+gramazaValue+'"type="button" onclick="gramazaFilter(this.value)" value="'+gramazaValue+'"> ');
+          $('.gramaza-content-inner').append(' <input class="button filter-neutral filter-weight" id="'+gramazaValue+'"type="button" onclick="gramazaFilter(this.value)" value="'+gramazaValue+'"> ');
         }
 
     });
@@ -235,6 +235,7 @@ function filtering(){
 // Close
 function categoryClose(){
     classArray = classArray.filter(function(x) { 
+        $('.filter-categories').removeClass("filter-off filter-on").addClass("filter-neutral");
         return categoryCloseArray.indexOf(x) < 0;
       });
     
@@ -244,6 +245,7 @@ function categoryClose(){
 }
 function vrsteMedaClose(){
     classArray = classArray.filter(function(x) { 
+        $('.filter-type').removeClass("filter-off filter-on").addClass("filter-neutral");
         return vrsteMedaFilterCloseArray.indexOf(x) < 0;
       });
     
@@ -252,6 +254,7 @@ function vrsteMedaClose(){
 function gramazaClose(){
     
     classArray = classArray.filter(function(x) { 
+        $('.filter-weight').removeClass("filter-off filter-on").addClass("filter-neutral");
         return gramazaFilterCloseArray.indexOf(x) < 0;
       });
     
@@ -262,6 +265,11 @@ function rangeClose(){
     $("input.ghost").val(100)
     priceHigh=1200;
     priceLow=0;
+    $(".multirange").attr('style','--low:1%; --high:99%;');
+    $('.low_value').text(priceLow+' rsd');
+    $('.high_value').text(priceHigh+' rsd');
+
+
     filtering();
 
  }

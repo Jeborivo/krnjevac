@@ -71,9 +71,11 @@ get_header(); ?>
 						<!-- display prices -->			
 						<h3 class="card-content_descriptio--price variation_price variation_price<?php echo $br2?>"> 
 						<?php if( $variation['display_price'] !=  $variation['display_regular_price']):?>
+						<span class="price-reg">
 						<span class="regular_price">
 						<span class="line"></span>	
 						<?php echo $variation['display_regular_price'];?>,- </span>
+						</span>
 						<span class="sale_price"><?php echo $variation['display_price'];?>,-</span>
 						<?php else: ?>
 						<span id="regular_price"> <?php echo $variation['display_price'];?>,-</span>
@@ -134,9 +136,11 @@ get_header(); ?>
 					</a>
 					<h6 class="card-content_description--weight"><?php echo $variable_product->get_attributes()['gramaza']; ?></h6>
 					<h3 class="card-content_description--price">
+						<span class="price-reg">
 						<span class="regular_price">
 						<span class="line"></span>
 						<?php echo $variable_product->get_regular_price(); ?>,-
+						</span>
 						</span>
                         <?php $sale= $variable_product->get_sale_price(); ?>
                         <?php if($sale != ''):?>
@@ -160,22 +164,22 @@ get_header(); ?>
 	<div class="product-buy-info-wrap">
 		<div class="product-buy-info main-container">
 			<div class="product-buy-info_address info-field">
-				<img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/phone.svg" alt="phone">
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/phone.svg" alt="phone">
 				<h5> Korisnička podrška<br>
 				+381 26 821 080</h5>
 			</div>
 			<div class="product-buy-info_delivery info-field"> 
-				<img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/delivery.svg" alt="delivery">
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/delivery.svg" alt="delivery">
 				<h5>Besplatna dostava za <br>
 				porudžbine iznad 1999,-</h5>
 			</div>
 			<div class="product-buy-info_safe info-field">
-				<img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/ssl.svg" alt="ssl">
+				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/ssl.svg" alt="ssl">
 				<h5>Sigurna kupovina putem<br>
 				sertifikovane prodavnice</h5>
 			</div>
 			<div class="product-buy-info_button info-field">
-				<button class="button btn-grey"><img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
+				<button class="button btn-grey"><img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
 			</div>
 		</div>
 	</div>
