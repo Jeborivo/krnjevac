@@ -16,7 +16,7 @@ get_header(); ?>
 <div class="main-container">
 	<div class="main-grid">
 		<main class="main-content">
-		<script src="../krnjevac/wp-content/themes/FoundationPress/js/single_product.js"></script>
+		<script src="../../wp-content/themes/FoundationPress/js/single_product.js"></script>
 		<div class="product-container">
 
 			<?php while ( have_posts() ) : the_post(); ?>
