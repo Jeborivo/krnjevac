@@ -101,7 +101,7 @@ get_header(); ?>
 					<button type="button" class="button btn-grey related-filters_buttons--last">Poslednje pregledano</button>
 					<button type="button" class="button btn-grey related-filters_buttons--most">Najprodavanije</button>
 				</div>
-				<a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC" class="related-filters_link">Internet-prodavnica <i class="fas fa-arrow-right"></i></a>
+				<a href="shop" class="related-filters_link">Internet-prodavnica <i class="fas fa-arrow-right"></i></a>
 			</div>
 			<div class="cards-container">
 
