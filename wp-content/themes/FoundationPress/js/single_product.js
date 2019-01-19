@@ -18,6 +18,22 @@ $( document ).ready(function() {
 
     
  });
+function quantityUp(){
+    event.preventDefault()
+    var quantityValue = $("#cart_quantity").val();
+    quantityValue = parseInt(quantityValue);
+    $("#cart_quantity").val(quantityValue+1);
+
+}
+function quantityDown(){
+    event.preventDefault()
+    var quantityValue = $("#cart_quantity").val();
+    quantityValue = parseInt(quantityValue);
+    if( $("#cart_quantity").val()!= 1){
+     $("#cart_quantity").val(quantityValue-1);
+    }
+}
+
 function addToCart(){
    
    quantity = document.getElementById("cart_quantity").value;

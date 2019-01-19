@@ -83,6 +83,8 @@ get_header(); ?>
 						</h3>
 					<?php endforeach;?>
 						<input id='cart_quantity' class="quantity product-info_price-quantity-to-cart-wrap--quantity" value="1" type="number" name="quantity" min="1" max="99">
+						<span><a id="arrow-asc" onclick="quantityUp()" href="" >strelica gore</a></span>
+						<span><a id="arrow-desc" onclick="quantityDown()" href="" >strelica dole</a></span>
 						<input type="button" id="variation_add_to_cart" class="button product-info_price-quantity-to-cart-wrap--button" onclick="addToCart()"value="Dodaj u korpu">
 					</div>			
 			</div><!-- product-info -->
