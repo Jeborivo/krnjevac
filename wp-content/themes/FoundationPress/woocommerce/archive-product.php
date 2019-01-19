@@ -12,8 +12,8 @@
  * @since FoundationPress 1.0.0
  */
 get_header(); ?>
-    <script src="../krnjevac/wp-content/themes/FoundationPress/js/multirange.js"></script>
-    <script src="../krnjevac/wp-content/themes/FoundationPress/js/jquery.js"></script>
+    <script src="wp-content/themes/FoundationPress/js/multirange.js"></script>
+    <script src="wp-content/themes/FoundationPress/js/jquery.js"></script>
 		
 <div class="main-container">
 	<div class="main-grid">
@@ -28,11 +28,16 @@ get_header(); ?>
           <option value="ime">Ime</option>
           <option value="cena">Cena</option>
         </select>
+        <span><a id="arrow-asc" onclick="arrowAsc()" href="" >strelica gore</a></span>
+        <span><a id="arrow-desc" onclick="arrowDesc()" href="" >strelica dole</a></span>
       </div>
+      
+
       <div class="search">
           <?php get_search_form(); ?>
       </div>
     </div>
+    
 
   <div class="shop-container">
 
