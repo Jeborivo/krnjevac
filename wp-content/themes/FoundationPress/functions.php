@@ -121,13 +121,27 @@ function create_posttype() {
                  'name' => __( 'Related Product' ),
                  'singular_name' => __( 'Related Product' ),
              ),
-             'supports' => array( 'title', 'editor','thumbnail' ),
+             'supports' => array( 'title', 'editor' ),
              'public' => true,
              'has_archive' => true,
              'rewrite' => array('slug' => 'Related Product'),
              
              
             ));
+            register_post_type( 'popular_products',
+            // CPT Options
+                array(
+                    'labels' => array(
+                        'name' => __( 'Popular Product' ),
+                        'singular_name' => __( 'Popular Product' ),
+                    ),
+                    'supports' => array( 'title', 'editor' ),
+                    'public' => true,
+                    'has_archive' => true,
+                    'rewrite' => array('slug' => 'Popular Product'),
+                    
+                    
+                   ));
    
 }
 

@@ -29,7 +29,39 @@ error_reporting(E_ALL);
     <?php $variation_number = $key +1; ?>
   <?php endif ?>
 <?php endforeach; ?>
+<div class="card">
+          <div class="card-content">
+              <div class="card-content_description">
+                <h4 class="card-content_description--title"><?php echo get_the_title( $value->post_parent ); ?></h4>
+                <h6 class="card-content_description--weight">
+                  <?php if (isset($variable_product->get_attributes()['gramaza'])): ?>
+                  <?php echo $variable_product->get_attributes()['gramaza']; ?>
+                  <?php endif;?>
+                </h6>
+                <h3 class="card-content_description--price">
+                  <?php 
+                 $sale= $variable_product->get_sale_price();
+                  if($sale != ''):?>
+                  <span class="price-reg">
+                  <span class="regular_price">
+                      <span class="line"></span>
+                      <?php echo($variable_product->get_regular_price()); ?>,- </span>
+                  </span>
 
+                    <span class="sale_price"><?php echo($sale);?></span>
+                    <?php echo(',-');?>
+                  <?php else: ?>
+                    <span id="regular_price"><?php echo($variable_product->get_regular_price()) ?> ,- </span>
+                  <?php endif;?>
+                </h3>
+              </div>
+              <div class="card-content_image" style="background-image: url('<?php  echo $thumbnail; ?> ')">
+              </div>
+              <a href="?add-to-cart=<?php echo ($productId); ?>" class="add_to_cart_button button"><h3>+</h3></a>
+           
+            </div>
+        </div>
+_____________________________________________
   <div class="card">
       <div class="card-content">
     <div class="card-content_description">
