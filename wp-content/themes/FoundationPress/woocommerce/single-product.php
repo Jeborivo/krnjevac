@@ -12,7 +12,10 @@
 
 get_header(); ?>
 
+<?php 
 
+
+?>
 <div class="main-container">
 	<div class="main-grid">
 		<main class="main-content">
@@ -47,8 +50,10 @@ get_header(); ?>
 				</div>
 				<div class="variation_select product-info_variation-select">
 					<div id="product_id"><?php echo ($product->get_id()); ?></div>
+					
 					<div class="var-button-wrap">
 						<?php foreach ( $variations as $variation ) :?>
+					
 						<!-- lists all atrributes -->
 						<?php if (isset($product->get_attributes()['gramaza']['options'][$br1])): ?>
 						<input id="attributeSelectorButton<?php echo $br1+1;?>"onclick="attributeSelect(this.name)"name="<?php echo $br1+1;?>" class="active button_<?php echo $br1;?> button button-var" type="button" value="<?php echo ($product->get_attributes()['gramaza']['options'][$br1]); ?>">
@@ -67,9 +72,11 @@ get_header(); ?>
 					</div>
 					<div class="product-info_price-quantity-to-cart-wrap">
 					<?php foreach ( $variations as $variation ) :?>	
+					
 					<?php $br2++;?>
 						<!-- display prices -->			
 						<h3 class="card-content_descriptio--price variation_price variation_price<?php echo $br2?>"> 
+						<div class="stock-blob stock_blob_<?php echo $br2?>"><?php echo($variation['is_in_stock'])?></div>	
 						<?php if( $variation['display_price'] !=  $variation['display_regular_price']):?>
 						<span class="price-reg">
 						<span class="regular_price">
