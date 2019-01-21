@@ -19,7 +19,7 @@ $( document ).ready(function() {
             $('#product-sort option[value="datum"]').hide();
         break;
         case 'title':
-            $('#product-sort option:contains("Selected")').text('Ime proizvoda');
+            $('#product-sort option:contains("Selected")').text('Ime');
             $('#product-sort option[value="ime"]').hide();
         break;
         case 'cena':
@@ -66,7 +66,7 @@ $( document ).ready(function() {
             productOrderby='cena';
           break;
       }
-      window.location.replace(siteUrl+'?post_type=product&productOrderBy='+productOrderby+'&itemOrder=ASC');
+      window.location.replace(siteUrl+'/shop?productOrderBy='+productOrderby+'&itemOrder=ASC');
 }
  function arrowAsc(event){
     event.preventDefault();
