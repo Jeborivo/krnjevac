@@ -47,6 +47,7 @@ function addToCart(){
 
  
 function attributeSelect(selected){
+    variationSetup(selected);
 // stock_blob klasa treba ima display none
 
     if($('.stock_blob_'+selected).text() == 1){
