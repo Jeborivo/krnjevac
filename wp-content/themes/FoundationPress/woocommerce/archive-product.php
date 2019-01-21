@@ -12,8 +12,8 @@
  * @since FoundationPress 1.0.0
  */
 get_header(); ?>
-    <script src="../wp-content/themes/FoundationPress/js/multirange.js"></script>
-    <script src="../wp-content/themes/FoundationPress/js/jquery.js"></script>
+    <script src="../krnjevac/wp-content/themes/FoundationPress/js/multirange.js"></script>
+    <script src="../krnjevac/wp-content/themes/FoundationPress/js/jquery.js"></script>
 		
 <div class="main-container">
 	<div class="main-grid">
@@ -135,7 +135,7 @@ get_header(); ?>
         <div class="product-list">
         
 
-                <div   class="products-container">
+                <div id="top"  class="products-container">
                 <?php
               
                
@@ -299,6 +299,8 @@ get_header(); ?>
                                </div>
                               </div>
                     <?php endforeach; ?>
+                    <span id="load-more">Ucitaj jos proizvoda <i class="fas fa-angle-down"></i></span>
+                      <!-- <a  class="totop" href="#top">Back to top</a>  -->
             </div><!--/.products-->
             </div>
 		</main>
