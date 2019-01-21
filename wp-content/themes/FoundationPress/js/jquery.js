@@ -19,7 +19,7 @@ $( document ).ready(function() {
             $('#product-sort option[value="datum"]').hide();
         break;
         case 'title':
-            $('#product-sort option:contains("Selected")').text('Ime proizvoda');
+            $('#product-sort option:contains("Selected")').text('Ime');
             $('#product-sort option[value="ime"]').hide();
         break;
         case 'cena':
@@ -66,9 +66,9 @@ $( document ).ready(function() {
             productOrderby='cena';
           break;
       }
-      window.location.replace(siteUrl+'?post_type=product&productOrderBy='+productOrderby+'&itemOrder=ASC');
+      window.location.replace(siteUrl+'/shop?productOrderBy='+productOrderby+'&itemOrder=ASC');
 }
- function arrowAsc(){
+ function arrowAsc(event){
     event.preventDefault();
      var currentUrl = window.location.href ;
      if (currentUrl.indexOf("itemOrder") >= 0){
@@ -81,7 +81,7 @@ $( document ).ready(function() {
     
 
  }
- function arrowDesc(){
+ function arrowDesc(event){
     event.preventDefault();
     var currentUrl = window.location.href ;
      if (currentUrl.indexOf("itemOrder") >= 0){
@@ -105,18 +105,24 @@ $( document ).ready(function() {
         return true;
 
     }
-        if (salePrice !=''){
-            if(priceLow> salePrice || priceHigh<salePrice){
-                $(this).hide();
-            }
-            else{$(this).show();}
-        }else{
-            if(priceLow> regularPrice || priceHigh<regularPrice){
-                $(this).hide();
-            }
-            else{$(this).show();}
-
+    if (salePrice !=''){
+        if(priceLow> salePrice || priceHigh<salePrice){
+            $(this).hide();
+            $(this).addClass("range_hidden")
         }
+        else{$(this).show();
+            $(this).removeClass("range_hidden")}
+    }else{
+        if(priceLow> regularPrice || priceHigh<regularPrice){
+            $(this).hide();
+            $(this).addClass("range_hidden")
+        }
+        else{
+            $(this).show();
+            $(this).removeClass("range_hidden")
+        }
+
+    }
     if($('.product_title:visible').length==0){
         $('.empty_results').text('Nema rezultata');
     }
@@ -196,16 +202,39 @@ function gramazaFilter(gramaza){
   
 }
 function filtering(){
-
-    $('.empty_results').text('');
-    
+     
     var classComp = classArray.toString();
    
     classComp = classComp.replace(/\,/g, ' ');
     $('.product').hide();
     $('.product').addClass('filter_hidden');
     $('.product').each(function(i,value){
-        var self=$(this);
+        var regularPrice= $('.regular_price',this).text();
+        var salePrice= $('.sale_price',this).text();
+        if(classArray.length==0){
+            $('.product').removeClass('filter_hidden');
+            if (salePrice !=''){
+                if(priceLow> salePrice || priceHigh<salePrice){
+                    $(this).hide();
+                    $(this).addClass("range_hidden")
+                }
+                else{$(this).show();
+                    $(this).removeClass("range_hidden")}
+            }else{
+                if(priceLow> regularPrice || priceHigh<regularPrice){
+                    $(this).hide();
+                    $(this).addClass("range_hidden")
+                }
+                else{
+                    $(this).show();
+                    $(this).removeClass("range_hidden")
+                }
+    
+            }
+            
+        }
+        else{    
+    var self=$(this);
       var elementClasses = $(this).attr("class").split(' ');
       var br =0;
         classArray.forEach(function(item){  
@@ -216,18 +245,35 @@ function filtering(){
             }
             
         });
-       
-        
-      
-     
+        if ( $( this ).hasClass( 'filter_hidden' )){
+           
+    
+        }else{
+            if (salePrice !=''){
+                if(priceLow> salePrice || priceHigh<salePrice){
+                    $(this).hide();
+                    $(this).addClass("range_hidden")
+                }
+                else{$(this).show();
+                    $(this).removeClass("range_hidden")}
+            }else{
+                if(priceLow> regularPrice || priceHigh<regularPrice){
+                    $(this).hide();
+                    $(this).addClass("range_hidden")
+                }
+                else{
+                    $(this).show();
+                    $(this).removeClass("range_hidden")
+                }
+    
+            }
+        }
+    }
       
     });
-    if(classArray.length==0){
-        $('.product').removeClass('filter_hidden');
-        $('.product').show();
-    }
+    
     if($('.product_title:visible').length==0){
-        $('.empty_results').text('Nema rezultata');
+        
     }
     
     
@@ -273,3 +319,42 @@ function rangeClose(){
     filtering();
 
  }
+ function productSearch(){
+    var inputValue = $('#product-search').val().toLowerCase();
+    if(inputValue.length != 0){
+            $('.product').each(function(i,value){
+                var productName= $('.card-content_description--title',this).text().toLowerCase();
+               
+                if ( $( this ).hasClass( 'filter_hidden' )){
+                    return true;
+                }
+                if ( $( this ).hasClass( 'range_hidden' )){
+                    return true;
+                }
+                if (productName.indexOf(inputValue) >= 0){
+                    $(this).show();
+                    
+                }
+                else{
+                    $(this).hide();
+
+                   
+                }
+
+                });
+      }
+      else{
+        $('.product').each(function(i,value){
+            if ( $( this ).hasClass( 'filter_hidden' )){
+                return true;
+            }
+            if ( $( this ).hasClass( 'range_hidden' )){
+                return true;
+            }
+            $(this).show();
+        
+        })
+          
+      }
+     
+     }

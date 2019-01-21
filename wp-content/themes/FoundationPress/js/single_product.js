@@ -5,6 +5,7 @@ var addToCartLink;
 var quantity;
 
 $( document ).ready(function() {
+  
     var currentUrl = window.location.href;
     var variation = 1;
     var urlConverted = new URL(currentUrl);
@@ -15,9 +16,27 @@ $( document ).ready(function() {
 
     
     variationSetup(variation);
+    attributeSelect(variation);
+
 
     
  });
+function quantityUp(event){
+    event.preventDefault()
+    var quantityValue = $("#cart_quantity").val();
+    quantityValue = parseInt(quantityValue);
+    $("#cart_quantity").val(quantityValue+1);
+
+}
+function quantityDown(event){
+    event.preventDefault()
+    var quantityValue = $("#cart_quantity").val();
+    quantityValue = parseInt(quantityValue);
+    if( $("#cart_quantity").val()!= 1){
+     $("#cart_quantity").val(quantityValue-1);
+    }
+}
+
 function addToCart(){
    
    quantity = document.getElementById("cart_quantity").value;
@@ -28,13 +47,20 @@ function addToCart(){
 
  
 function attributeSelect(selected){
-        variation = selected;
-        variationSetup(selected);
-     
+    variationSetup(selected);
+// stock_blob klasa treba ima display none
 
+    if($('.stock_blob_'+selected).text() == 1){
+        // slucaj kada je na stanju
+        $('.stockIcon').html('<i class="far fa-check-circle"></i><p class="available">Na stanju!</p>');      
+    }else{
+        // slucaj kada nije na stanju
+        $('.stockIcon').html('<i class="far fa-times-circle"></i><p class="available">Nije na stanju!</p>');
+    }
 
 }
 function variationSetup(variation){
+    
     selectedVariation = $('.variation_'+variation).text();
     attributeValue = $('#attributeSelectorButton'+variation).val();
     productId= $('#product_id').text();
@@ -53,10 +79,5 @@ function variationSetup(variation){
   
     $('#variation_add_to_cart').attr('href',addToCartLink);
   
-    if($('.stock'+variation+':contains("1")').length > 0){   
-        $('.stockIcon').html('<i class="far fa-check-circle"></i><p class="available">Na stanju!</p>');      
-    }
-    else{
-        $('.stockIcon').html('<i class="far fa-times-circle"></i><p class="available">Nije na stanju!</p>');
-    }
+  
 }

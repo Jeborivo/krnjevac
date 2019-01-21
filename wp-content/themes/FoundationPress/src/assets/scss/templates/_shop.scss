@@ -48,11 +48,59 @@
 
             #product-sort {
                 height: 58px;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background-image: none!important;
+                border:none;
+                margin: 0;
+                padding: 0px 20px 5px 20px;
+
+                &:focus {
+                    border: none!important;
+                }
             }
 
             .input-group {
                 width: 270px;
                 height: 58px;
+            }
+
+            .sort {
+                display: flex;
+                height: 58px;
+                border: 1px solid #cacaca;
+                overflow: hidden;
+
+                .asc-desc-sort {
+                    width: 25px;
+                    display: block;
+                    border-left: 1px solid #cacaca;
+
+                    span {
+                        cursor: pointer;
+                        margin: auto;
+                        display: block;
+                        width: 25px;
+                        height: 28px;
+                        text-align: center;
+                    }
+
+                    .fa-caret-up {
+                        font-size: 25px;
+                    }
+
+
+                    &_up {
+                        border-bottom: 1px solid #cacaca;
+                    }
+
+                    &_down {
+                        .caret-down {
+                            transform: rotate(180deg);
+                            margin-top: 2px;
+                        }
+                    }
+                }
             }
 
             .input-group-field {
@@ -83,7 +131,8 @@
             padding: 0 75px 0 55px;
 
             .sort {
-                width: 282px;                
+                width: 282px;
+
             }
 
 
