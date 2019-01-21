@@ -5,6 +5,7 @@ var addToCartLink;
 var quantity;
 
 $( document ).ready(function() {
+  
     var currentUrl = window.location.href;
     var variation = 1;
     var urlConverted = new URL(currentUrl);
@@ -15,6 +16,8 @@ $( document ).ready(function() {
 
     
     variationSetup(variation);
+    attributeSelect(variation);
+
 
     
  });
@@ -44,13 +47,19 @@ function addToCart(){
 
  
 function attributeSelect(selected){
-        variation = selected;
-        variationSetup(selected);
-     
+// stock_blob klasa treba ima display none
 
+    if($('.stock_blob_'+selected).text() == 1){
+        // slucaj kada je na stanju
+        console.log('na stanju');
+    }else{
+        // slucaj kada nije na stanju
+        console.log('nije na stanju');
+    }
 
 }
 function variationSetup(variation){
+    
     selectedVariation = $('.variation_'+variation).text();
     attributeValue = $('#attributeSelectorButton'+variation).val();
     productId= $('#product_id').text();
