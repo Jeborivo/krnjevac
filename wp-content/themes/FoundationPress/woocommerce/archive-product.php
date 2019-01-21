@@ -12,8 +12,8 @@
  * @since FoundationPress 1.0.0
  */
 get_header(); ?>
-    <script src="../wp-content/themes/FoundationPress/js/multirange.js"></script>
-    <script src="../wp-content/themes/FoundationPress/js/jquery.js"></script>
+    <script src="../krnjevac/wp-content/themes/FoundationPress/js/multirange.js"></script>
+    <script src="../krnjevac/wp-content/themes/FoundationPress/js/jquery.js"></script>
 		
 <div class="main-container">
 	<div class="main-grid">
@@ -23,19 +23,25 @@ get_header(); ?>
       <div class="sort">
         <?php $site_url =  get_site_url();?>
         <select value="asd" id="product-sort" onchange="productSort('<?php echo $site_url; ?>')">
-          <option value="selected" >Selected</option>
           <option value="najprodavanije">Najprodavanije</option>
           <option value="ime">Ime</option>
           <option value="cena">Cena</option>
         </select>
-        <span><a id="arrow-asc" onclick="arrowAsc()" href="" >strelica gore</a></span>
-        <span><a id="arrow-desc" onclick="arrowDesc()" href="" >strelica dole</a></span>
+        <span class="asc-desc-sort">
+          <span  class="asc-desc-sort_up" id="arrow-asc" onclick="arrowAsc(event);"> <i class="fas fa-caret-up"></i> </span>
+          <span  class="asc-desc-sort_down" id="arrow-desc" onclick="arrowDesc(event);"> <i class="fas fa-caret-up caret-down"></i> </span>
+        </span>
       </div>
       
 
       <div class="search">
-      <input type="text" id="product-search" onkeyup="productSearch()" name="product-search">
-          <?php get_search_form(); ?>
+      
+        <div class="input-group">
+          <input class="input-group-field" type="text" id="product-search" onkeyup="productSearch()" name="product-search" placeholder="Pretraži...">
+		      <div class="input-group-button">
+			      <span  id="searchsubmit" value=""></span>
+		      </div>
+	      </div>
       </div>
     </div>
     

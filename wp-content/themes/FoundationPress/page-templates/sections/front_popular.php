@@ -51,6 +51,6 @@
       <h6><i class="far fa-check-circle"></i>Dostava danas za sutra</h6>
       <h6><i class="far fa-check-circle"></i>Slanje paketa sirom Srbije</h6>
     </div>
-    <button class="button go-to-shop" type="button"> <a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC"><h5>Internet prodavnica<i class="fas fa-shopping-cart"></i></h5></a></button>
+    <a class="button go-to-shop" type="button" href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC"><h5>Internet prodavnica<i class="fas fa-shopping-cart"></i></h5></a>
   </div>
 </div>

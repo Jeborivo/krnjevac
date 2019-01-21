@@ -20,7 +20,7 @@ get_header(); ?>
         <h1>Gde kupiti?</h1>
         <h3>Pored naše internet prodavnice, dostupni smo i u svim većim lancima supermarketa</h3>
         <div class="hero_wtb--link-wrap">
-            <button class="button go-to-shop" type="button"> <a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC?post_type=product&productOrderBy=menu_order&itemOrder=ASCpost_type=product&productOrderBy=menu_order&itemOrder=ASC"><h5>Internet prodavnica<i class="fas fa-shopping-cart"></i></h5></a></button>
+            <a class="button btn-grey go-to-shop" type="button" href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC?post_type=product&productOrderBy=menu_order&itemOrder=ASCpost_type=product&productOrderBy=menu_order&itemOrder=ASC"><h5>Internet prodavnica<i class="fas fa-shopping-cart"></i></h5></a>
             <h5 class="hero_wtb--link"><a href="#supermarketi">Supermarketi<i class="fas fa-arrow-right"></i></a></h5>
         </div>
     </div>

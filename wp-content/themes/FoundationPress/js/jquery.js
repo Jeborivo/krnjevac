@@ -68,7 +68,7 @@ $( document ).ready(function() {
       }
       window.location.replace(siteUrl+'?post_type=product&productOrderBy='+productOrderby+'&itemOrder=ASC');
 }
- function arrowAsc(){
+ function arrowAsc(event){
     event.preventDefault();
      var currentUrl = window.location.href ;
      if (currentUrl.indexOf("itemOrder") >= 0){
@@ -81,7 +81,7 @@ $( document ).ready(function() {
     
 
  }
- function arrowDesc(){
+ function arrowDesc(event){
     event.preventDefault();
     var currentUrl = window.location.href ;
      if (currentUrl.indexOf("itemOrder") >= 0){

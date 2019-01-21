@@ -18,14 +18,14 @@ $( document ).ready(function() {
 
     
  });
-function quantityUp(){
+function quantityUp(event){
     event.preventDefault()
     var quantityValue = $("#cart_quantity").val();
     quantityValue = parseInt(quantityValue);
     $("#cart_quantity").val(quantityValue+1);
 
 }
-function quantityDown(){
+function quantityDown(event){
     event.preventDefault()
     var quantityValue = $("#cart_quantity").val();
     quantityValue = parseInt(quantityValue);
@@ -44,11 +44,8 @@ function addToCart(){
 
  
 function attributeSelect(selected){
-        variation = selected;
-        variationSetup(selected);
-     
-
-
+    variation = selected;
+    variationSetup(selected);
 }
 function variationSetup(variation){
     selectedVariation = $('.variation_'+variation).text();

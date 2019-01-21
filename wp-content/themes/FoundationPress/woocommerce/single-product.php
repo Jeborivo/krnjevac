@@ -16,7 +16,7 @@ get_header(); ?>
 <div class="main-container">
 	<div class="main-grid">
 		<main class="main-content">
-		<script src="../../wp-content/themes/FoundationPress/js/single_product.js"></script>
+		<script src="../krnjevac/wp-content/themes/FoundationPress/js/single_product.js"></script>
 		<div class="product-container">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -82,9 +82,16 @@ get_header(); ?>
 						<?php endif?>
 						</h3>
 					<?php endforeach;?>
-						<input id='cart_quantity' class="quantity product-info_price-quantity-to-cart-wrap--quantity" value="1" type="number" name="quantity" min="1" max="99">
-						<span><a id="arrow-asc" onclick="quantityUp()" href="" >strelica gore</a></span>
-						<span><a id="arrow-desc" onclick="quantityDown()" href="" >strelica dole</a></span>
+					
+						<div class="quantity product-info_price-quantity-to-cart-wrap--quantity">
+							<input id='cart_quantity'value="1" type="number" name="quantity" min="1" max="99">
+							<span class="quantity-spin">
+								<span class="quantity-spin_up" id="arrow-asc" onclick="quantityUp(event);"> <i class="fas fa-caret-up"></i> </span>
+								<span class="quantity-spin_down" id="arrow-desc" onclick="quantityDown(event);"> <i class="fas fa-caret-up caret-down"></i>
+								</span>
+							</span>
+						</div>
+
 						<input type="button" id="variation_add_to_cart" class="button product-info_price-quantity-to-cart-wrap--button" onclick="addToCart()"value="Dodaj u korpu">
 					</div>			
 			</div><!-- product-info -->

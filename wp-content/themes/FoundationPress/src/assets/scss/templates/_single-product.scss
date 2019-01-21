@@ -165,10 +165,51 @@
                             margin-bottom: 10px;
                         }
 
+                        input[type=number]::-webkit-inner-spin-button, 
+                        input[type=number]::-webkit-outer-spin-button { 
+                            -webkit-appearance: none; 
+                            margin: 0; 
+                        }
+                        input[type=number] {
+                            -moz-appearance:textfield;
+                        }
+
+                        input[type=number] {
+                            border: none;
+                            margin: 0;
+                            height: 100%;
+                            width: 80px;
+                        }
+
                         &--quantity {
-                            width: 110px;
+                            display: flex;
                             height: auto;
                             margin: 0 0 10px 0;
+                            border: 1px solid #cacaca;
+
+                            .quantity-spin {
+                                border-left: 1px solid #cacaca;
+
+                                span {
+                                    cursor: pointer;
+                                    margin: auto;
+                                    display: block;
+                                    width: 25px;
+                                    text-align: center;
+                                }
+
+                                &_up {
+                                    border-bottom: 1px solid #cacaca;
+                                }
+
+                                &_down {
+                                    .caret-down {
+                                        transform: rotate(180deg);
+                                        margin-top: 2px;
+                                    }
+                                }
+                            }
+
                         }
 
                         &--button {
