@@ -52,10 +52,10 @@ function attributeSelect(selected){
 
     if($('.stock_blob_'+selected).text() == 1){
         // slucaj kada je na stanju
-        console.log('na stanju');
+        $('.stockIcon').html('<i class="far fa-check-circle"></i><p class="available">Na stanju!</p>');      
     }else{
         // slucaj kada nije na stanju
-        console.log('nije na stanju');
+        $('.stockIcon').html('<i class="far fa-times-circle"></i><p class="available">Nije na stanju!</p>');
     }
 
 }
@@ -79,10 +79,5 @@ function variationSetup(variation){
   
     $('#variation_add_to_cart').attr('href',addToCartLink);
   
-    if($('.stock'+variation+':contains("1")').length > 0){   
-        $('.stockIcon').html('<i class="far fa-check-circle"></i><p class="available">Na stanju!</p>');      
-    }
-    else{
-        $('.stockIcon').html('<i class="far fa-times-circle"></i><p class="available">Nije na stanju!</p>');
-    }
+  
 }

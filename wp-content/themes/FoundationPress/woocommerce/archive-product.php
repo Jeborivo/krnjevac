@@ -12,8 +12,8 @@
  * @since FoundationPress 1.0.0
  */
 get_header(); ?>
-    <script src="../krnjevac/wp-content/themes/FoundationPress/js/multirange.js"></script>
-    <script src="../krnjevac/wp-content/themes/FoundationPress/js/jquery.js"></script>
+    <script src="../wp-content/themes/FoundationPress/js/multirange.js"></script>
+    <script src="../wp-content/themes/FoundationPress/js/jquery.js"></script>
 		
 <div class="main-container">
 	<div class="main-grid">
@@ -22,7 +22,8 @@ get_header(); ?>
     <div class="searchsort-container">
       <div class="sort">
         <?php $site_url =  get_site_url();?>
-        <select value="asd" id="product-sort" onchange="productSort('<?php echo $site_url; ?>')">
+        <select id="product-sort" onchange="productSort('<?php echo $site_url; ?>')">
+        <option value="selected" >Selected</option>
           <option value="najprodavanije">Najprodavanije</option>
           <option value="ime">Ime</option>
           <option value="cena">Cena</option>
