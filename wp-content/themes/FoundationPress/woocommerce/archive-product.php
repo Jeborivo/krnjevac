@@ -299,7 +299,7 @@ get_header(); ?>
                                </div>
                               </div>
                     <?php endforeach; ?>
-                    <span id="load-more">Ucitaj jos proizvoda <i class="fas fa-angle-down"></i></span>
+                    <!-- <span id="load-more">Ucitaj jos proizvoda <i class="fas fa-angle-down"></i></span> -->
                       <!-- <a  class="totop" href="#top">Back to top</a>  -->
             </div><!--/.products-->
             </div>
