@@ -1,4 +1,13 @@
 <?php
+session_start();
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+ 
+require_once($_SERVER['DOCUMENT_ROOT'].'/krnjevac/wp-content/themes/FoundationPress/plugins/last_seen_products.php');
+
 /**
  * The template for displaying pages
  *
@@ -12,10 +21,6 @@
 
 get_header(); ?>
 
-<?php 
-
-
-?>
 <div class="main-container">
 	<div class="main-grid">
 		<main class="main-content">
@@ -33,6 +38,8 @@ get_header(); ?>
 				 ?>
 
 			<div class="product-var-image product">
+				<?php $_SESSION['last_seen_array'] = last_seen_product($_SESSION['last_seen_array'],$product->get_id());?>
+				<?php $last_seen_products = $_SESSION['last_seen_array']; ?>
 			<?php foreach ( $variations as $variation ) :?>
 				<?php $br++; ?>
 				<div class="variation_image variation_image_<?php echo $br;?>">
@@ -114,12 +121,12 @@ get_header(); ?>
 			<div class="related_wrap-mc main-container">
 			<div class="related-filters">
 				<div class="related-filters_buttons">
-					<button type="button" class="button btn-grey related-filters_buttons--last">Poslednje pregledano</button>
-					<button type="button" class="button btn-grey related-filters_buttons--most">Najprodavanije</button>
+					<button type="button" onclick="lastSeen()"class="button btn-grey related-filters_buttons--last">Poslednje pregledano</button>
+					<button type="button" onclick="related()"class="button btn-grey related-filters_buttons--most">Najprodavanije</button>
 				</div>
-				<a href="?post_type=product&productOrderBy=menu_order&itemOrder=ASC" class="related-filters_link">Internet-prodavnica <i class="fas fa-arrow-right"></i></a>
+				<a href="shop" class="related-filters_link">Internet-prodavnica <i class="fas fa-arrow-right"></i></a>
 			</div>
-			<div class="cards-container">
+			<div class="cards-container related-cards">
 
 			<?php 
 			// query
@@ -175,27 +182,85 @@ get_header(); ?>
 
 			</div>
 			<!-- custom related  -->
+			<div class="last_seen cards-container">
+					<?php foreach($last_seen_products as $key=>$last_seen_product): ?>	
+						<?php $single_product = new WC_Product_Variable($last_seen_product); ?>
+						<?php $last_seen_variations = $single_product->get_available_variations(); ?>
+						<?php 	
+							$highest_price=NULL;
+							$lowest_price= NULL;
+							$highest_gramaza = '';
+							$lowest_gramaza='';			
+							$last_seen_img= '';
+							$last_seen_url=get_permalink($last_seen_product );
+						?>
+						<?php foreach ($last_seen_variations as $key=>$last_seen_variation) : ?>
+						<?php $last_seen_img=get_the_post_thumbnail_url($last_seen_variation['variation_id']);?>
+						
+						<?php  $price_format=$last_seen_variation['display_price']; ?>	
+							<?php if (($highest_gramaza < $last_seen_variation['attributes']['attribute_gramaza'])||$highest_gramaza==''):?>
+								<?php $highest_gramaza = $last_seen_variation['attributes']['attribute_gramaza'];?>
+							<?php endif?>
+							<?php if (($lowest_gramaza > $last_seen_variation['attributes']['attribute_gramaza'])||$lowest_gramaza==''):?>
+								<?php $lowest_gramaza = $last_seen_variation['attributes']['attribute_gramaza'];?>
+							<?php endif?>
+
+							<?php if (($highest_price < $price_format)||$highest_price==NULL):?>
+								<?php $highest_price = $price_format;?>
+							<?php endif?>
+							<?php if (($lowest_price > $price_format)||$lowest_price==NULL):?>
+								<?php $lowest_price = $price_format;?>
+							<?php endif?>
+						<?php endforeach?>
+						<div class="card">
+						<div class="card-content">
+							<div class="card-content_description">
+							<a href="<?php echo $last_seen_url;?>">
+								<h4 class="card-content_description--title"><?php echo get_the_title( $last_seen_product ); ?></h4>
+							</a>
+							<h6 class="card-content_description--weight"><?php echo $lowest_gramaza; ?>-<?php echo $highest_gramaza; ?></h6>
+							<h3 class="card-content_description--price">
+								<span class="price-reg">
+								<span class="regular_price">
+								<span class="line"></span>
+								<?php echo $lowest_price; ?>-
+								</span>
+								</span>
+								<?php echo $highest_price; ?>RSD
+								</h3>
+							</div>
+							<a href="<?php echo $last_seen_url;?>">
+								<div class="card-content_image" style="background-image: url('<?php  echo $last_seen_img; ?>')" ></div>
+							</a>
+						</div>
+					</div>
+					
+						<!-- ispisivanje ovde -->
+					<?php endforeach; ?>
+
+					</div>
+	</div>
 		</div>
 	</div>
 	<div class="product-buy-info-wrap">
 		<div class="product-buy-info main-container">
 			<div class="product-buy-info_address info-field">
-				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/phone.svg" alt="phone">
+				<img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/phone.svg" alt="phone">
 				<h5> Korisnička podrška<br>
 				+381 26 821 080</h5>
 			</div>
 			<div class="product-buy-info_delivery info-field"> 
-				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/delivery.svg" alt="delivery">
+				<img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/delivery.svg" alt="delivery">
 				<h5>Besplatna dostava za <br>
 				porudžbine iznad 1999,-</h5>
 			</div>
 			<div class="product-buy-info_safe info-field">
-				<img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/ssl.svg" alt="ssl">
+				<img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/ssl.svg" alt="ssl">
 				<h5>Sigurna kupovina putem<br>
 				sertifikovane prodavnice</h5>
 			</div>
 			<div class="product-buy-info_button info-field">
-				<button class="button btn-grey"><img src="http://localhost/krnjevac/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
+				<button class="button btn-grey"><img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/letter.svg" alt="letter"></button>
 			</div>
 		</div>
 	</div>
