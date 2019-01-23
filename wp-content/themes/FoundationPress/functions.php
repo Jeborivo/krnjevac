@@ -180,4 +180,8 @@ function remove_gallery_and_product_images() {
  * Remove related products output
  */
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+// Last seen session
+
+
+
 
