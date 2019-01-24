@@ -306,6 +306,7 @@ get_header(); ?>
 	</div>
 </div>
 
+
           <div class="shop-newsletter main-container-full-width">
             <div class="shop-newsletter_wrap main-container">
               <div class="shop-newsletter_title newsletter-item">
@@ -314,6 +315,9 @@ get_header(); ?>
               </div>
             
               <form action="" class="shop-newsletter_email newsletter-item">
+                <?php if ( is_active_sidebar( 'newsletter' ) ) : ?>
+                    <?php dynamic_sidebar( 'newsletter' ); ?>
+                <?php endif; ?>
                 <input type="text" class="shop-newsletter_email--text " placeholder="E mail adresa">
                 <input type="submit" value="Pošalji" class="button btn-grey shop-newsletter_email--submit">
               </form>
