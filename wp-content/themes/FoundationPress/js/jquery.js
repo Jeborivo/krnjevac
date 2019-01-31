@@ -2,6 +2,9 @@ var priceLow ;
 var priceHigh;
 
 $( document ).ready(function() {
+    $('.tnp-email').addClass('shop-newsletter_email--text');
+    $('.tnp-email').attr('placeholder','E mail adresa');
+    $('.tnp-submit').addClass('button btn-grey shop-newsletter_email--submit');
     var currentUrl = window.location.href ;
     if (currentUrl.indexOf("productOrderBy") <= 0){
         window.location.replace(currentUrl+'?productOrderBy=menu_order&itemOrder=ASC');

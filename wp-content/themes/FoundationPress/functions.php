@@ -180,4 +180,25 @@ function remove_gallery_and_product_images() {
  * Remove related products output
  */
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+// Last seen session
 
+
+
+
+/**
+ * Register our widgetized areas.
+ *
+ */
+function arphabet_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'newsletter',
+		'id'            => 'newsletter',
+		'before_widget' => '<div class="newsletter">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
