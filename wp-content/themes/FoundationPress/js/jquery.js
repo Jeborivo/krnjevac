@@ -207,6 +207,7 @@ function gramazaFilter(gramaza){
 function filtering(){
      
     var classComp = classArray.toString();
+
    
     classComp = classComp.replace(/\,/g, ' ');
     $('.product').hide();
@@ -241,13 +242,17 @@ function filtering(){
       var elementClasses = $(this).attr("class").split(' ');
       var br =0;
         classArray.forEach(function(item){  
+            // OVde cu odratiti I logiku za kategorije... u slucaju da produkt ima kategoriju, dodacu mu klasu po kojoj cu da razvrstavam
+           
             var arrayContainsClass = (elementClasses.indexOf(item) > -1);
+
             if(arrayContainsClass != false){
                 self.show();
                 self.removeClass('filter_hidden');
             }
             
         });
+        
         if ( $( this ).hasClass( 'filter_hidden' )){
            
     
@@ -272,8 +277,16 @@ function filtering(){
             }
         }
     }
-      
+    // categoryCloseArray.forEach(function(item){ 
+        if(!self.hasClass('filter_hidden')){
+            if(!self.hasClass(item)){
+            self.hide();
+            self.addClass('filter_hidden');
+            }
+        }
+
     });
+  
     
     if($('.product_title:visible').length==0){
         
