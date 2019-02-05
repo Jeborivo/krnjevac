@@ -209,8 +209,9 @@ function filtering(){
     $('.product').hide();
     $('.product').addClass('filter_hidden');
     $('.product').each(function(i,value){
-        if($('.sale_price',this)){
-            $(this).addClass('Action');
+        console.log($('.sale_price',this).text());
+        if($('.sale_price',this).text()!= ''){
+            $(this).addClass('Akcija');
         }
         var regularPrice= $('.regular_price',this).text();
         var salePrice= $('.sale_price',this).text();
