@@ -374,3 +374,34 @@ function rangeClose(){
       }
      
      }
+
+// LOAD MORE FUNCTIONALITY 
+
+// $(function () {
+//     $(".product").slice(0, 9).show();
+//     $("#load-more").on('click', function (e) {
+//         e.preventDefault();
+//         $(".product:hidden").slice(0, 9).slideDown();
+//         if ($(".product:hidden").length == 0) {
+//             $("#load").fadeOut('slow');
+//         }
+//         $('.products-container').animate({
+//             scrollTop: $(this).offset().top
+//         }, 1500);
+//     });
+// });
+
+// $('a[href=#top]').click(function () {
+//     $(".products-container").animate({
+//         scrollTop: 0
+//     }, 600);
+//     return false;
+// });
+
+// $(window).scroll(function () {
+//     if ($(this).scrollTop() > 50) {
+//         $(".totop").fadeIn();
+//     } else {
+//         $(".totop").fadeOut();
+//     }
+// });

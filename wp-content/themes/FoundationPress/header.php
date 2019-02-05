@@ -82,6 +82,7 @@ $(document).ready(function(){
 				</div>
 
 				<a href="?page_id=43" class="shop"><i class="fas fa-shopping-cart"></i></a>
+				<!-- <?php echo WC()->cart->get_cart_contents_count(); ?>  -->
 				<div class="navigation"> 	
             	<input type="checkbox" class="navigation__checkbox" id="navi-toggle">
            		<label for="navi-toggle" class="navigation__button">
