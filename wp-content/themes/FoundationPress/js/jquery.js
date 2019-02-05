@@ -209,7 +209,7 @@ function filtering(){
     $('.product').hide();
     $('.product').addClass('filter_hidden');
     $('.product').each(function(i,value){
-        if($('.sale_price',this)){
+        if($('.sale_price',this).text()!= ''){
             $(this).addClass('Akcija');
         }
         var regularPrice= $('.regular_price',this).text();
