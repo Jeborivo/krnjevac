@@ -1,7 +1,8 @@
 var priceLow ;
 var priceHigh;
-
+var gramaze= [];
 $( document ).ready(function() {
+    
     $('.tnp-email').addClass('shop-newsletter_email--text');
     $('.tnp-email').attr('placeholder','E mail adresa');
     $('.tnp-submit').addClass('button btn-grey shop-newsletter_email--submit');
@@ -30,23 +31,16 @@ $( document ).ready(function() {
             $('#product-sort option[value="cena"]').hide();
         break;
       }
-    
-
+     filtering();
+      gramazaFilters()
+      
     $('#product-sort option[value="selected"]').hide();
     priceLow = lowValue *12;
     priceHigh = highValue *12;
-    var gramaze= [];
+   
     $('.low_value').text(priceLow+' rsd');
     $('.high_value').text(priceHigh+' rsd');
-    $('.product_gramaza').each(function(i,value){
-    var gramazaValue= $(this).text();
-    gramazaValue=gramazaValue.replace(' ','');
-      if ($.inArray($(this).text(), gramaze) == -1){
-          gramaze.push($(this).text());
-          $('.gramaza-content-inner').append(' <input class="button filter-neutral filter-weight" id="'+gramazaValue+'"type="button" onclick="gramazaFilter(this.value)" value="'+gramazaValue+'"> ');
-        }
-
-    });
+   
 
  });
 
@@ -205,6 +199,8 @@ function gramazaFilter(gramaza){
   
 }
 function filtering(){
+
+    
      
     var classComp = classArray.toString();
 
@@ -213,6 +209,9 @@ function filtering(){
     $('.product').hide();
     $('.product').addClass('filter_hidden');
     $('.product').each(function(i,value){
+        if($('.sale_price',this)){
+            $(this).addClass('Action');
+        }
         var regularPrice= $('.regular_price',this).text();
         var salePrice= $('.sale_price',this).text();
         if(classArray.length==0){
@@ -242,13 +241,17 @@ function filtering(){
       var elementClasses = $(this).attr("class").split(' ');
       var br =0;
         classArray.forEach(function(item){  
+            
             // OVde cu odratiti I logiku za kategorije... u slucaju da produkt ima kategoriju, dodacu mu klasu po kojoj cu da razvrstavam
            
             var arrayContainsClass = (elementClasses.indexOf(item) > -1);
-
             if(arrayContainsClass != false){
-                self.show();
-                self.removeClass('filter_hidden');
+                br++;
+                if(br == classArray.length){
+                    self.show();
+                    self.removeClass('filter_hidden');
+                }
+                
             }
             
         });
@@ -277,21 +280,21 @@ function filtering(){
             }
         }
     }
-    // categoryCloseArray.forEach(function(item){ 
+    categoryCloseArray.forEach(function(item){ 
         if(!self.hasClass('filter_hidden')){
             if(!self.hasClass(item)){
             self.hide();
             self.addClass('filter_hidden');
             }
         }
-
+    });
     });
   
     
     if($('.product_title:visible').length==0){
         
     }
-    
+    gramazaFilters();
     
 }
 // Close
@@ -374,6 +377,30 @@ function rangeClose(){
       }
      
      }
+     function gramazaFilters(){
+         gramaze= [];
+         var br=0;
+        $('.gramaza-content-inner').html('');
+        
+        $('.product_gramaza').each(function(i,value){
+            var gramazaValue= $(this).text();
+            gramazaValue=gramazaValue.replace(' ','');
+            
+              if ($.inArray($(this).text(), gramaze) == -1){
+                if($(this.closest('.product')).hasClass('filter_hidden') == false){
+                    br++;
+                  gramaze.push($(this).text());
+                  $('.gramaza-content-inner').append(' <input class=" gramaza-filter button filter-neutral filter-weight" id="'+gramazaValue+'"type="button" onclick="gramazaFilter(this.value)" value="'+gramazaValue+'"> ');
+                  }
+                }
+        
+            });
+            if(br==1){
+                $(".gramaza-filter").addClass('filter-on');
+                $(".gramaza-filter").removeClass('filter-neutral');
+            }
+           
+      }
 
 // LOAD MORE FUNCTIONALITY 
 
