@@ -210,7 +210,7 @@ function filtering(){
     $('.product').addClass('filter_hidden');
     $('.product').each(function(i,value){
         if($('.sale_price',this)){
-            $(this).addClass('Action');
+            $(this).addClass('Akcija');
         }
         var regularPrice= $('.regular_price',this).text();
         var salePrice= $('.sale_price',this).text();
