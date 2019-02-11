@@ -136,6 +136,8 @@ var classArray = [];
 var categoryCloseArray = [];
 var vrsteMedaFilterCloseArray = [];
 var gramazaFilterCloseArray = [];
+var allArray=[];
+
 
 function categoryFilter(category){
     var catFormatted = category.replace(/\ /g, '_');
@@ -164,6 +166,7 @@ function categoryFilter(category){
 function vrsteMedaFilter(id){
     if(jQuery.inArray(id,classArray)==-1){
         classArray.push(id);
+        allArray.push(id);
         vrsteMedaFilterCloseArray.push(id);
         $('#'+id).removeClass("filter-off filter-neutral").addClass("filter-on");
     }
@@ -175,6 +178,9 @@ function vrsteMedaFilter(id){
           vrsteMedaFilterCloseArray = $.grep(vrsteMedaFilterCloseArray, function(value) {
             return value != id;
           });
+          allArray = $.grep(allArray, function(value) {
+            return value != id;
+          });
     }
     filtering();
   
@@ -183,6 +189,7 @@ function gramazaFilter(gramaza){
         if(jQuery.inArray(gramaza,classArray)==-1){
             classArray.push(gramaza);
             gramazaFilterCloseArray.push(gramaza)
+            allArray.push(gramaza);
             $('#'+gramaza).removeClass("filter-off filter-neutral").addClass("filter-on");
           }
          else{
@@ -193,22 +200,38 @@ function gramazaFilter(gramaza){
           gramazaFilterCloseArray = $.grep(gramazaFilterCloseArray, function(value) {
             return value != gramaza;
           });
+          allArray = $.grep(allArray, function(value) {
+            return value != gramaza;
+          });
          
     }
     filtering();
   
 }
 function filtering(){
-
-    
-     
     var classComp = classArray.toString();
+   
 
    
     classComp = classComp.replace(/\,/g, ' ');
     $('.product').hide();
     $('.product').addClass('filter_hidden');
+    $('.product').removeClass('to_be_removed');
+
     $('.product').each(function(i,value){
+        var categoryBr=0;
+        var self=$(this);
+        if(categoryCloseArray.length>0){
+            categoryCloseArray.forEach(function(item){
+            if(self.hasClass(item)==true){
+                categoryBr=categoryBr+1;
+            }
+            });
+            if(!categoryBr>0){
+                self.addClass('to_be_removed');
+            }
+           
+        }
         if($('.sale_price',this).text()!= ''){
             $(this).addClass('Akcija');
         }
@@ -237,7 +260,7 @@ function filtering(){
             
         }
         else{    
-    var self=$(this);
+    
       var elementClasses = $(this).attr("class").split(' ');
       var br =0;
         classArray.forEach(function(item){  
@@ -247,12 +270,25 @@ function filtering(){
             var arrayContainsClass = (elementClasses.indexOf(item) > -1);
             if(arrayContainsClass != false){
                 br++;
-                if(br == classArray.length){
+                // za logiku da se prikazuju proiuzvodi koji imaju sve otkaceno
+                // if(br == classArray.length){ 
+                    
                     self.show();
                     self.removeClass('filter_hidden');
-                }
+                // }
                 
             }
+
+            
+        });
+        allArray.forEach(function(item){  
+            var arrayContainsClass = (elementClasses.indexOf(item) > -1);
+            if(arrayContainsClass == false){     
+                    self.hide();
+                    self.addClass('filter_hidden');
+                
+            }
+
             
         });
         
@@ -280,14 +316,15 @@ function filtering(){
             }
         }
     }
-    categoryCloseArray.forEach(function(item){ 
-        if(!self.hasClass('filter_hidden')){
-            if(!self.hasClass(item)){
-            self.hide();
-            self.addClass('filter_hidden');
-            }
-        }
-    });
+    // categoryCloseArray.forEach(function(item){ 
+    //     console.log(item)
+    //     if(!self.hasClass("filter_hidden")){
+    //         if(!self.hasClass(item)){
+    //         self.hide();
+    //         self.addClass('filter_hidden');
+    //         }
+    //     }
+    // });
     });
   
     
@@ -299,6 +336,7 @@ function filtering(){
 }
 // Close
 function categoryClose(){
+    
     classArray = classArray.filter(function(x) { 
         $('.filter-categories').removeClass("filter-off filter-on").addClass("filter-neutral");
         return categoryCloseArray.indexOf(x) < 0;
@@ -313,12 +351,20 @@ function vrsteMedaClose(){
         $('.filter-type').removeClass("filter-off filter-on").addClass("filter-neutral");
         return vrsteMedaFilterCloseArray.indexOf(x) < 0;
       });
+      allArray = allArray.filter(function(x) { 
+        $('.filter-type').removeClass("filter-off filter-on").addClass("filter-neutral");
+        return vrsteMedaFilterCloseArray.indexOf(x) < 0;
+      });
     
           filtering();
 }
 function gramazaClose(){
     
     classArray = classArray.filter(function(x) { 
+        $('.filter-weight').removeClass("filter-off filter-on").addClass("filter-neutral");
+        return gramazaFilterCloseArray.indexOf(x) < 0;
+      });
+      allArray = allArray.filter(function(x) { 
         $('.filter-weight').removeClass("filter-off filter-on").addClass("filter-neutral");
         return gramazaFilterCloseArray.indexOf(x) < 0;
       });
