@@ -151,6 +151,26 @@
   }
 
   .shop {
+    position: relative;
+
+    .shop-counter {
+    position: absolute;
+    right: 35%;
+    bottom: 15%;
+
+      
+      h6 {
+        margin: 0;
+        text-align: center;
+        color: black;
+        background-color: #ffc629;
+        width: 20px;
+        border-radius: 50%;
+        font-size: 10px;
+        font-weight: bold;
+        padding: 3px;
+      }
+    }
     .icon-cart {
       font-size: 21px;
       color: $white;
