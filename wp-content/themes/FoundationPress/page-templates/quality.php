@@ -36,42 +36,42 @@ get_header(); ?>
 					<div class="quality-steps_step-1 step" id="step1">
 						<h1 class="step_title">1</h1>
 						<h3 class="step_desc">Vrcanje meda</h3>
-						<div class="step_text">Ut sagittis sagittis augue, eu luctus lorem convallis non. Sed vitae lacus nec ante malesuada faucibus.</div>
+						<div class="step_text">Sve počinje vrcanjem najkvalitetnijeg meda koje su vredne pčele sakupljale tokom sezone. </div>
 						<div class="step_line"></div>
 					</div>
 					<div class="quality-steps_step-2 step">
 						<h1 class="step_title">2</h1>
 						<h3 class="step_desc">Uzorkovanje meda</h3>
-						<div class="step_text">Ut sagittis sagittis augue, eu luctus lorem convallis non. Sed vitae lacus nec ante malesuada faucibus.</div>
+						<div class="step_text">Da se uverimo u kvalitet meda, pre otkupa, naši radnici prikupljaju uzorke meda za testiranje.</div>
 						<div class="step_line"></div>
 					</div>
 					<div class="quality-steps_step-3 step">
 						<h1 class="step_title">3</h1>
 						<h3 class="step_desc">Testiranje uzoraka</h3>
-						<div class="step_text">Ut sagittis sagittis augue, eu luctus lorem convallis non. Sed vitae lacus nec ante malesuada faucibus.</div>
+						<div class="step_text">Svi uzorci se detaljno testiraju u laboratoriji kako bismo sa sigurnošću zadovoljili standarde.</div>
 					</div>
 					<div class="quality-steps_step-4 step">
-						<h1 class="step_title">4</h1>
+						<h1 class="step_title">6</h1>
 						<h3 class="step_desc">Prikuplajnje meda</h3>
-						<div class="step_text">Ut sagittis sagittis augue, eu luctus lorem convallis non. Sed vitae lacus nec ante malesuada faucibus.</div>
+						<div class="step_text">Ukoliko testirani med zadovoljava propisane standarde, organizuje se otkup meda.</div>
 						<div class="step_line"></div>
 					</div>
 					<div class="quality-steps_step-5 step">
 						<h1 class="step_title">5</h1>
 						<h3 class="step_desc">Otklanjanje nečistoća</h3>
-						<div class="step_text">Ut sagittis sagittis augue, eu luctus lorem convallis non. Sed vitae lacus nec ante malesuada faucibus.</div>
+						<div class="step_text">Kako nastaje potpuno delom prirode, sitne nečistoće su deo otkupljenog meda, koje se dalje potpuno otklanjaju.</div>
 						<div class="step_line"></div>
 					</div>
 					<div class="quality-steps_step-6 step">
-						<h1 class="step_title">6</h1>
+						<h1 class="step_title">4</h1>
 						<h3 class="step_desc">Homogenizacija</h3>
-						<div class="step_text">Ut sagittis sagittis augue, eu luctus lorem convallis non. Sed vitae lacus nec ante malesuada faucibus.</div>
+						<div class="step_text">U kupažeru mešamo med i još jednom ga kontrolišemu u cilju postizanja optimalnog prozivoda.</div>
 					</div>
 					<div class="quality-steps_step-7 step">
 						<div class="step-7">
 						<h1 class="step_title">7</h1>
 						<h3 class="step_desc">Pakovanje Krnjevac meda</h3>
-						<div class="step_text">Ut sagittis sagittis augue, eu luctus lorem convallis non. Sed vitae lacus nec ante malesuada faucibus.</div>
+						<div class="step_text">Nakon svih provera, med je spreman da postane Krnjevac. Proizvod je spreman za tvoj obrok!</div>
 						<div class="step_line--special"></div>
 						</div>
 					</div>

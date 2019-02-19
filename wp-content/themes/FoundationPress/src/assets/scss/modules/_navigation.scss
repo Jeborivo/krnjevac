@@ -260,6 +260,7 @@
   }
 
   &__button {
+
       height: 20px;
       width: 20px;
       position: absolute;
@@ -545,6 +546,8 @@
 
   &__icon {
 
+ 
+
     position: relative;
     top: 58%;
     width: 13px;
@@ -555,7 +558,13 @@
     &::after {
       height: 2px;
       background-color: white;
-      display: inline-block;
+      // display: inline-block;
+      @include breakpoint(small){
+        display: inline-block;
+      }
+      @include breakpoint(medium){
+        display: none;
+      }
     }
 
     &::before,

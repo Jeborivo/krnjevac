@@ -59,7 +59,9 @@
                 }
 
                 &--button-link-wrap {
-                    display: flex;
+                    display: none;
+                    // promenjeno mozda se vrati
+                    // display: flex;
                     justify-content: center;
                     flex-direction: column;
                     align-items: center;
@@ -258,7 +260,7 @@
                     &_line {
                         visibility: visible;
                         width: 80%;
-                        height: 4px;
+                        height: 2px;
                         background-image: url(http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/steplines.png);
                         background-repeat: repeat-x;
                         background-size: 40px 10px;
