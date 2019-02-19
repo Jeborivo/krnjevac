@@ -36,82 +36,82 @@ get_header(); ?>
             <div class="supermarkets-container">
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/logo-dis.png"alt="dis">
                     </div>
-                    <h5 class="supermarket_title">Dis marketi</h5>
+                    <h5 class="supermarket_title">DIS</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
                     <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="#">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/logo-maxi.png"alt="maxi">
                     </div>
-                    <h5 class="supermarket_title">Dis marketi</h5>
-                    <h6 class="supermarket_web">www.dismarket.rs</h6>
-                    <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
+                    <h5 class="supermarket_title">Maxi</h5>
+                    <h6 class="supermarket_web">www.maxi.rs</h6>
+                    <h6 class="supermarket_phone">0800 3537 030</h6>
+                    <h6 class="supermarket_link"><a href="#">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/logo-mercator.png"alt="mercator">
                     </div>
-                    <h5 class="supermarket_title">Dis marketi</h5>
-                    <h6 class="supermarket_web">www.dismarket.rs</h6>
-                    <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
+                    <h5 class="supermarket_title">Mercator</h5>
+                    <h6 class="supermarket_web">www.mercator.rs</h6>
+                    <h6 class="supermarket_phone">0800 000 500</h6>
+                    <h6 class="supermarket_link"><a href="#">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/logo-idea.png"alt="idea">
                     </div>
-                    <h5 class="supermarket_title">Dis marketi</h5>
-                    <h6 class="supermarket_web">www.dismarket.rs</h6>
-                    <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
+                    <h5 class="supermarket_title">Idea</h5>
+                    <h6 class="supermarket_web">www.idea.rs</h6>
+                    <h6 class="supermarket_phone">0800 101 202</h6>
+                    <h6 class="supermarket_link"><a href="#">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/logo-roda.png"alt="roda">
                     </div>
-                    <h5 class="supermarket_title">Dis marketi</h5>
-                    <h6 class="supermarket_web">www.dismarket.rs</h6>
-                    <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
+                    <h5 class="supermarket_title">Roda</h5>
+                    <h6 class="supermarket_web">www.roda.rs</h6>
+                    <h6 class="supermarket_phone">0800 000 500</h6>
+                    <h6 class="supermarket_link"><a href="#">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/logo-tempo.png"alt="tempo">
                     </div>
-                    <h5 class="supermarket_title">Dis marketi</h5>
-                    <h6 class="supermarket_web">www.dismarket.rs</h6>
-                    <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
+                    <h5 class="supermarket_title">Tempo</h5>
+                    <h6 class="supermarket_web">www.tempo.rs</h6>
+                    <h6 class="supermarket_phone">0800 3537 040</h6>
+                    <h6 class="supermarket_link"><a href="#">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/logo-vero.png"alt="super vero">
                     </div>
-                    <h5 class="supermarket_title">Dis marketi</h5>
-                    <h6 class="supermarket_web">www.dismarket.rs</h6>
-                    <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
+                    <h5 class="supermarket_title">Super Vero</h5>
+                    <h6 class="supermarket_web">www.supervero.rs</h6>
+                    <h6 class="supermarket_phone">011 3119 111</h6>
+                    <h6 class="supermarket_link"><a href="#">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
-                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/krnjevac_logo.svg"alt="krnjevac">
+                    <img src="http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/logo-qvattro.png"alt="qvattro">
                     </div>
-                    <h5 class="supermarket_title">Dis marketi</h5>
-                    <h6 class="supermarket_web">www.dismarket.rs</h6>
-                    <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Lokacije objekta<i class="fas fa-arrow-right"></i></a></h6>
+                    <h5 class="supermarket_title">Qvattro</h5>
+                    <h6 class="supermarket_web">www.qvattro.rs</h6>
+                    <h6 class="supermarket_phone">011 3189 739</h6>
+                    <h6 class="supermarket_link"><a href="#">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
             </div>
 
             <div class="partner-form">
                 <div class="partner-form_container">
-                    <h3 class="partner-form_title">Postani naš partner</h3>
-                    <h4 class="partner-form_desc">Tekst za distribuciju proizvoda, partnerima koji poseduju maloprodaje, otrpilike ove veličine</h4>
+                    <h3 class="partner-form_title">Kontaktiraj nas</h3>
+                    <h4 class="partner-form_desc">Niste pronašli naš proizvod ili imate dodatnih pitanja?</h4>
                 </div>
                 <div class="form-wrap">
                     <input type="checkbox" id="collapse" class="toggle">
@@ -126,13 +126,13 @@ get_header(); ?>
 					    </label>
                             <form action="">
                                 <div class="input-text">
-                                    <input type="text" placeholder="Ime kompanije" name="company-name">
-                                    <input type="text" placeholder="Vaše ime i prezime" name="first-last-name">
-                                    <input type="text" placeholder="Kontakt e-mail" name="mail">                                    
+                                    <input type="text" placeholder="Ime i prezime" name="company-name">
+                                    <input type="text" placeholder="Kontakt e-mail" name="first-last-name">
+                                    <input type="text" placeholder="Tekst poruke" name="mail">                                    
                                 </div>
                                 <div class="desc-submit">
                                     <h4 class="form-desc">Po poslatom zahtevu, naš operater će Vas kontaktirati u roku od 24h</h4>
-                                    <input type="submit" value="Pošalji" class="button btn-grey">
+                                    <input type="submit" value="Pošalji poruku " class="button btn-grey">
                                 </div>
                             </form>
                         </div> 

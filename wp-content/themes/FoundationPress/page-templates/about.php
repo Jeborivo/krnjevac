@@ -17,7 +17,7 @@ get_header(); ?>
 		<div class="hero hero_about" style="background-image: url('http://krnjevac.rs/wp-content/themes/FoundationPress/src/assets/images/aboutbg.png')">
 			<div class="hero_content main-container">
 				<div class="hero_content--text">
-					<h1 class="hero_content--title">Garantovano 100% prirodnimed bez ikakvih dodataka</h1>
+					<h1 class="hero_content--title">Garantovano 100% prirodni med bez ikakvih dodataka</h1>
 					<h5 class="hero_content--link"><a href="shop">Kupi Krnjevac proizvode <i class="fas fa-arrow-right"></i></a></h5>
 					<h5 class="hero_content--link"><a href="?page_id=102">Kontrola kvaliteta <i class="fas fa-arrow-right"></i></a></h5>
 					<a class="hero_content--more-link" href="#section-info1">
@@ -99,7 +99,7 @@ for (i = 0; i < coll.length; i++) {
 	<div class="about-newsletter_wrap main-container">
 	<div class="about-newsletter_title newsletter-item">
     	<h2 class="ntitle">Pretplati se na newsletter</h2>
-      	<p>Vestibulum fringilla felis in finibus elementum. Maecenas venenatis massa a ullamcorper laoreet. Aenean atexdiam.</p>
+      	<p>Prijavom na naš newsletter bićete u toku sa svim Krnjevac promocijama, akcijama i novostima.</p>
    	</div>
             
 	<form action="" class="about-newsletter_email newsletter-item">
