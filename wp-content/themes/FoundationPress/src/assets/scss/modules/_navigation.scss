@@ -255,6 +255,16 @@
     width: 20px;
     height: 20px;
 
+    @include breakpoint(small) {
+      .navigation__button {
+        display: inline-block;
+      }
+    }
+
+    @include breakpoint(large) {
+      display: none;
+    }
+
   &__checkbox {
       display: none;
   }

@@ -61,9 +61,9 @@
 </div>
 <div class="cards-info main-container">
     <div class="cards-info_text">
-      <h6><i class="far fa-check-circle"></i>Besplatna dostava preko 2000,-</h6>
+      <h6><i class="far fa-check-circle"></i>Sigurna kupovina</h6>
       <h6><i class="far fa-check-circle"></i>Dostava danas za sutra</h6>
-      <h6><i class="far fa-check-circle"></i>Slanje paketa sirom Srbije</h6>
+      <h6><i class="far fa-check-circle"></i>Slanje paketa širom Srbije</h6>
     </div>
     <a class="button go-to-shop" type="button" href="shop?productOrderBy=menu_order&itemOrder=ASC"><h5>Internet prodavnica<i class="fas fa-shopping-cart"></i></h5></a>
   </div>
