@@ -1,0 +1,159 @@
+.woocommerce-checkout {
+
+    .edit-link {
+        display: none;
+    }
+    
+    .top-bar-left {
+        a {
+            color: black;
+        }
+    }
+    
+    .top-bar-right {
+        .fa-search,
+        .fa-shopping-cart {
+            color: black;
+        }
+
+        .navigation__icon {
+            background-color: black;
+            &::before,
+            &::after {
+                background-color: black;
+            }
+        }
+    }
+    .main-grid {
+        margin: 0;
+        padding-top: 100px;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .woocommerce {
+        @include breakpoint(small) {
+            .woocommerce-form-coupon-toggle {
+                display: none;
+            }
+
+            .checkout-grid-container {
+                @include xy-grid 
+                
+                .buyer-info {
+                    @include xy-cell (2 of 5)
+
+                    .woocommerce-billing-fields {
+                        h3 {
+                            font-weight: bold;
+                        }
+
+                        label {
+                            color: #636363;
+                            font-weight: bold;
+                        }
+                        
+                        .input-text {
+                            background-color: #E9E9E9;
+                            border: none;
+                            box-shadow: none;
+                            height: 58px;
+                            color: #636363;
+                            padding: 20px;
+                        }
+
+                        .form-row-first,
+                        .form-row-last {
+                            width: 100%;
+                        }
+
+                        .select2 {
+                            background-color: #E9E9E9;
+                            border: none;
+                            box-shadow: none;
+                            height: 58px;
+                            color: #636363;
+                        
+                        }
+
+                        .select2-selection {
+                            background-color: #E9E9E9;
+                            border: none;
+                            box-shadow: none;
+                            height: 58px;
+                            color: #636363;
+
+                            &__rendered {
+                                padding: 15px;
+                            }
+
+                            &__arrow {
+                                top: 15px;
+                            }
+                        }
+
+                    }
+                }
+
+                .order-review {
+                    @include xy-cell (3 of 5)
+
+                    #order_review_heading {
+                        font-weight: bold;
+                        margin-bottom: 23px;
+                    }
+
+                    .shop_table {
+                        border: none;
+
+                        .product-name {
+                            color: #636363;
+
+                            .product-quantity {
+                                color: #636363;
+                            }
+                        }
+
+                        .amount {
+                            color: #636363;
+                            font-weight: 400;
+                        }
+
+                        th {
+                            color: #636363;
+                        }
+
+                    }
+
+                    .woocommerce-checkout-payment {
+                        background-color: $white!important;
+                    }
+
+                    .place-order {
+                        .button {
+                            background-color: $primary-color;
+                            width: 220px;
+                            height: 58px;
+                            padding: 18px 52px;
+                            float: right;
+                            border-radius: 0;
+        
+                            &:hover {
+                                background-color: #fcb900;
+                            }
+                        }
+                    }
+                }
+            }
+            padding: 0 36px;
+        }
+        @include breakpoint(medium) {
+           
+        }
+        @include breakpoint(large) {
+            padding: 0 98px;
+        }
+    }
+}

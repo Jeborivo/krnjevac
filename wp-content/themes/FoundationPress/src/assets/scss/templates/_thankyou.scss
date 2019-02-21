@@ -1,0 +1,105 @@
+.woocommerce-order-received {
+    .woocommerce-thankyou-order-received {
+        font-size: 16px;
+        color: #636363;
+        margin-bottom : 56px;
+    }
+
+    .woocommerce ul.order_details li {
+        font-family: $body-font-family;
+        font-size: 16px;
+        font-weight: bold;
+        color: $black;
+        text-transform: unset;
+        border: none;
+
+        strong {
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+    }
+    .order-details-grid {
+        @include xy-grid 
+        
+        @include breakpoint(small) {
+            .woocommerce-order-details {
+                @include xy-cell(12);
+
+                h3 {
+                    font-weight: bold;
+                }
+                .shop_table {
+                    border: none;
+                    border-collapse: collapse;
+
+                    .product-total {
+                        text-align: right;   
+                    }
+
+                    .product-name {
+                        text-align: left;
+                        a {
+                            color: #636363;
+                        }
+                    }
+
+                    td {
+                        text-align: right;
+                        color: #636363;
+                        font-weight: 400;
+                    }
+
+                    th {
+                        color: #636363;
+                    }
+
+                    th,
+                    td {
+                        border-bottom: 1px solid #707070;
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+
+                    .amount {
+                        float: right;
+                        color: #636363;
+                        font-weight: 400;
+                    }
+
+                    tr {
+                        background-color: $white!important;
+                    }
+                }
+            }
+            .woocommerce-customer-details {
+                @include xy-cell(12);
+
+                h3 {
+                    font-weight: bold;
+                    margin-bottom: 16px;
+                }
+
+                address {
+                    border: none;
+                    color: #636363;
+                    padding: 0;
+                }
+            }
+        }
+        @include breakpoint(medium) {
+            
+        }
+        @include breakpoint(large) {
+            .woocommerce-order-details {
+                @include xy-cell(2 of 4);
+                margin-left: 0;
+                margin-right: 60px;
+                
+            }
+            .woocommerce-customer-details {
+                @include xy-cell(1 of 4);
+            }
+        }
+    }
+}
