@@ -44,7 +44,7 @@ if ( $show_downloads ) {
 
 		<thead>
 			<tr>
-				<th class="woocommerce-table__product-name product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
+				<th class="woocommerce-table__product-name product-name"><?php _e( 'Proizvod', 'woocommerce' ); ?></th>
 				<th class="woocommerce-table__product-table product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
 			</tr>
 		</thead>
@@ -72,10 +72,27 @@ if ( $show_downloads ) {
 
 		<tfoot>
 			<?php
+			// ovo djubre od koda treba samo da ima echo $total['label'] u foreachu
 				foreach ( $order->get_order_item_totals() as $key => $total ) {
 					?>
+					<?php if( $total['label']=='Payment method:'): ?>
+							<?php continue;?>
+						<?php endif;?>
 					<tr>
-						<th scope="row"><?php echo $total['label']; ?></th>
+						<th scope="row">
+							<?php if( $total['label']=='Subtotal:'): ?>
+							<?php echo 'Ukupno proizvodi' ?></th>
+						<?php else:?>
+						<?php if( $total['label']=='Shipping:'): ?>
+							<?php echo 'Poštarina' ?></th>
+						<?php else:?>
+						<?php if( $total['label']=='Total:'): ?>
+							<?php echo 'Ukupno' ?></th>
+						<?php else:?>
+							<?php echo $total['label']; ?></th>
+						<?php endif;?>
+						<?php endif;?>
+						<?php endif;?>
 						<td><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : $total['value']; ?></td>
 					</tr>
 					<?php
