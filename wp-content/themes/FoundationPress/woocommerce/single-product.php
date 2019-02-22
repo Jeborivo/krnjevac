@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 
  
-require_once($_SERVER['DOCUMENT_ROOT'].'/krnjevac/wp-content/themes/FoundationPress/plugins/last_seen_products.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/FoundationPress/plugins/last_seen_products.php');
 
 /**
  * The template for displaying pages
