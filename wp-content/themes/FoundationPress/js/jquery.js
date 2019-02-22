@@ -20,7 +20,7 @@ $( document ).ready(function() {
     if (currentUrl.indexOf("pcelinji") > 0){
     //    dizajn
     }
-    if (currentUrl.indexOf("Horeca") > 0){
+    if (currentUrl.indexOf("horeca") > 0){
         classArray.push('Horeca');
         $('#Horeca').removeClass("filter-off filter-neutral").addClass("filter-on");
        
