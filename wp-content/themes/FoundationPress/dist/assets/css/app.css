@@ -8655,7 +8655,7 @@ body#tinymce {
   height: 35px; }
 
 .to_be_removed {
-  display: none; }
+  display: none!important; }
 
 .sites-button {
   background: #ffc629;

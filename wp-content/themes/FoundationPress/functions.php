@@ -203,39 +203,65 @@ function arphabet_widgets_init() {
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
-// cart Total label renamed
-add_filter('gettext', 'wc_renaming_checkout_total', 20, 3);
-function wc_renaming_checkout_total( $translated_text, $untranslated_text, $domain ) {
 
-    if( !is_admin() && is_checkout ) {
-        if( $untranslated_text == 'Total' )
-            $translated_text = __( 'Ukupno','theme_slug_domain' );
-    }
-    return $translated_text;
+// Renames 
+add_filter ( 'wc_add_to_cart_message', 'wc_add_to_cart_message_filter', 10, 2 );
+function wc_add_to_cart_message_filter($message, $product_id = null) {
+    $titles[] = get_the_title( $product_id );
+    $titles = array_filter( $titles );
+    $added_text = sprintf( _n( 'Proizvod %s je dodat u korpu.', 'Proizvod %s je dodat u korpu.', sizeof( $titles ), 'woocommerce' ), wc_format_list_of_items( $titles ) );
+    $message = sprintf( '%s <a href="%s" class="button">%s</a>&nbsp;<a href="%s" class="button">%s</a>',
+                    esc_html( $added_text ),
+                    esc_url( wc_get_page_permalink( 'checkout' ) ),
+                    esc_html__( 'Na kasu', 'woocommerce' ),
+                    esc_url( get_permalink( get_page_by_path( 'proizvodi' ) )),
+                    esc_html__( 'Nastavi kupovinu', 'woocommerce' ));
+    return $message;
 }
-// cart Subotal label renamed
-add_filter('gettext', 'wc_renaming_checkout_subtotal', 20, 3);
-function wc_renaming_checkout_subtotal( $translated_text, $untranslated_text, $domain ) {
-
-    if( !is_admin() && is_checkout ) {
-        if( $untranslated_text == 'Subtotal' )
-            $translated_text = __( 'Proizvodi','theme_slug_domain' );
-    }
-    return $translated_text;
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+// Our hooked in function - $fields is passed via the filter!
+function custom_override_checkout_fields( $fields ) {
+	// First name edited
+	$fields['billing']['billing_first_name']['label'] = 'Ime';
+	$fields['billing']['billing_first_name']['placeholder'] = '';
+	$fields['billing']['billing_first_name']['required'] = true;
+	// Last name edited
+	$fields['billing']['billing_last_name']['label'] = 'Prezime';
+	$fields['billing']['billing_last_name']['placeholder'] = '';
+	$fields['billing']['billing_last_name']['required'] = true;
+	// Country field rename
+	$fields['billing']['billing_country']['label'] = 'Država';
+	//Removes fields that are not needed
+	unset($fields['billing']['billing_state']);
+	$fields['billing']['billing_phone']['label'] = 'Telefon';
+	$fields['billing']['billing_phone']['placeholder'] = '';
+    $fields['billing']['billing_phone']['required'] = true;
+    // company
+    unset($fields['billing']['billing_company']);
+	// Email field edited
+	$fields['billing']['billing_email']['label'] = 'E-mail';
+	$fields['billing']['billing_email']['required'] = false;
+	// Order comment edited
+	$fields['order']['order_comments']['label'] = 'Napomena';
+    $fields['order']['order_comments']['placeholder'] = 'Ovde možete napisati vašu napomenu ili zahtev.';
+    // Address1
+    $fields['billing']['billing_address_1']['label'] = 'Adresa';
+    $fields['billing']['billing_address_1']['placeholder'] = 'Adresa';
+    // Address2
+    unset($fields['billing']['billing_address_2']);
+ 
+     // Grad
+     $fields['billing']['billing_city']['label'] = 'Grad';
+     $fields['billing']['billing_city']['placeholder'] = 'Grad';
+      // Zip
+      $fields['billing']['billing_postcode']['label'] = 'Poštanski broj';
+      $fields['billing']['billing_postcode']['placeholder'] = 'Poštanski broj';
+     return $fields;
 }
-// cart Shipping label renamed
-add_filter( 'woocommerce_shipping_package_name', 'custom_shipping_package_name' );
-function custom_shipping_package_name( $name ) {
-  return 'Poštarina';
-}
+// Other solution for checkout fields when the first one doesn't work (Woocommerce documentation)
+add_filter( 'woocommerce_default_address_fields' , 'wpse_120741_wc_def_state_label' );
+function wpse_120741_wc_def_state_label( $address_fields ) {
 
-// cart Total label renamed
-add_filter('gettext', 'wc_renaming_order_recieved_total', 20, 3);
-function wc_renaming_order_recieved_total( $translated_text, $untranslated_text, $domain ) {
-
-    if( !is_admin() && order_received ) {
-        if( $untranslated_text == 'Total' )
-            $translated_text = __( 'Ukupno','theme_slug_domain' );
-    }
-    return $translated_text;
+	
+     return $address_fields;
 }
