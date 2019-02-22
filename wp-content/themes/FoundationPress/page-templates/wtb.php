@@ -131,7 +131,7 @@ get_header(); ?>
                                     <input type="text" placeholder="Tekst poruke" name="mail">                                    
                                 </div>
                                 <div class="desc-submit">
-                                    <h4 class="form-desc">Po poslatom zahtevu, naš operater će Vas kontaktirati u roku od 24h</h4>
+                                    <h4 class="form-desc">- Po poslatom zahtevu se menja se briše Kvalitet stranica</h4>
                                     <input type="submit" value="Pošalji poruku " class="button btn-grey">
                                 </div>
                             </form>

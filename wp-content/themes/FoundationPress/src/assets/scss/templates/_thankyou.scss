@@ -65,6 +65,10 @@
                         float: right;
                         color: #636363;
                         font-weight: 400;
+
+                        .shipped_via {
+                            display: none;
+                        }
                     }
 
                     tr {
