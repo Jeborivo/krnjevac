@@ -69,6 +69,10 @@
                         .shipped_via {
                             display: none;
                         }
+
+                        small {
+                            display: none;
+                        }
                     }
 
                     tr {
@@ -106,4 +110,8 @@
             }
         }
     }
+}
+
+.woocommerce table.shop_table td .shipped_via {
+    display: none;
 }

@@ -111,6 +111,7 @@
 
                     .shop_table {
                         border: none;
+                        border-collapse: collapse;
 
                         .product-name {
                             color: #636363;
@@ -127,6 +128,20 @@
 
                         th {
                             color: #636363;
+                            background-color: $white;
+                            border-bottom: 1px solid $black;
+                        }
+
+                        td {
+                            border-bottom: 1px solid $black;
+                        }
+
+                        tr {
+                            background-color: $white;
+                        }
+
+                        .order-total { 
+                            border-bottom: 1px solid $black;
                         }
 
                     }
