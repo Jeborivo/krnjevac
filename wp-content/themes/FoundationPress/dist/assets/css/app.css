@@ -11909,6 +11909,7 @@ body#tinymce {
       width: calc(25% - 1.875rem);
       margin-right: 0.9375rem;
       margin-left: 0.9375rem; } }
+      .to_be_removed{display: none!important;}
 
 .woocommerce table.shop_table td .shipped_via {
   display: none; }
