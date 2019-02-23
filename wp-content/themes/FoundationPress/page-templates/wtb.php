@@ -41,7 +41,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">DIS</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
                     <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="http://www.dismarket.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="https://www.dismarket.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -59,7 +59,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Mercator</h5>
                     <h6 class="supermarket_web">www.mercator.rs</h6>
                     <h6 class="supermarket_phone">0800 000 500</h6>
-                    <h6 class="supermarket_link"><a href="www.mercator.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="https://www.mercator.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -68,7 +68,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Idea</h5>
                     <h6 class="supermarket_web">www.idea.rs</h6>
                     <h6 class="supermarket_phone">0800 101 202</h6>
-                    <h6 class="supermarket_link"><a href="www.idea.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="https://www.idea.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -77,7 +77,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Roda</h5>
                     <h6 class="supermarket_web">www.roda.rs</h6>
                     <h6 class="supermarket_phone">0800 000 500</h6>
-                    <h6 class="supermarket_link"><a href="www.roda.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="https://www.roda.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -86,7 +86,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Tempo</h5>
                     <h6 class="supermarket_web">www.tempo.rs</h6>
                     <h6 class="supermarket_phone">0800 3537 040</h6>
-                    <h6 class="supermarket_link"><a href="www.tempo.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="https://www.tempo.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -95,7 +95,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Super Vero</h5>
                     <h6 class="supermarket_web">www.supervero.rs</h6>
                     <h6 class="supermarket_phone">011 3119 111</h6>
-                    <h6 class="supermarket_link"><a href="www.supervero.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="https://www.supervero.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -104,7 +104,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Qvattro</h5>
                     <h6 class="supermarket_web">www.qvattro.rs</h6>
                     <h6 class="supermarket_phone">011 3189 739</h6>
-                    <h6 class="supermarket_link"><a href="www.qvattro.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="https://www.qvattro.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
             </div>
 
