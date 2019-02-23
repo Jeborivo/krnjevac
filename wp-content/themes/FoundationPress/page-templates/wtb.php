@@ -41,7 +41,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">DIS</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
                     <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="http://www.dismarket.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -50,7 +50,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Maxi</h5>
                     <h6 class="supermarket_web">www.maxi.rs</h6>
                     <h6 class="supermarket_phone">0800 3537 030</h6>
-                    <h6 class="supermarket_link"><a href="#">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="https://www.maxi.rs/">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
