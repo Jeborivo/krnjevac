@@ -265,3 +265,11 @@ function wpse_120741_wc_def_state_label( $address_fields ) {
 	
      return $address_fields;
 }
+// renames "order recieved"
+function bk_title_order_received( $title, $id ) {
+	if ( is_order_received_page() && get_the_ID() === $id ) {
+		$title = "Porudžbina primljena";
+	}
+	return $title;
+}
+add_filter( 'the_title', 'bk_title_order_received', 10, 2 );
