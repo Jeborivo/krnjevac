@@ -52,7 +52,8 @@
 
         .text-content {
 
-            .more-link {
+            .more-link-odd,
+            .more-link-even {
 
                 @include breakpoint(medium) {
                     justify-content: flex-start;
@@ -131,6 +132,10 @@
     @include breakpoint(small) {
         flex-direction: column-reverse;
 
+        .more-link-even {
+            display: none;
+        }
+
     }
     
     @include breakpoint(medium) {
@@ -181,6 +186,10 @@
             width: 100%;
             margin-left: 0;
             margin-right: 5%;
+
+            .more-link-odd{
+                display: none;
+            }
         }
     }
 

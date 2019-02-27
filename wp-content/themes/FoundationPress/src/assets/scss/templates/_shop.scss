@@ -104,19 +104,19 @@
             }
 
             .input-group-field {
-                background-color: $color-grey-light-1;
+                background-color: #ebe9eb;
                 border: none !important;
                 box-shadow: none !important;
-                color: $white;
+                color: $color-grey-dark-2;
                 padding-left: 22px;
 
                 &::placeholder {
-                    color: $white;
+                    color: $color-grey-dark-2;
                 }
             }
 
             .input-group-button {
-                background-color: $color-grey-light-1;
+                background-color: #ebe9eb
             }
 
             #searchsubmit {
