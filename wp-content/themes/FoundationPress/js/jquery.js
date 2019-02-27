@@ -1,12 +1,37 @@
 var priceLow ;
 var priceHigh;
 var gramaze= [];
+var classArray = [];
+var categoryCloseArray = [];
+var vrsteMedaFilterCloseArray = [];
+var gramazaFilterCloseArray = [];
+var allArray=[];
 $( document ).ready(function() {
     
     $('.tnp-email').addClass('shop-newsletter_email--text');
     $('.tnp-email').attr('placeholder','E mail adresa');
     $('.tnp-submit').addClass('button btn-grey shop-newsletter_email--submit');
     var currentUrl = window.location.href ;
+    if (currentUrl.indexOf("teglirani") > 0){
+        classArray.push('Teglirani_med');
+        $('#Teglirani_med').removeClass("filter-off filter-neutral").addClass("filter-on");
+
+    }
+    if (currentUrl.indexOf("pcelinji") > 0){
+    //    dizajn
+    }
+    if (currentUrl.indexOf("horeca") > 0){
+        classArray.push('Horeca');
+        $('#Horeca').removeClass("filter-off filter-neutral").addClass("filter-on");
+       
+
+    }
+    if (currentUrl.indexOf("akcija") > 0){
+        classArray.push('Akcija');
+        $('#Akcija').removeClass("filter-off filter-neutral").addClass("filter-on");
+       
+
+    }
     if (currentUrl.indexOf("productOrderBy") <= 0){
         window.location.replace(currentUrl+'?productOrderBy=menu_order&itemOrder=ASC');
         } 
@@ -132,11 +157,7 @@ $( document ).ready(function() {
 
 
 
-var classArray = [];
-var categoryCloseArray = [];
-var vrsteMedaFilterCloseArray = [];
-var gramazaFilterCloseArray = [];
-var allArray=[];
+
 
 
 function categoryFilter(category){
@@ -210,7 +231,7 @@ function gramazaFilter(gramaza){
 }
 function filtering(){
     var classComp = classArray.toString();
-   
+    console.log(classArray)
 
    
     classComp = classComp.replace(/\,/g, ' ');

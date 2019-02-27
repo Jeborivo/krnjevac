@@ -1,4 +1,5 @@
 <?php
+require_once($_SERVER['DOCUMENT_ROOT'].'/krnjevac/wp-content/themes/FoundationPress/plugins/renames.php');
 /**
  * Proceed to checkout button
  *

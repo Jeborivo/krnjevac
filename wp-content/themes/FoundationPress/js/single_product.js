@@ -5,6 +5,8 @@ var addToCartLink;
 var quantity;
 
 $( document ).ready(function() {
+    document.getElementsByClassName('last_seen')[0].style.display='flex';
+    document.getElementsByClassName('related-cards')[0].style.display='none';
   
     var currentUrl = window.location.href;
     var variation = 1;
@@ -82,12 +84,12 @@ function variationSetup(variation){
   
 }
 function lastSeen(){
-    // document.getElementsByClassName('last_seen')[0].style.display='block';
-    // document.getElementsByClassName('related-cards')[0].style.display='none';
+    document.getElementsByClassName('last_seen')[0].style.display='flex';
+    document.getElementsByClassName('related-cards')[0].style.display='none';
 
 }
 function related(){
-    // document.getElementsByClassName('last_seen')[0].style.display='none';
-    // document.getElementsByClassName('related-cards')[0].style.display='block';
+    document.getElementsByClassName('last_seen')[0].style.display='none';
+    document.getElementsByClassName('related-cards')[0].style.display='flex';
     
 }
