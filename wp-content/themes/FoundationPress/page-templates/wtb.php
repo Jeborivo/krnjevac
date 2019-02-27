@@ -41,7 +41,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">DIS</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
                     <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="https://www.dismarket.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="http://www.dismarket.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -86,7 +86,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Tempo</h5>
                     <h6 class="supermarket_web">www.tempo.rs</h6>
                     <h6 class="supermarket_phone">0800 3537 040</h6>
-                    <h6 class="supermarket_link"><a href="https://www.tempo.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="http://www.tempo.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -95,7 +95,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Super Vero</h5>
                     <h6 class="supermarket_web">www.supervero.rs</h6>
                     <h6 class="supermarket_phone">011 3119 111</h6>
-                    <h6 class="supermarket_link"><a href="https://www.supervero.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="http://www.supervero.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -104,7 +104,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Qvattro</h5>
                     <h6 class="supermarket_web">www.qvattro.rs</h6>
                     <h6 class="supermarket_phone">011 3189 739</h6>
-                    <h6 class="supermarket_link"><a href="https://www.qvattro.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="http://www.qvattro.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
             </div>
 
