@@ -1,5 +1,11 @@
 <?php /* Template Name: where to buy */ ?>
+
 <?php
+if (isset($_POST['submit'])) {
+    if ($error>0){
+    header("Refresh:0");
+    }
+}
 /**
  * 
  * The template for displaying pages
@@ -14,7 +20,7 @@
 
 get_header(); ?>
 
-        
+
     <div class="front_wtb hero_wtb">
     <div class="front_wtb--text hero_wtb--text">
         <h1>Gde kupiti?</h1>
@@ -116,7 +122,7 @@ get_header(); ?>
                 <div class="form-wrap">
                     <input type="checkbox" id="collapse" class="toggle">
                     <label for="collapse" class="form-toggle button btn-green">
-                    <h5>Postani partner<i class="fas fa-angle-down"></i></h5>
+                    <h5>Kontaktiraj nas <i class="fas fa-angle-down"></i></h5>
 					</label>
                     <div class="form-wrap_content">
                         <div class="form-wrap_content--inner">
@@ -124,17 +130,38 @@ get_header(); ?>
                         <label for="collapse" class="form-toggle close">
                         <i class="icon-close"></i>
 					    </label>
-                            <form action="">
+                            <form action="" method="POST">
                                 <div class="input-text">
-                                    <input type="text" placeholder="Ime i prezime" name="company-name">
-                                    <input type="text" placeholder="Kontakt e-mail" name="first-last-name">
-                                    <input type="text" placeholder="Tekst poruke" name="mail">                                    
+                                    <input type="text" name="ime_prezime" placeholder="Ime i prezime">
+                                    <input type="text" name="mail" placeholder="Kontakt e-mail">
+                                    <input type="text" name="text" placeholder="Tekst poruke">                                    
                                 </div>
                                 <div class="desc-submit">
                                     <h4 class="form-desc">- Po poslatom zahtevu se menja se briše Kvalitet stranica</h4>
-                                    <input type="submit" value="Pošalji poruku " class="button btn-grey">
+                                    <input type="submit" name="submit" value="Pošalji poruku" class="button btn-grey">
                                 </div>
                             </form>
+                            <?php 
+                                           if (isset($_POST['submit'])) {
+                                           
+                                                    $ime_prezime=$_POST['ime_prezime'];
+                                                    $mail=$_POST['mail'];
+                                                    $text=$_POST['text'];
+                                                    $error=0;
+                                                    if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+                                                        $error++;
+                                                        echo "";
+                                                    }
+                                                    if(strlen($ime_prezime)< 3){
+                                                        $error++;
+                                                        echo('');
+                                                    }
+                                           }
+
+                                           if ($error==0){    
+                                           wp_mail( 'anru1996@gmail.com', $mail, $text, $ime_prezime );
+                                           }
+                                    ?>
                         </div> 
                     </div>
                 </div>
