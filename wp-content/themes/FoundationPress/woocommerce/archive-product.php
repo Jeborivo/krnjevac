@@ -95,10 +95,10 @@ get_header(); ?>
             <label for="vrste-colapse" class="vrste-toggle">Vrste meda <span id="vrste-meda-close" onclick="vrsteMedaClose()" href="">x</span></label>
               <div class="vrste-colapse-content">
                 <div class="vrste-content-inner">
-                  <input class="button filter-neutral filter-type" type="button" id="bagremov_med" onclick="vrsteMedaFilter(this.id)" value="Bagremov med"> <br>
-                  <input class="button filter-neutral filter-type" type="button" id="livadski_med" onclick="vrsteMedaFilter(this.id)" value="Livadski med"> <br>
-                  <input class="button filter-neutral filter-type" type="button" id="lipov_med" onclick="vrsteMedaFilter(this.id)" value="Lipov med"> <br>
-                  <input class="button filter-neutral filter-type" type="button" id="cvetni_med" onclick="vrsteMedaFilter(this.id)" value="Cvetni med"> <br>
+                  <input class="button filter-neutral filter-type vrste-meda-button" type="button" id="bagremov_med" onclick="vrsteMedaFilter(this.id)" value="Bagremov med"> <br>
+                  <input class="button filter-neutral filter-type vrste-meda-button" type="button" id="livadski_med" onclick="vrsteMedaFilter(this.id)" value="Livadski med"> <br>
+                  <input class="button filter-neutral filter-type vrste-meda-button" type="button" id="lipov_med" onclick="vrsteMedaFilter(this.id)" value="Lipov med"> <br>
+                  <input class="button filter-neutral filter-type vrste-meda-button" type="button" id="cvetni_med" onclick="vrsteMedaFilter(this.id)" value="Cvetni med"> <br>
                 </div>
               </div>
           </div>

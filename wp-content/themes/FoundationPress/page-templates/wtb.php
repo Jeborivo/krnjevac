@@ -1,5 +1,11 @@
 <?php /* Template Name: where to buy */ ?>
+
 <?php
+if (isset($_POST['submit'])) {
+    if ($error>0){
+    header("Refresh:0");
+    }
+}
 /**
  * 
  * The template for displaying pages
@@ -14,7 +20,7 @@
 
 get_header(); ?>
 
-        
+
     <div class="front_wtb hero_wtb">
     <div class="front_wtb--text hero_wtb--text">
         <h1>Gde kupiti?</h1>
@@ -41,7 +47,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">DIS</h5>
                     <h6 class="supermarket_web">www.dismarket.rs</h6>
                     <h6 class="supermarket_phone">0800 101 101</h6>
-                    <h6 class="supermarket_link"><a href="#">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="http://www.dismarket.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -50,7 +56,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Maxi</h5>
                     <h6 class="supermarket_web">www.maxi.rs</h6>
                     <h6 class="supermarket_phone">0800 3537 030</h6>
-                    <h6 class="supermarket_link"><a href="#">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="https://www.maxi.rs/">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -59,7 +65,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Mercator</h5>
                     <h6 class="supermarket_web">www.mercator.rs</h6>
                     <h6 class="supermarket_phone">0800 000 500</h6>
-                    <h6 class="supermarket_link"><a href="www.mercator.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="https://www.mercator.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -68,7 +74,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Idea</h5>
                     <h6 class="supermarket_web">www.idea.rs</h6>
                     <h6 class="supermarket_phone">0800 101 202</h6>
-                    <h6 class="supermarket_link"><a href="www.idea.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="https://www.idea.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -77,7 +83,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Roda</h5>
                     <h6 class="supermarket_web">www.roda.rs</h6>
                     <h6 class="supermarket_phone">0800 000 500</h6>
-                    <h6 class="supermarket_link"><a href="www.roda.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="https://www.roda.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -86,7 +92,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Tempo</h5>
                     <h6 class="supermarket_web">www.tempo.rs</h6>
                     <h6 class="supermarket_phone">0800 3537 040</h6>
-                    <h6 class="supermarket_link"><a href="www.tempo.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="http://www.tempo.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -95,7 +101,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Super Vero</h5>
                     <h6 class="supermarket_web">www.supervero.rs</h6>
                     <h6 class="supermarket_phone">011 3119 111</h6>
-                    <h6 class="supermarket_link"><a href="www.supervero.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="http://www.supervero.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
                 <div class="supermarket">
                     <div class="supermarket_logo">
@@ -104,7 +110,7 @@ get_header(); ?>
                     <h5 class="supermarket_title">Qvattro</h5>
                     <h6 class="supermarket_web">www.qvattro.rs</h6>
                     <h6 class="supermarket_phone">011 3189 739</h6>
-                    <h6 class="supermarket_link"><a href="www.qvattro.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
+                    <h6 class="supermarket_link"><a href="http://www.qvattro.rs">Saznaj više<i class="fas fa-arrow-right"></i></a></h6>
                 </div>
             </div>
 
@@ -116,7 +122,7 @@ get_header(); ?>
                 <div class="form-wrap">
                     <input type="checkbox" id="collapse" class="toggle">
                     <label for="collapse" class="form-toggle button btn-green">
-                    <h5>Postani partner<i class="fas fa-angle-down"></i></h5>
+                    <h5>Kontaktiraj nas <i class="fas fa-angle-down"></i></h5>
 					</label>
                     <div class="form-wrap_content">
                         <div class="form-wrap_content--inner">
@@ -124,17 +130,38 @@ get_header(); ?>
                         <label for="collapse" class="form-toggle close">
                         <i class="icon-close"></i>
 					    </label>
-                            <form action="">
+                            <form action="" method="POST">
                                 <div class="input-text">
-                                    <input type="text" placeholder="Ime i prezime" name="company-name">
-                                    <input type="text" placeholder="Kontakt e-mail" name="first-last-name">
-                                    <input type="text" placeholder="Tekst poruke" name="mail">                                    
+                                    <input type="text" name="ime_prezime" placeholder="Ime i prezime">
+                                    <input type="text" name="mail" placeholder="Kontakt e-mail">
+                                    <input type="text" name="text" placeholder="Tekst poruke">                                    
                                 </div>
                                 <div class="desc-submit">
                                     <h4 class="form-desc">- Po poslatom zahtevu se menja se briše Kvalitet stranica</h4>
-                                    <input type="submit" value="Pošalji poruku " class="button btn-grey">
+                                    <input type="submit" name="submit" value="Pošalji poruku" class="button btn-grey">
                                 </div>
                             </form>
+                            <?php 
+                                           if (isset($_POST['submit'])) {
+                                           
+                                                    $ime_prezime=$_POST['ime_prezime'];
+                                                    $mail=$_POST['mail'];
+                                                    $text=$_POST['text'];
+                                                    $error=0;
+                                                    if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+                                                        $error++;
+                                                        echo "";
+                                                    }
+                                                    if(strlen($ime_prezime)< 3){
+                                                        $error++;
+                                                        echo('');
+                                                    }
+                                           }
+
+                                           if ($error==0){    
+                                           wp_mail( 'anru1996@gmail.com', $mail, $text, $ime_prezime );
+                                           }
+                                    ?>
                         </div> 
                     </div>
                 </div>

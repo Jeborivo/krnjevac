@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'].'/krnjevac/wp-content/themes/FoundationPress/plugins/renames.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/FoundationPress/plugins/renames.php');
 /**
  * Checkout shipping information form
  *
