@@ -6,6 +6,8 @@ var categoryCloseArray = [];
 var vrsteMedaFilterCloseArray = [];
 var gramazaFilterCloseArray = [];
 var allArray=[];
+var categoryMemory;
+var categoryState =0;
 $( document ).ready(function() {
     
     $('.tnp-email').addClass('shop-newsletter_email--text');
@@ -115,7 +117,7 @@ $( document ).ready(function() {
         }
  }
 //  range
- $(document).on('input', '#range_slider', function() {
+function range(){
     priceLow = lowValue *12;
     priceHigh = highValue *12;
     $('.low_value').text(priceLow+' rsd');
@@ -124,6 +126,18 @@ $( document ).ready(function() {
     var regularPrice= $('.regular_price',this).text();
     var salePrice= $('.sale_price',this).text();
     if ( $( this ).hasClass( 'filter_hidden' )){
+        return true;
+
+    }
+    if ( $( this ).hasClass( 'new_category' )){
+        return true;
+
+    }
+     if ( $( this ).hasClass( 'new_gramaza' )){
+        return true;
+
+    }
+    if ( $( this ).hasClass( 'new_vrstemeda' )){
         return true;
 
     }
@@ -153,6 +167,9 @@ $( document ).ready(function() {
        
 
         });
+}
+ $(document).on('input', '#range_slider', function() {
+    range();
     });
 
 
@@ -161,77 +178,255 @@ $( document ).ready(function() {
 
 
 function categoryFilter(category){
-    var catFormatted = category.replace(/\ /g, '_');
-    if(jQuery.inArray(catFormatted,classArray)==-1){
-    classArray.push(catFormatted);
-    categoryCloseArray.push(catFormatted);
-    $('#'+catFormatted).removeClass("filter-off filter-neutral").addClass("filter-on");
+    vrsteMedaFilterCloseArray=[];
+    $('.vrste-meda-button').addClass("filter-off filter-neutral").removeClass("filter-on ");
+    category = category.replace(/ /g, '_');
+    // brojac za funck
+    
+
+    if(categoryMemory == category){
+        categoryMemory=category;
+        
+            if(categoryState==0){
+                $('.product').each(function(i,value){
+                        if ($(this).hasClass('new_gramaza')){
+                            return true;
+                        }
+                        if ($(this).hasClass('range_hidden')){
+                            return true;
+                        }
+                        $(this).show();
+                    
+                });
+                  $('.product').removeClass('new_category');
+
+                  $('.filter-categories').addClass("filter-off filter-neutral").removeClass("filter-on ");
+                categoryState=1;
+            }else {
+                 $('.filter-categories').addClass("filter-off filter-neutral").removeClass("filter-on");
+                 $('#'+category).removeClass("filter-off filter-neutral").addClass("filter-on");
+                categoryState=0;
+                $('.product').hide();
+                $('.product').addClass('new_category');
+                $('.product').each(function(i,value){
+                    if($(this).hasClass(category)){
+                        $(this).removeClass('new_category');
+                    }
+                });
+                $('.product').each(function(i,value){
+                    if($(this).hasClass(category)){
+                        if ($(self).hasClass('new_gramaza')){
+                            return true;
+                        }
+                        if ($(self).hasClass('range_hidden')){
+                            return true;
+                        }
+                        $(this).show();
+                    }
+                });
+            }
+        
+        
     }
     else{
-        classArray = $.grep(classArray, function(value) {
-            return value != catFormatted;
-          });
-          $('#'+catFormatted).removeClass("filter-on filter-neutral").addClass("filter-off");
-
-          categoryCloseArray = $.grep(categoryCloseArray, function(value) {
-            return value != catFormatted;
-          });
-         
-          
-    }
-    filtering();
-  
+        categoryState=0;
+      categoryMemory = category;
+      $('.filter-categories').addClass("filter-off filter-neutral").removeClass("filter-on");
+      $('#'+category).removeClass("filter-off filter-neutral").addClass("filter-on");
+      $('.product').hide();
+      $('.product').addClass('new_category');
+      $('.product').each(function(i,value){
+          if($(this).hasClass(category)){
+              $(this).removeClass('new_category');
+          }
+      });
+      $('.product').each(function(i,value){
+          if($(this).hasClass(category)){
+              if ($(self).hasClass('new_gramaza')){
+                  return true;
+              }
+              if ($(self).hasClass('range_hidden')){
+                  return true;
+              }
+              $(this).show();
+          }
+      });
+        }
+        $('.product').each(function(i,value){
+                    if($(this).hasClass('range_hidden')){
+                        $(this).hide();
+                      
+                    }
+                });
+                range();
 }
 
 
 function vrsteMedaFilter(id){
-    if(jQuery.inArray(id,classArray)==-1){
-        classArray.push(id);
-        allArray.push(id);
+    categoryState=0;
+    categoryMemory=undefined;
+    $('.filter-categories').addClass("filter-off filter-neutral").removeClass("filter-on ");
+    $('.product').hide();
+    $('.product').removeClass('new_category')
+    $('.product').addClass('new_vrstemeda');
+    if(jQuery.inArray(id,vrsteMedaFilterCloseArray)==-1){
         vrsteMedaFilterCloseArray.push(id);
+        // allArray.push(id);
         $('#'+id).removeClass("filter-off filter-neutral").addClass("filter-on");
     }
     else{
-        classArray = $.grep(classArray, function(value) {
+        vrsteMedaFilterCloseArray = $.grep(vrsteMedaFilterCloseArray, function(value) {
             return value != id;
           });
           $('#'+id).removeClass("filter-on").addClass("filter-off");
-          vrsteMedaFilterCloseArray = $.grep(vrsteMedaFilterCloseArray, function(value) {
-            return value != id;
-          });
-          allArray = $.grep(allArray, function(value) {
-            return value != id;
-          });
+         
     }
-    filtering();
+
+    $('.product').each(function(){
+        let self= this;
+        vrsteMedaFilterCloseArray.forEach(function(el){
+            if ($(self).hasClass(el)){
+                $(self).removeClass('new_vrstemeda');
+
+             }
+           
+        })
+
+    });
+  
+    $('.product').each(function(){
+     
+        let self= this;
+             vrsteMedaFilterCloseArray.forEach(function(el){
+                if ($(self).hasClass('new_gramaza')){
+                    return true;
+                }
+                if ($(self).hasClass('range_hidden')){
+                    return true;
+                }
+                 
+                 if ($(self).hasClass(el)){
+                    $(self).show();
+
+                 }
+
+             })
+    });
+    
+    if(vrsteMedaFilterCloseArray.length==0){
+        $('.product').each(function(el){
+            $(this).removeClass('new_vrstemeda');
+            if ($(this).hasClass('new_gramaza')){
+                return true;
+            }
+            if ($(this).hasClass('range_hidden')){
+                return true;
+            }
+           $(this).show();
+          
+    
+           
+        });
+    }
+  
+    range();
   
 }
 function gramazaFilter(gramaza){
-        if(jQuery.inArray(gramaza,classArray)==-1){
-            classArray.push(gramaza);
-            gramazaFilterCloseArray.push(gramaza)
-            allArray.push(gramaza);
-            $('#'+gramaza).removeClass("filter-off filter-neutral").addClass("filter-on");
-          }
-         else{
-             classArray = $.grep(classArray, function(value) {
-            $('#'+gramaza).removeClass("filter-on").addClass("filter-off");
-            return value != gramaza;
-          });
-          gramazaFilterCloseArray = $.grep(gramazaFilterCloseArray, function(value) {
-            return value != gramaza;
-          });
-          allArray = $.grep(allArray, function(value) {
-            return value != gramaza;
-          });
-         
+    if(vrsteMedaFilterCloseArray.length==0){
+        $('.product').each(function(el){
+            $(this).removeClass('new_vrstemeda');
+        });
+     }
+    $('.product').hide();
+    $('.product').addClass('new_gramaza');
+    if(jQuery.inArray(gramaza,gramazaFilterCloseArray)==-1){
+        gramazaFilterCloseArray.push(gramaza);
+        // allArray.push(id);
+        $('#'+gramaza).removeClass("filter-off filter-neutral").addClass("filter-on");
     }
-    filtering();
+    else{
+        gramazaFilterCloseArray = $.grep(gramazaFilterCloseArray, function(value) {
+            return value != gramaza;
+          });
+          $('#'+gramaza).removeClass("filter-on").addClass("filter-off");
+          
+    }$('.product').each(function(){
+        let self= this;
+        gramazaFilterCloseArray.forEach(function(el){
+            if ($(self).hasClass(el)){
+                $(self).removeClass('new_gramaza');
+
+             }
+           
+        })
+
+    });
+    $('.product').each(function(el){
+        if ($(this).hasClass('new_vrstemeda')){
+            return true;
+        }
+        if ($(this).hasClass('new_category')){
+            return true;
+        }
+        if ($(this).hasClass('range_hidden')){
+            return true;
+        }
+        var self= this;
+        gramazaFilterCloseArray.forEach(function(el){
+                 if ($(self).hasClass(el)){
+                    $(self).show();
+
+                 }
+
+             })
+             
+
+       
+    });
+    if(gramazaFilterCloseArray.length==0){
+        $('.product').each(function(el){
+            $(this).removeClass('new_gramaza');
+            if ($(this).hasClass('new_vrstemeda')){
+                return true;
+            }
+            if ($(this).hasClass('new_category')){
+                return true;
+            }
+            if ($(this).hasClass('range_hidden')){
+                return true;
+            }
+           
+           $(this).show();
+    
+           
+        });
+      }
+    //     if(jQuery.inArray(gramaza,classArray)==-1){
+    //         classArray.push(gramaza);
+    //         gramazaFilterCloseArray.push(gramaza)
+    //         allArray.push(gramaza);
+    //         $('#'+gramaza).removeClass("filter-off filter-neutral").addClass("filter-on");
+    //       }
+    //      else{
+    //          classArray = $.grep(classArray, function(value) {
+    //         $('#'+gramaza).removeClass("filter-on").addClass("filter-off");
+    //         return value != gramaza;
+    //       });
+    //       gramazaFilterCloseArray = $.grep(gramazaFilterCloseArray, function(value) {
+    //         return value != gramaza;
+    //       });
+    //       allArray = $.grep(allArray, function(value) {
+    //         return value != gramaza;
+    //       });
+         
+    // }
+    // filtering();
+    range();
   
 }
 function filtering(){
     var classComp = classArray.toString();
-    console.log(classArray)
 
    
     classComp = classComp.replace(/\,/g, ' ');
@@ -357,40 +552,58 @@ function filtering(){
 }
 // Close
 function categoryClose(){
-    
-    classArray = classArray.filter(function(x) { 
-        $('.filter-categories').removeClass("filter-off filter-on").addClass("filter-neutral");
-        return categoryCloseArray.indexOf(x) < 0;
-      });
-    
-          filtering();
+    categoryMemory=undefined;
+    categoryState =0;
+    categoryClose=[];
+    $('.filter-categories').removeClass("filter-off filter-on").addClass("filter-neutral");
+    $('.product').each(function(i,value){
+       $(this).removeClass('new_category')
+       if ($(this).hasClass('new_gramaza')){
+        return true;
+    }
+    if ($(this).hasClass('range_hidden')){
+        return true;
+    }
+    $(this).show();
+    });
+    range();
 
     
 }
 function vrsteMedaClose(){
-    classArray = classArray.filter(function(x) { 
-        $('.filter-type').removeClass("filter-off filter-on").addClass("filter-neutral");
-        return vrsteMedaFilterCloseArray.indexOf(x) < 0;
-      });
-      allArray = allArray.filter(function(x) { 
-        $('.filter-type').removeClass("filter-off filter-on").addClass("filter-neutral");
-        return vrsteMedaFilterCloseArray.indexOf(x) < 0;
-      });
+    $('.vrste-meda-button').addClass("filter-off filter-neutral").removeClass("filter-on ");
+    vrsteMedaFilterCloseArray=[];
+    $('.product').each(function(i,value){
+        $(this).removeClass('new_vrstemeda')
+        if ($(this).hasClass('new_gramaza')){
+         return true;
+        }
+        if ($(this).hasClass('range_hidden')){
+            return true;
+        }
+     $(this).show();
+     });
+     range();
     
-          filtering();
 }
 function gramazaClose(){
-    
-    classArray = classArray.filter(function(x) { 
+    gramazaFilterCloseArray=[];
         $('.filter-weight').removeClass("filter-off filter-on").addClass("filter-neutral");
-        return gramazaFilterCloseArray.indexOf(x) < 0;
-      });
-      allArray = allArray.filter(function(x) { 
-        $('.filter-weight').removeClass("filter-off filter-on").addClass("filter-neutral");
-        return gramazaFilterCloseArray.indexOf(x) < 0;
-      });
-    
-          filtering();
+        $('.product').each(function(i,value){
+            $(this).removeClass('new_gramaza')
+            if ($(this).hasClass('new_vrstemeda')){
+             return true;
+            }
+            if ($(this).hasClass('range_hidden')){
+                return true;
+            }
+            if ($(this).hasClass('new_category')){
+                return true;
+               }
+         $(this).show();
+         });
+         range();
+
 }
 function rangeClose(){
     $("input.original").val(0)
@@ -411,10 +624,16 @@ function rangeClose(){
             $('.product').each(function(i,value){
                 var productName= $('.card-content_description--title',this).text().toLowerCase();
                
-                if ( $( this ).hasClass( 'filter_hidden' )){
+                if ($(this).hasClass('new_vrstemeda')){
                     return true;
                 }
-                if ( $( this ).hasClass( 'range_hidden' )){
+                if ($(this).hasClass('new_category')){
+                    return true;
+                }
+                if ($(this).hasClass('new_gramaza')){
+                    return true;
+                }
+                if ($(this).hasClass('range_hidden')){
                     return true;
                 }
                 if (productName.indexOf(inputValue) >= 0){
@@ -431,10 +650,16 @@ function rangeClose(){
       }
       else{
         $('.product').each(function(i,value){
-            if ( $( this ).hasClass( 'filter_hidden' )){
+            if ($(this).hasClass('new_vrstemeda')){
                 return true;
             }
-            if ( $( this ).hasClass( 'range_hidden' )){
+            if ($(this).hasClass('new_category')){
+                return true;
+            }
+            if ($(this).hasClass('new_gramaza')){
+                return true;
+            }
+            if ($(this).hasClass('range_hidden')){
                 return true;
             }
             $(this).show();
