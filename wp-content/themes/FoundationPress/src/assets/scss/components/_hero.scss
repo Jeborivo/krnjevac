@@ -300,3 +300,16 @@
         }
     }
 }
+
+:-ms-lang(x), :-webkit-full-screen .bg-video_content {
+    top: -10000px;
+    right: -10000px;
+    bottom: -10000px;
+    left: -10000px;
+    margin: auto;
+    min-width: 100%;
+    min-height: 100%;
+    zoom: 0.1;
+    width: auto;
+    height: auto;
+}
