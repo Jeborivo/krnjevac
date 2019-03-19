@@ -1,7 +1,5 @@
 <?php 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 function last_seen_product($last_seen_array,$product_id){
       if($last_seen_array == NULL){
         // if Variable is NULL set it to empty array
