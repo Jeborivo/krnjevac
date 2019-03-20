@@ -1,5 +1,15 @@
 
 <?php
+session_start();
+if($_GET["productOrderBy"]==NULL){
+  $_SESSION['order']=1;
+}
+if($_SESSION['order']==0){
+  header('Location: shop');
+}
+
+
+
 /**
  * 
  * The template for displaying pages
@@ -23,14 +33,11 @@ get_header(); ?>
       <div class="sort">
         <?php $site_url =  get_site_url();?>
         <select id="product-sort" onchange="productSort('<?php echo $site_url; ?>')">
-        <option value="selected" >Selected</option>
-          <option value="najprodavanije">Najprodavanije</option>
-          <option value="ime">Ime</option>
           <option value="cena">Cena</option>
         </select>
         <span class="asc-desc-sort">
-          <span  class="asc-desc-sort_up" id="arrow-asc" onclick="arrowAsc(event);"> <i class="fas fa-caret-up"></i> </span>
-          <span  class="asc-desc-sort_down" id="arrow-desc" onclick="arrowDesc(event);"> <i class="fas fa-caret-up caret-down"></i> </span>
+          <span  class="asc-desc-sort_up" id="arrow-asc" onclick="arrowAsc(event,'<?php echo $site_url; ?>');"> <i class="fas fa-caret-up"></i> </span>
+          <span  class="asc-desc-sort_down" id="arrow-desc" onclick="arrowDesc(event, '<?php echo $site_url; ?>');"> <i class="fas fa-caret-up caret-down"></i> </span>
         </span>
       </div>
       
@@ -200,6 +207,16 @@ get_header(); ?>
                     <?php endwhile ?>
                     <?php 
                     $productOrderBy = $_GET["productOrderBy"];
+
+                    if($productOrderBy==NULL){
+                      $productOrderBy="menu_order";
+                    }
+                    if($productOrderBy=='cena'){
+                      $_SESSION['order']=0;
+                   
+                      $productOrderBy="menu_order";
+                    }
+                 
                     $itemOrder = $_GET["itemOrder"];
                    
 
