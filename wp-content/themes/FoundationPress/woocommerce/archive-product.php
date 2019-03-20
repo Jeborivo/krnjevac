@@ -210,56 +210,22 @@ get_header(); ?>
 
                     if($productOrderBy==NULL){
                       $productOrderBy="menu_order";
+                      $itemOrder='ASC';
                     }
                     if($productOrderBy=='cena'){
                       $_SESSION['order']=0;
-                   
-                      $productOrderBy="menu_order";
                     }
-                 
                     $itemOrder = $_GET["itemOrder"];
-                   
-
 
                      switch ($productOrderBy) {
-                        case ($productOrderBy=="title" && $itemOrder=="ASC") :  
-                            usort($products_array, function($a, $b) {
-                              if($a['name']==$b['name']) return 0;
-                              return $b['name'] < $a['name']?1:-1;
-                            });                   
-                        break;
-                        case ($productOrderBy=="title" && $itemOrder=="DESC") :   
-                             case ($productOrderBy=="title" && $itemOrder=="ASC") :    
-                             usort($products_array, function($a, $b) {
-                               if($a['name']==$b['name']) return 0;
-                               return $a['name'] < $b['name']?1:-1;
-                           });       
-                        break;
                         case ($productOrderBy=="menu_order" && $itemOrder=="ASC") :
                               usort($products_array, function($a, $b) {
                                 if($a['popular']==$b['popular']) return 0;
                                 return $b['popular'] < $a['popular']?1:-1;
                               });          
                         break;
-                        case ($productOrderBy=="menu_order" && $itemOrder=="DESC") :
-                              usort($products_array, function($a, $b) {
-                                if($a['popular']==$b['popular']) return 0;
-                                return $a['popular'] < $b['popular']?1:-1;
-                              });   
-                        break;
-                        case ($productOrderBy=="date" && $itemOrder=="ASC") :
-                              usort($products_array, function($a, $b) {
-                                  if($a['date']==$b['date']) return 0;
-                                  return $a['date'] < $b['date']?1:-1;
-                              });                   
-                        break;
-                        case ($productOrderBy=="date" && $itemOrder=="DESC") :
-                              usort($products_array, function($a, $b) {
-                                  if($a['date']==$b['date']) return 0;
-                                  return $a['date'] < $b['date']?1:-1;
-                              });  
-                        break;
                         case ($productOrderBy=="cena" && $itemOrder=="ASC") :
+                        echo('asasasaa');
                               usort($products_array, function($a, $b) {
                                   if($a['price_regular']==$b['price_regular']) return 0;
                                   return $b['price_regular'] < $a['price_regular']?1:-1;
