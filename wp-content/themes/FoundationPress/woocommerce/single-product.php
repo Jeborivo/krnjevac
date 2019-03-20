@@ -1,9 +1,12 @@
 <?php
 session_start();
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 
  
-require_once($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/FoundationPress/plugins/last_seen_products.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/krnjevac/wp-content/themes/FoundationPress/plugins/last_seen_products.php');
 
 /**
  * The template for displaying pages
@@ -76,7 +79,7 @@ get_header(); ?>
 					</div>
 					<div class="product-info_price-quantity-to-cart-wrap">
 					<?php foreach ( $variations as $variation ) :?>	
-					
+					TESTST
 					<?php $br2++;?>
 						<!-- display prices -->			
 						<h3 class="card-content_descriptio--price variation_price variation_price<?php echo $br2?>"> 
@@ -155,7 +158,7 @@ get_header(); ?>
 						<h4 class="card-content_description--title"><?php echo get_the_title( $value->post_parent ); ?></h4>
 					</a>
 					<h6 class="card-content_description--weight"><?php echo $variable_product->get_attributes()['gramaza']; ?></h6>
-					<h3 class="card-content_description--price">
+					<h3 class="card-content_description--price"> TEST
 						<span class="price-reg">
 						<span class="regular_price">
 						<span class="line"></span>
