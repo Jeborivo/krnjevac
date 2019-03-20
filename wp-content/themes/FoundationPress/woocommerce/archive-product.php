@@ -295,7 +295,7 @@ get_header(); ?>
                                 </div>
                                 </a>
                                 <!-- custom add to cart button for current variation -->
-                               
+                                <a href="?add-to-cart=<?php echo $sortable_product["product_id"]; ?>&variation_id=<?php echo $sortable_product["variation_id"];?>&attribute_pa_gramaza=<?php echo ($sortable_product["gramaza"]); ?>" class="add_to_cart_button button"><h3>+</h3></a>
                                </div>
                               </div>
                     <?php endforeach; ?>
