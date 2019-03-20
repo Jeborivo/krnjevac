@@ -225,7 +225,6 @@ get_header(); ?>
                               });          
                         break;
                         case ($productOrderBy=="cena" && $itemOrder=="ASC") :
-                        echo('asasasaa');
                               usort($products_array, function($a, $b) {
                                   if($a['price_regular']==$b['price_regular']) return 0;
                                   return $b['price_regular'] < $a['price_regular']?1:-1;
