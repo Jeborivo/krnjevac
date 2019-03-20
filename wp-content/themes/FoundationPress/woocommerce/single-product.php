@@ -79,7 +79,6 @@ get_header(); ?>
 					</div>
 					<div class="product-info_price-quantity-to-cart-wrap">
 					<?php foreach ( $variations as $variation ) :?>	
-					TESTST
 					<?php $br2++;?>
 						<!-- display prices -->			
 						<h3 class="card-content_descriptio--price variation_price variation_price<?php echo $br2?>"> 
