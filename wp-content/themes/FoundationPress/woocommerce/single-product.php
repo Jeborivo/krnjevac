@@ -155,7 +155,7 @@ get_header(); ?>
 						<h4 class="card-content_description--title"><?php echo get_the_title( $value->post_parent ); ?></h4>
 					</a>
 					<h6 class="card-content_description--weight"><?php echo $variable_product->get_attributes()['gramaza']; ?></h6>
-					<h3 class="card-content_description--price">
+					<h3 class="card-content_description--price">TEST
 						<span class="price-reg">
 						<span class="regular_price">
 						<span class="line"></span>
