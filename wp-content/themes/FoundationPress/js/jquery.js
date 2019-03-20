@@ -35,7 +35,7 @@ $( document ).ready(function() {
 
     }
     if (currentUrl.indexOf("productOrderBy") <= 0){
-        window.location.replace(currentUrl+'?productOrderBy=menu_order&itemOrder=ASC');
+        // window.location.replace(currentUrl+'?productOrderBy=menu_order&itemOrder=ASC');
         } 
   
     var formattedUrl = new URL(currentUrl);
@@ -90,31 +90,16 @@ $( document ).ready(function() {
             productOrderby='cena';
           break;
       }
-      window.location.replace(siteUrl+'/shop?productOrderBy='+productOrderby+'&itemOrder=ASC');
+    //   window.location.replace(siteUrl+'/shop?productOrderBy='+productOrderby+'&itemOrder=ASC');
 }
- function arrowAsc(event){
+ function arrowAsc(event,siteUrl){
     event.preventDefault();
-     var currentUrl = window.location.href ;
-     if (currentUrl.indexOf("itemOrder") >= 0){
-        currentUrl = currentUrl.replace("DESC", "ASC");
-        window.location.replace(currentUrl);
-        } 
-     else {
-         alert('ne moze');
-        }
-    
+      window.location.replace(siteUrl+'/shop/?productOrderBy=cena&itemOrder=ASC');
 
  }
- function arrowDesc(event){
+ function arrowDesc(event,siteUrl){
     event.preventDefault();
-    var currentUrl = window.location.href ;
-     if (currentUrl.indexOf("itemOrder") >= 0){
-        currentUrl = currentUrl.replace("ASC", "DESC");
-        window.location.replace(currentUrl);
-        } 
-     else {
-         alert('ne moze');
-        }
+   window.location.replace(siteUrl+'/shop/?productOrderBy=cena&itemOrder=DESC');
  }
 //  range
 function range(){
