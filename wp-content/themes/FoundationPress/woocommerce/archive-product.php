@@ -297,14 +297,8 @@ get_header(); ?>
                 <h2 class="ntitle">Pretplati se na newsletter</h2>
                 <p>Vestibulum fringilla felis in finibus elementum. Maecenas venenatis massa a ullamcorper laoreet. Aenean at ex diam.</p>
               </div>
-            
-              <form action="" class="shop-newsletter_email newsletter-item">
-                <?php if ( is_active_sidebar( 'newsletter' ) ) : ?>
-                    <?php dynamic_sidebar( 'newsletter' ); ?>
-                <?php endif; ?>
-                <input type="text" class="shop-newsletter_email--text " placeholder="E mail adresa">
-                <input type="submit" value="Pošalji" class="button btn-grey shop-newsletter_email--submit">
-              </form>
+              <?php dynamic_sidebar( 'newsletter' ); ?>
+              
             </div>
           </div>
 <?php
