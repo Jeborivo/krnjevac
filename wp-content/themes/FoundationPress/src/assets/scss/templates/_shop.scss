@@ -571,6 +571,45 @@
 
         .newsletter-item {
             @include xy-cell(12);
+
+            .newsletter {
+                width: 100%;
+
+                .tnp-form {
+                    display: flex;
+
+                    .tnp-email {
+                        height: 55px;
+                        margin: 0;
+                        background-color: #D5D5D5;
+                        border: none;
+                        padding-left: 38px;
+
+                        &:focus {
+                            border: none;
+                            box-shadow: none;
+                        }
+                        
+                        &::placeholder {
+                            color: white;
+                        }
+                    }
+
+                    .tnp-submit {
+                        border-radius: 0px!important;
+                        width: 167px!important;
+                        background-color: #636363;
+                        color: $white!important;
+                        transition: all .2s;
+                        font-weight: bold;
+
+                        &:hover {
+                            cursor: pointer;
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
         }
 
         &_title {

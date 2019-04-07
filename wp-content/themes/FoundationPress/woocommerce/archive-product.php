@@ -297,8 +297,11 @@ get_header(); ?>
                 <h2 class="ntitle">Pretplati se na newsletter</h2>
                 <p>Vestibulum fringilla felis in finibus elementum. Maecenas venenatis massa a ullamcorper laoreet. Aenean at ex diam.</p>
               </div>
-              <?php dynamic_sidebar( 'newsletter' ); ?>
-              
+
+              <div class="shop-newsletter_email newsletter-item">
+                <?php dynamic_sidebar( 'newsletter' ); ?>
+              </div>
+    
             </div>
           </div>
 <?php
